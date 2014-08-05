@@ -2,9 +2,9 @@
 
   <div class="wrap">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-1 column">
+    <h2 class="footer-heading">Contact me</h2>
       <ul>
         <li>
           <a href="https://github.com/{{ site.github_username }}">
@@ -78,7 +78,16 @@
     </div>
 
     <div class="footer-col-2 column">
-      <p class="text">{{ site.description }}</p>
+    <h2 class="footer-heading">News</h2>
+      <ul class="news">
+        {% for post in site.categories.news limit:3%}
+          <li>
+            <span class="news-date">{{ post.date | date: "%b %-d, %Y" }}
+            <a class="news-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
     </div>
 
   </div>

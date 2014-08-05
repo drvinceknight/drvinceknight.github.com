@@ -4,8 +4,10 @@ layout: default
 
 <div class="home">
 
-    <h2><a href="/teaching">Teaching</a></h2>
 
+    <h1><a href="/teaching">Teaching</a></h1>
+
+        <p>
         <ul>
         {% for course in site.data.courses %}
           <li>
@@ -15,5 +17,34 @@ layout: default
           </li>
         {% endfor %}
         </ul>
+        </p>
 
+    <h1><a href="/research">Research</a></h1>
+
+        <p>Here is a list of my latest papers:</p>
+
+        <p>
+        <ul>
+        {% for paper in site.data.papers %}
+          <li>
+            <a href="{{paper.url}}">
+              {{ paper.title }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+        </p>
+
+        <p>Here is a list of current research students I am working with:</p>
+        <p>
+        <ul>
+        {% for student in site.data.students %}
+          <li>
+            <a href="{{student.url}}">
+              {{ student.name }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+        </p>
 </div>
