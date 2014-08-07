@@ -2,7 +2,7 @@
 
   <div class="wrap">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/">Vincent Knight: {{ page.title }}</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -20,7 +20,6 @@
         {% for page in site.pages %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endfor %}
-          <a class="page-link" href="http://www.vincent-knight.com/">Personal webpage</a>
       </div>
     </nav>
 
