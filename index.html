@@ -25,12 +25,12 @@ layout: default
 
         <p>
         <ul>
-        {% for paper in site.data.papers %}
+        {% for paper in site.categories.publications %}
           <li>
-            <a href="{{paper.url}}">
+            <a href="{{paper.url | prepend: site.baseurl}}">
                 {{ paper.title }}
             </a>
-            in {{ paper.journal }}.
+            in <a href="{{ paper.pub_url }}">{{ paper.journal }}</a>.
           </li>
         {% endfor %}
         </ul>

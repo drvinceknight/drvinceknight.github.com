@@ -2,7 +2,11 @@
 
   <div class="wrap">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ page.title }}</a>
+      {% if layout == 'publications' %}
+      <a class="site-title" href="{{ site.baseurl }}/">Research Publication</a>
+      {% else %}
+      <a class="site-title" href="{{ site.baseurl }}/">{{ page.title }}</a>
+      {% endif %}
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
