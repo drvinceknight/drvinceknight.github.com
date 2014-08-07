@@ -1,2 +1,6 @@
-- title : Selfish routing in public services
-  url   : http://www.sciencedirect.com/science/article/pii/S0377221713003019
+- title            : Selfish routing in public services
+  authors          : Knight, Vincent and Harper, Paul
+  url              : http://www.sciencedirect.com/science/article/pii/S0377221713003019
+  publication_date : 2013-10-01
+  journal          : European Journal of Operational Research
+  keywords         : Game Theory, Queueing Theory, Health Care, OR in health services, Price of Anarchy, PoA

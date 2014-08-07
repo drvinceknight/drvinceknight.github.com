@@ -1,5 +1,23 @@
 - title : Computing for Mathematics
   url   : http://drvinceknight.github.io/Computing_for_mathematics/
+  level : BSc. Year 1
 
-- title  : OR Methods
-  github : https://sites.google.com/site/vincentknight/home/teaching/mat001
+- title : OR Methods
+  url   : https://sites.google.com/site/vincentknight/home/teaching/mat001
+  level : MSc.
+
+- title : Introduction to Object Oriented Programming
+  url   : http://drvinceknight.github.io/Introduction_to_OOP/
+  level : MSc.
+
+- title : Introduction to LaTeX
+  url   : http://drvinceknight.github.io/Introduction_to_LaTeX/
+  level : BSc. Year 3
+
+- title : OR2 - Game Theory
+  url   : http://drvinceknight.github.io/Year_3_game_theory_course/
+  level : BSc. Year 3
+
+- title : Advanced Statistical Packages
+  url   : http://drvinceknight.github.io/MAT013/
+  level : MSc.

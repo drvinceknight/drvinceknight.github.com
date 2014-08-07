@@ -28,8 +28,9 @@ layout: default
         {% for paper in site.data.papers %}
           <li>
             <a href="{{paper.url}}">
-              {{ paper.title }}
+                {{ paper.title }}
             </a>
+            in {{ paper.journal }}.
           </li>
         {% endfor %}
         </ul>
