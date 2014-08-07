@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="home">
+<p>
+My interests mainly lie in these three fields:
+<ul>
+    <li>Game Theory</li>
+    <li>Queueing Theory</li>
+    <li>Healthcare Modelling</li>
+</ul>
+</p>
+
+<p>
+My research is in the understanding and design of queueing systems, where individual behaviour is a factor.
+</p>
+
+<p>I have worked closely with healthcare personnel and translated theory in to practice though modeling of different aspects of the healthcare system, such as emergency units, ambulance service and social care.</p>
+
+<h3>Current work</h3>
+<p>A list of my current research projects can be found <a href="./projects">here</a></p>
+
+<h3>Publications</h3>
+<p>My publication list can be found <a href="./publicationlist.html">here</a></p>
+
+
+<h3>Research students</h3>
+<p>Working with research students is one of the most rewarding parts of my job. I'm always looking to work with enthusiastic hard working students from 1st year undergraduate to PhD level. Please get in touch if this is something you might be interested in.</p>
+
+{% if openprojects %}
+    {% if openprojects|length > 1 %}
+        <p>Here are some projects that have not yet found a student:</p>
+    {% else %}
+        <p>Here is a project that has not yet found a student:</p>
+    {% endif %}
+
+
+<p>
+    <ul>
+    {% for student in openprojects %}
+        <li><a href='./researchstudents/{{student.id}}'>{{student.category}}: {{student.projecttitle}}</a> (Start: {{student.startdate|date:"M Y"}})</li>
+    {% endfor %}
+    </ul>
+</p>
+
+{% endif %}
+
+{% if currentstudents %}
+
+<p>
+My current/future research students can be found here:
+
+<ol>
+{% for student in currentstudents %}
+    <li><a href='./researchstudents/{{student.id}}'>{{student.studentname}} ({{student.category}}): {{student.projecttitle}}</a> (Finish: {{student.enddate|date:"M Y"}})</li>
+{% endfor %}
+</ol>
+</p>
+{% endif %}
+
+{% if students %}
+A list of all ({{students|length}}) of my research students (past and present) can be found <a href='./researchstudents'>here</a>.
+{% endif %}
+
+
+</div>
