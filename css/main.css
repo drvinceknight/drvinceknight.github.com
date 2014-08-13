@@ -147,14 +147,16 @@ a:visited { color: #205caa; }
 
 .page-content {
   padding: 30px 0;
-  background-color: #fff;
 }
+
+.page-content h1 {font-size: 1em; color: #818181; }
 
 
 /* Home styles */
 /* ----------------------------------------------------------*/
 
 .home ul {padding: 0 20px ;}
+.home ol {padding: 0 20px ;}
 
 .home h1 { margin-bottom: 5px; margin-top: 20px; }
 

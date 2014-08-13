@@ -25,7 +25,7 @@ layout: default
 
         <p>
         <ul>
-        {% for paper in site.categories.publications %}
+        {% for paper in site.categories.publications limit:5 %}
           <li>
             <a href="{{paper.url | prepend: site.baseurl}}">
                 {{ paper.title }}
@@ -48,6 +48,7 @@ layout: default
         {% endfor %}
         </ul>
         </p>
+        <p>You can find my talks <a href='http://drvinceknight.github.io/Talks/'>here</a>.</p>
 
         <h1><a href="{{site.baseurl}}/research">Outreach</a></h1>
         <p>
