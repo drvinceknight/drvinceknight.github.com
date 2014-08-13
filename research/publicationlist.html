@@ -1,0 +1,20 @@
+---
+layout: default
+title: Publication List
+---
+<div class="home">
+
+    <p>
+    <ol reversed>
+    {% for paper in site.categories.publications %}
+      <li>
+      {{paper.date |  date: "%b %-d %Y" }}:
+      <a href="{{paper.url | prepend: site.baseurl}}">
+            {{ paper.title }}
+        </a>
+        in <a href="{{ paper.pub_url }}">{{ paper.journal }}</a>.
+      </li>
+    {% endfor %}
+    </ol>
+    </p>
+</div>
