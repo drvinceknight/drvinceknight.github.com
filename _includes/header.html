@@ -2,10 +2,10 @@
 
   <div class="wrap">
 
-      {% if layout == 'publications' %}
+      {% if page.categories contains 'publications' %}
       <a class="site-title" href="{{ site.baseurl }}/">Research Publication</a>
       {% else %}
-      <a class="site-title" href="{{ site.baseurl }}/">{{ page.title }}</a>
+      <a class="site-title" href="{{ site.baseurl }}/">{{page.title}}</a>
       {% endif %}
 
     <nav class="site-nav">
