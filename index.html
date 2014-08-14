@@ -39,14 +39,12 @@ layout: default
         <p>Here is a list of current research students I am working with:</p>
         <p>
         <ul>
-        {% for student in site.categories.students %}
-         {% if student.current %}
+        {% for student in site.categories.current %}
           <li>
             <a href="{{student.url | prepend: site.baseurl}}">
                 {{ student.name }} ({{student.type}})
             </a>
           </li>
-         {% endif %}
         {% endfor %}
         </ul>
         <p>

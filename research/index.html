@@ -30,14 +30,12 @@ My research is in the understanding and design of queueing systems, where indivi
 
 <p>
 <ul>
-{% for student in site.categories.students %}
- {% if student.current %}
+{% for student in site.categories.current %}
   <li>
     <a href="{{student.url | prepend: site.baseurl}}">
         {{ student.name }} ({{student.type}})
     </a>
   </li>
- {% endif %}
 {% endfor %}
 </ul>
 </p>

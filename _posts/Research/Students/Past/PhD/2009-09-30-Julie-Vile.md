@@ -4,7 +4,6 @@ name        : Julie Vile
 project_title       : Time-dependent stochastic modelling for predicting demand and scheduling of emergency medical services
 keywords    : Time dependent queues, Ambulance service, ABCi.
 type        : PhD
-current     : false
 start_date  : 2009-09-30
 finish_date : 2012-05-31
 comments   : false

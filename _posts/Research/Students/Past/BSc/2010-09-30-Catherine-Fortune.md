@@ -4,7 +4,6 @@ name          : Catherine Fortune
 project_title : Game Theory and the Lemke-Howson algorithm
 keywords      : Game Theory, Lemke-Howson,
 type          : BSc.
-current       : false
 start_date    : 2010-09-30
 finish_date   : 2011-05-01
 comments      : false

@@ -4,7 +4,6 @@ name       : Chappman Sin
 project_title : Mathematical modelling of Risk (the board game)
 keywords   : Risk, Board Game, Markov Chains, Graph Theory
 type       : BSc.
-current    : false
 start_date : 2011-09-30
 finish_date : 2012-05-01
 comments   : false

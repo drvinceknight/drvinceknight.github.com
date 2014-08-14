@@ -4,7 +4,6 @@ name          : Jason Young
 project_title : Understanding the effect of selfish behaviour in a series of 2 queues
 keywords      : Summer Research, Game Theory, Queueing Theory, Python
 type          : Summer
-current       : false
 start_date    : 2012-06-01
 finish_date   : 2012-08-31
 comments   : false
