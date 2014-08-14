@@ -25,21 +25,23 @@ My research is in the understanding and design of queueing systems, where indivi
 <h1>Research students</h1>
 <p>Working with research students is one of the most rewarding parts of my job. I'm always looking to work with enthusiastic hard working students from 1st year undergraduate to PhD level. Please get in touch if this is something you might be interested in.</p>
 
-<p>Here are my current research students:</p>
-        <p>
-        <ul>
-        {% for student in site.categories.students %}
-         {% if student.current %}
-          <li>
-            <a href="{{student.url | prepend: site.baseurl}}">
-                {{ student.name }} ({{student.type}})
-            </a>
-          </li>
-         {% endif %}
-        {% endfor %}
-        </ul>
-        </p>
 
-        A list of all ({{ site.categories.students | size }}) of my reseach students past and present can be found <a href='{{site.baseurl}}/research/students'>here</a></p>
+<p>Here are my current research students: </p>
+
+<p>
+<ul>
+{% for student in site.categories.students %}
+ {% if student.current %}
+  <li>
+    <a href="{{student.url | prepend: site.baseurl}}">
+        {{ student.name }} ({{student.type}})
+    </a>
+  </li>
+ {% endif %}
+{% endfor %}
+</ul>
+</p>
+
+<p>A list of all ({{ site.categories.students | size }}) of my reseach students past and present can be found <a href='{{site.baseurl}}/research/students'>here</a></p>
 
 </div>
