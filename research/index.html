@@ -26,17 +26,18 @@ My research is in the understanding and design of queueing systems, where indivi
 <p>Working with research students is one of the most rewarding parts of my job. I'm always looking to work with enthusiastic hard working students from 1st year undergraduate to PhD level. Please get in touch if this is something you might be interested in.</p>
 
 <p>Here are my current research students:</p>
-    <p>
-    <ul>
-    {% for student in site.data.students %}
-      <li>
-        <a href="{{student.url}}">
-            {{ student.name }}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
-    </p>
-
+        <p>
+        <ul>
+        {% for student in site.categories.students %}
+         {% if student.current %}
+          <li>
+            <a href="{{student.url | prepend: site.baseurl}}">
+                {{ student.name }} ({{student.type}})
+            </a>
+          </li>
+         {% endif %}
+        {% endfor %}
+        </ul>
+        <p>
 
 </div>
