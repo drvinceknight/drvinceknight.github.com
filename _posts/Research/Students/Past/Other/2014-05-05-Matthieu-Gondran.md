@@ -6,7 +6,7 @@ keywords      : Game Theory, Scheduling,
 type          : Other
 start_date    : 2014-05-05
 finish_date   : 2014-07-27
-comments   : false
+comments   : true
 ---
 
 Matthieu is a student from Clermont-Ferrand (France) and will be working with me for 3 months. The idea is to look at the potential for Game Theory being applied to surgery scheduling.

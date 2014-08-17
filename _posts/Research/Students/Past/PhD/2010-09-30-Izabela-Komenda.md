@@ -6,7 +6,7 @@ keywords      : Queueing Theory, Healthcare, ABCi
 type          : PhD
 start_date    : 2009-10-01
 finish_date   : 2013-06-01
-comments   : false
+comments   : true
 ---
 
 Izabela did her PhD with [Professor Griffiths](http://www.cardiff.ac.uk/maths/contactsandpeople/profiles/griffiths.html) and myself applying queueing theory to bed management in a critical care unit.

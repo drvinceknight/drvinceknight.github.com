@@ -6,7 +6,7 @@ keywords      : Summer Research, Game Theory, Queueing Theory, Python
 type          : Summer
 start_date    : 2012-06-01
 finish_date   : 2012-08-31
-comments   : false
+comments   : true
 ---
 
 In this project Jason built an Agent Based Simulation to consider game theoretical behaviour in a series of two queues. Here is a video of a talk he gave at [OR54](http://www.theorsociety.com/Pages/Conferences/OR54/OR54.aspx):

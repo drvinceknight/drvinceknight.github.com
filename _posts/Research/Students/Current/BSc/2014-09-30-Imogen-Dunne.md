@@ -6,7 +6,7 @@ keywords      : Mathed, pedagogy, Flipped classroom
 type          : BSc.
 start_date    : 2014-09-30
 finish_date   : 2015-07-01
-comments      : false
+comments      : true
 ---
 
 Various modern pedagogic techniques make use of technology to better scaffold student learning. One such pedagogy is referred to as a ‘flipped classroom’. This approach aims to modify the locus of knowledge exchange so that learners are able to obtain knowledge outside of contact time with the educator. The goal of this is to make  use of contact time for a deeper learning experience.

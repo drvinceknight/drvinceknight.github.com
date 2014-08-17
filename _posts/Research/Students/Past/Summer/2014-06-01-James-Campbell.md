@@ -6,7 +6,7 @@ keywords      : Game Theory, Sage, Sagemath, Python
 type          : Summer
 start_date    : 2014-07-14
 finish_date   : 2014-09-05
-comments   : false
+comments   : true
 ---
 
 James will build game theoretical software in to [Sage](http://sagemath.org/).

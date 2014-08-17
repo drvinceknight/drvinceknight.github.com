@@ -6,7 +6,7 @@ keywords      : Game Theory, Axelrod, Prisoner's Dilemma
 type          : BSc.
 start_date    : 2009-09-30
 finish_date   : 2010-06-01
-comments      : false
+comments      : true
 ---
 
 Fern was supervised by [Dr Thompson](http://www.cardiff.ac.uk/maths/contactsandpeople/profiles/thompsonjm1.html) and myself.

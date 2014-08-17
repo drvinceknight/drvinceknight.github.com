@@ -6,7 +6,7 @@ keywords      : Social networks, Game Theory, Smoking
 type          : PhD
 start_date    : 2010-09-01
 finish_date   : 2014-05-15
-comments   : false
+comments   : true
 ---
 
 Angelico is supervised by [Professor Harper](http://www.profpaulharper.com/), [Dr Williams](http://www.cardiff.ac.uk/maths/contactsandpeople/profiles/williamsje.html) and I.

@@ -6,7 +6,7 @@ keywords    : Time dependent queues, Ambulance service, ABCi.
 type        : PhD
 start_date  : 2009-09-30
 finish_date : 2012-05-31
-comments   : false
+comments   : true
 ---
 
 Julie was supervised by [Professor Harperl](http://www.profpaulharper.com/) [Dr Gillard](http://www.jonathangillard.co.uk/) and myself. Her PhD applied time dependent queueing models to the Welsh Ambulance service.

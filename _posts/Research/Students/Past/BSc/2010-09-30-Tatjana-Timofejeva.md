@@ -6,7 +6,7 @@ keywords      : Simul8, Time Dependent Queues, Healthcare
 type          : BSc.
 start_date    : 2010-09-30
 finish_date   : 2011-06-01
-comments      : false
+comments      : true
 ---
 
 Catherine was supervised by [Dr Thompson](http://www.cardiff.ac.uk/maths/contactsandpeople/profiles/thompsonjm1.html) and I.
