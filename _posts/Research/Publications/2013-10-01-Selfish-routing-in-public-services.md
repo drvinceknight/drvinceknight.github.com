@@ -7,7 +7,7 @@ journal: European Journal of Operational Research
 authors: Knight VA, Harper PR
 keywords: Game Theory, Queueing Theory, Health Care, OR in health services, Price of Anarchy, PoA
 pub_url: http://www.sciencedirect.com/science/article/pii/S0377221713003019
-comments: false
+comments: true
 ---
 
 Here's the abstract of the paper:

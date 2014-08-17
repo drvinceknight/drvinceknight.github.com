@@ -7,7 +7,7 @@ url              : http://www.sciencedirect.com/science/article/pii/S03772217120
 publication_date : 2013-05-16
 journal          : European Journal of Operational Research
 keywords         : Queueing, Equilibrium strategies, Optimal strategies, Customer information
-comments: false
+comments: true
 ---
 
 Here's the abstract of the paper:
