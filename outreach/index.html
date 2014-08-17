@@ -1,0 +1,14 @@
+---
+layout: default
+title: Outreach
+---
+
+<div class="home">
+    <p>
+        <ul>
+            {% for activity in activities %}
+                <li><a href='./{{activity.slug}}'>{{activity.title}}</a>: {{activity.description}}</li>
+            {% endfor %}
+        </ul>
+    </p>
+</div>

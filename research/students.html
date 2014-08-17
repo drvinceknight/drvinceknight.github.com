@@ -1,0 +1,20 @@
+---
+layout: default
+title: Research Students
+---
+
+
+<h1>Current students</h1>
+<ol reversed>
+{% for student in site.categories.current %}
+<li><a href='{{student.url | prepend : site.baseurl}}'>{{student.name}}</a> ({{student.type}}): {{student.project_title}} (Start: {{student.start_date}})</li>
+{% endfor %}
+</ol>
+
+<h1>Past students</h1>
+<ol reversed>
+{% assign sorted_pages = (site.categories.past | sort: 'finish_date') %}
+{% for student in sorted_pages reversed %}
+<li><a href='{{student.url | prepend : site.baseurl}}'>{{student.name}}</a> ({{student.type}}): {{student.project_title}} (Finish: {{student.finish_date}})</li>
+{% endfor %}
+</ol>

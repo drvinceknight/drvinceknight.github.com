@@ -1,0 +1,259 @@
+entries:
+    baboolal_how_2012:
+        abstract: Various approaches have been used to identify possible routes for
+            improvement of patient flow within an emergency unit ({EU}). One such
+            approach is to use simulation to create a ‘real world’ model of an {EU}
+            and carry out various tests to gauge ways of improvement. This paper proposes
+            a novel approach in which simulation is used to create a ‘perfect world
+            model’. The {EU} at a major {UK} hospital is modelled not as it is, but
+            as it could be. The ‘efficiency gap’ between the ‘perfect world’ and the
+            ‘real world’ demonstrates how operational research can be used effectively
+            to identify the location of bottlenecks in the current ‘whole hospital’
+            patient pathway and can be used in the planning and managing of hospital
+            resources to ensure the most effective use of those resources.
+        author:
+        -   first: Kesh
+            last: Baboolal
+        -   first: Jeff
+            last: Griffiths
+            middle: D.
+        -   first: Vincent
+            last: Knight
+            middle: A.
+        -   first: Andrew
+            last: Nelson
+            middle: V.
+        -   first: Cheryl
+            last: Voake
+        -   first: Janet
+            last: Williams
+            middle: E.
+        doi: 10.1136/emermed-2011-200101
+        file: Baboolal et al. - 2012 - How efficient can an emergency unit be A perfect
+            world model.pdf:/Users/vince/Library/Application Support/Zotero/Profiles/mehpmeny.default/zotero/storage/BRHQJVPR/Baboolal
+            et al. - 2012 - How efficient can an emergency unit be A perfect world
+            model.pdf:application/pdf;Snapshot:/Users/vince/Library/Application Support/Zotero/Profiles/mehpmeny.default/zotero/storage/U2DRCVJV/emermed-2011-200101.html:text/html
+        issn: ', 1472-0213'
+        journal: Emergency Medicine Journal
+        keywords: Emergency unit, management, simulation, staffing, targets, waiting
+            times
+        language: en
+        month: February
+        pmid: '22334643'
+        shorttitle: How efficient can an emergency unit be?
+        title: How efficient can an emergency unit be? A perfect world model
+        type: article
+        url: http://emj.bmj.com/content/early/2012/02/13/emermed-2011-200101
+        urldate: '2013-08-20'
+        year: '2012'
+    fetta_peter_2012:
+        author:
+        -   first: A.G.
+            last: Fetta
+        -   first: P.R.
+            last: Harper
+        -   first: V.A.
+            last: Knight
+        -   first: I.T.
+            last: Vieira
+        -   first: J.E.
+            last: Williams
+        doi: 10.1016/j.physa.2011.12.053
+        issn: 03784371
+        journal: 'Physica A: Statistical Mechanics and its Applications'
+        month: May
+        number: '9'
+        pages: 2898--2910
+        shorttitle: On the Peter Principle
+        title: 'On the Peter Principle: An agent based investigation into the consequential
+            effects of social networks and behavioural factors'
+        type: article
+        url: http://linkinghub.elsevier.com/retrieve/pii/S0378437111009897
+        urldate: '2014-01-01'
+        volume: '391'
+        year: '2012'
+    gillard_using_2014:
+        author:
+        -   first: Jonathan
+            last: Gillard
+        -   first: Vincent
+            last: Knight
+        doi: 10.1057/jors.2013.41
+        issn: 0160-5682, 1476-9360
+        journal: Journal of the Operational Research Society
+        month: May
+        number: '5'
+        pages: 735--746
+        title: Using Singular Spectrum Analysis to obtain staffing level requirements
+            in emergency units
+        type: article
+        url: http://www.palgrave-journals.com/doifinder/10.1057/jors.2013.41
+        urldate: '2014-05-15'
+        volume: '65'
+        year: '2014'
+    griffiths_bed_2012:
+        author:
+        -   first: J.
+            last: Griffiths
+            middle: D.
+        -   first: V.
+            last: Knight
+        -   first: I.
+            last: Komenda
+        doi: 10.1093/imaman/dpr028
+        issn: 1471-678X, 1471-6798
+        journal: '{IMA} Journal of Management Mathematics'
+        month: January
+        number: '2'
+        pages: 137--153
+        title: Bed management in a Critical Care Unit
+        type: article
+        url: http://imaman.oxfordjournals.org/cgi/doi/10.1093/imaman/dpr028
+        urldate: '2014-01-01'
+        volume: '24'
+        year: '2012'
+    knight_ambulance_2012:
+        author:
+        -   first: V.A.
+            last: Knight
+        -   first: P.R.
+            last: Harper
+        -   first: L.
+            last: Smith
+        doi: 10.1016/j.omega.2012.02.003
+        issn: 03050483
+        journal: Omega
+        month: December
+        number: '6'
+        pages: 918--926
+        title: Ambulance allocation for maximal survival with heterogeneous outcome
+            measures
+        type: article
+        url: http://linkinghub.elsevier.com/retrieve/pii/S0305048312000436
+        urldate: '2014-01-01'
+        volume: '40'
+        year: '2012'
+    knight_modelling_2011:
+        author:
+        -   first: Vincent
+            last: Knight
+            middle: A.
+        -   first: Janet
+            last: Williams
+            middle: E.
+        -   first: I.
+            last: Reynolds
+        journal: Journal of Simulation
+        number: '2'
+        pages: 92–102
+        shorttitle: Modelling patient choice in healthcare systems
+        title: 'Modelling patient choice in healthcare systems: development and application
+            of a discrete event simulation with agent-based decision making'
+        type: article
+        url: http://www.palgrave-journals.com/jos/journal/v6/n2/abs/jos201121a.html
+        urldate: '2014-01-01'
+        volume: '6'
+        year: '2011'
+    knight_modelling_2012:
+        author:
+        -   first: Vincent
+            last: Knight
+            middle: A.
+        -   first: Paul
+            last: Harper
+            middle: R.
+        journal: Health Systems
+        number: '1'
+        pages: 58–68
+        title: Modelling emergency medical services with phase-type distributions
+        type: article
+        url: http://www.palgrave-journals.com/hs/journal/v1/n1/abs/hs20121a.html
+        urldate: '2013-12-18'
+        volume: '1'
+        year: '2012'
+    knight_selfish_2013:
+        abstract: Abstract It is well observed that individual behaviour can have
+            an effect on the efficiency of queueing systems. The impact of this behaviour
+            on the economic efficiency of public services is considered in this paper
+            where we present results concerning the congestion related implications
+            of decisions made by individuals when choosing between facilities. The
+            work presented has important managerial implications at a public policy
+            level when considering the effect of allowing individuals to choose between
+            providers. We show that in general the introduction of choice in an already
+            inefficient system will not have a negative effect. Introducing choice
+            in a system that copes with demand will have a negative effect.
+        author:
+        -   first: Vincent
+            last: Knight
+            middle: A.
+        -   first: Paul
+            last: Harper
+            middle: R.
+        doi: 10.1016/j.ejor.2013.04.003
+        issn: 0377-2217
+        journal: European Journal of Operational Research
+        keywords: Game theory, Health care, {OR} in health services, Queueing theory
+        month: October
+        number: '1'
+        pages: 122--132
+        title: Selfish routing in public services
+        type: article
+        url: http://www.sciencedirect.com/science/article/pii/S0377221713003019
+        urldate: '2013-11-05'
+        volume: '230'
+        year: '2013'
+    shone_comparisons_2013:
+        author:
+        -   first: Rob
+            last: Shone
+        -   first: Vincent
+            last: Knight
+            middle: A.
+        -   first: Janet
+            last: Williams
+            middle: E.
+        doi: 10.1016/j.ejor.2012.12.016
+        file: Shone, Knight, Williams - 2013 - Comparisons between observable and
+            unobservable M M 1 queues with respect to optimal customer behavior.pdf:/Users/vince/Library/Application
+            Support/Zotero/Profiles/mehpmeny.default/zotero/storage/5EAAKRSU/Shone,
+            Knight, Williams - 2013 - Comparisons between observable and unobservable
+            M M 1 queues with respect to optimal customer behavior.pdf:application/pdf
+        issn: '03772217'
+        journal: European Journal of Operational Research
+        language: en
+        month: May
+        number: '1'
+        pages: 133--141
+        title: Comparisons between observable and unobservable M/M/1 queues with respect
+            to optimal customer behavior
+        type: article
+        url: http://linkinghub.elsevier.com/retrieve/pii/S0377221712009472
+        urldate: '2014-07-01'
+        volume: '227'
+        year: '2013'
+    vile_predicting_2012:
+        author:
+        -   first: J
+            last: Vile
+            middle: L
+        -   first: J
+            last: Gillard
+            middle: W
+        -   first: P
+            last: Harper
+            middle: R
+        -   first: V
+            last: Knight
+            middle: A
+        doi: 10.1057/jors.2011.160
+        issn: 0160-5682, 1476-9360
+        journal: Journal of the Operational Research Society
+        month: February
+        number: '11'
+        pages: 1556--1565
+        title: Predicting ambulance demand using singular spectrum analysis
+        type: article
+        url: http://www.palgrave-journals.com/doifinder/10.1057/jors.2011.160
+        urldate: '2014-01-01'
+        volume: '63'
+        year: '2012'

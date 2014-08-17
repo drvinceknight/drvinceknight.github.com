@@ -28,3 +28,72 @@
 </script>
 
 
+---
+layout : default
+title  : Vince Knight
+---
+
+<div class="home">
+
+
+    <h1><a href="{{site.baseurl}}/teaching">Teaching</a></h1>
+
+        <p>
+        <ul>
+        {% for course in site.data.courses %}
+         {% if course.current %}
+          <li>
+            <a href="{{course.url}}">
+              {{ course.title }}
+            </a>
+          </li>
+         {% endif %}
+        {% endfor %}
+        </ul>
+        </p>
+
+        <h1><a href="{{site.baseurl}}/research">Research</a></h1>
+
+        <p>Here is a list of my latest papers:</p>
+
+        <p>
+        <ul>
+        {% for paper in site.categories.publications limit:5 %}
+          <li>
+            <a href="{{paper.url | prepend: site.baseurl}}">
+                {{ paper.title }}
+            </a>
+            in <a href="{{ paper.pub_url }}">{{ paper.journal }}</a>.
+          </li>
+        {% endfor %}
+        </ul>
+        </p>
+
+        <p>Here is a list of current research students I am working with:</p>
+        <p>
+        <ul>
+        {% for student in site.categories.current %}
+          <li>
+            <a href="{{student.url | prepend: site.baseurl}}">
+                {{ student.name }} ({{student.type}})
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+        <p>
+
+        <p>You can find my talks <a href='http://drvinceknight.github.io/Talks/'>here</a>.</p>
+
+        <h1><a href="{{site.baseurl}}/research">Outreach</a></h1>
+        <p>
+        <ul>
+        {% for post in site.data.blog_posts %}
+          <li>
+            <a href="{{post.url}}">
+              {{ post.title }}
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+        </p>
+</div>
