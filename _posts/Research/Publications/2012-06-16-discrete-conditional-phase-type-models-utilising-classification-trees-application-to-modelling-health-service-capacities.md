@@ -1,10 +1,10 @@
 ---
 layout     : publication
 categories : publications
-title      : Discrete Conditional Phase-type Models Utilising Classification Trees: Application to Modelling Health Service Capacities
+title      : Discrete Conditional Phase-type Models Utilising Classification Trees Application to Modelling Health Service Capacities
 date       : 2012-06-16
 journal    : European Journal of Operational Research
-authors    : P.R. Harper, V.A. Knight, , A.H. Marshall,
+authors    : P.R. Harper, V.A. Knight, A.H. Marshall,
 keywords   : Discrete Conditional Phase-type model, Markov processes, Classification trees, OR in health services, Maternity services
 pub_url    : http://www.sciencedirect.com/science/article/pii/S0377221711009751
 comments   : true
