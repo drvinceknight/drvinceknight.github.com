@@ -33,7 +33,7 @@ My research is in the understanding and design of queueing systems, where indivi
 <ul>
 {% for student in site.categories.current %}
   <li>
-    <a href="{{student.url | prepend: site.baseurl}}">
+    <a href="{{student.url }}">
         {{ student.name }} ({{student.type}})
     </a>
   </li>
@@ -41,6 +41,6 @@ My research is in the understanding and design of queueing systems, where indivi
 </ul>
 </p>
 
-<p>A list of all ({{ site.categories.students | size }}) of my reseach students past and present can be found <a href='{{site.baseurl}}/research/students'>here</a>.</p>
+<p>A list of all ({{ site.categories.students | size }}) of my research students past and present can be found <a href='/research/students'>here</a>.</p>
 
 </div>
