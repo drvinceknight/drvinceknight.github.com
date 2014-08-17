@@ -1,7 +1,7 @@
 ---
 layout     : publication
 categories : publications
-title      : Modelling patient choice in healthcare systems: development and application of a discrete event simulation with agent-based decision making
+title      : Modelling patient choice in healthcare systems development and application of a discrete event simulation with agent-based decision making
 date       : 2011-08-26
 journal    : Journal of Simulation
 authors    : V A Knight, J E Williams and I Reynolds
