@@ -11,11 +11,13 @@ title  : Vince Knight
         <p>
         <ul>
         {% for course in site.data.courses %}
+         {% if course.current %}
           <li>
             <a href="{{course.url}}">
               {{ course.title }}
             </a>
           </li>
+         {% endif %}
         {% endfor %}
         </ul>
         </p>
