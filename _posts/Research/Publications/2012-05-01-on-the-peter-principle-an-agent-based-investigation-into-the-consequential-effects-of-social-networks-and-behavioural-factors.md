@@ -3,7 +3,7 @@ layout     : publication
 categories : publications
 title      : On the Peter Principle: An agent based investigation into the consequential effects of social networks and behavioural factors
 date       : 2012-05-01
-journal    : Physica A: Statistical Mechanics and its Applications
+journal    : Physica A Statistical Mechanics and its Applications
 authors    : A.G. Fetta, P.R. Harper, V.A. Knight, I.T. Vieira, J.E. Williams
 keywords   : Peter Principle, Organisations efficiency, Agent based models, Social networks, Organisational behaviour
 pub_url    : http://www.sciencedirect.com/science/article/pii/S0378437111009897
