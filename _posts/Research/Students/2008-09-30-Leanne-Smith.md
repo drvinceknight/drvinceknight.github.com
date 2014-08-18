@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Leanne Smith
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Modelling emergency medical vehicle services
 keywords      : Ambulance, Location Analysis, Simulation
 type          : PhD

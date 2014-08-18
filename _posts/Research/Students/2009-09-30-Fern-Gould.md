@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Fern Gould
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Game Theory and the Iterated Prisoner's Dilemma
 keywords      : Game Theory, Axelrod, Prisoner's Dilemma
 type          : BSc.

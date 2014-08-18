@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Tatjana Timofejeva
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Impact of unscheduled care Modelling time varying activities at a Hospital
 keywords      : Simul8, Time Dependent Queues, Healthcare
 type          : BSc.

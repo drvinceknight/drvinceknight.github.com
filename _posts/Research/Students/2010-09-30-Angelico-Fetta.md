@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Angelico Fetta
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Agent Based Simulation for Complex Health Systems Interventions
 keywords      : Social networks, Game Theory, Smoking
 type          : PhD

@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Iain Reynolds
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Modelling patient choice in healthcare systems development and application of a discrete event simulation with agent-based functionality
 keywords      : Patient Choice, Publication, NHS
 type          : Summer

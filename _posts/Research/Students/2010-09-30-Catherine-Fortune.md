@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Catherine Fortune
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Game Theory and the Lemke-Howson algorithm
 keywords      : Game Theory, Lemke-Howson,
 type          : BSc.

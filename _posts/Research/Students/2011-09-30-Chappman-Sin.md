@@ -1,7 +1,7 @@
 ---
 layout     : post
 name       : Chappman Sin
-categories    : [research, student, past]
+categories    : [research, students, past]
 project_title : Mathematical modelling of Risk (the board game)
 keywords   : Risk, Board Game, Markov Chains, Graph Theory
 type       : BSc.
