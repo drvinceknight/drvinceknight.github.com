@@ -1,11 +1,12 @@
 ---
 layout        : post
-name          : Tatjana Timofejeva
-project_title : Impact of unscheduled care Modelling time varying activities at a Hospital
-keywords      : Simul8, Time Dependent Queues, Healthcare
+name          : Catherine Fortune
+categories    : [research, student, past]
+project_title : Game Theory and the Lemke-Howson algorithm
+keywords      : Game Theory, Lemke-Howson,
 type          : BSc.
 start_date    : 2010-09-30
-finish_date   : 2011-06-01
+finish_date   : 2011-05-01
 comments      : true
 ---
 

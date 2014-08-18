@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Izabela Komenda
+categories    : [research, student, past]
 project_title : Bed management in a critical care unit
 keywords      : Queueing Theory, Healthcare, ABCi
 type          : PhD

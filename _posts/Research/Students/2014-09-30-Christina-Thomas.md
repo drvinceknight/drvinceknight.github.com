@@ -1,6 +1,7 @@
 ---
 layout        : post
-name          : '?'
+name          : Christina Thomas
+categories    : [research, student, current]
 project_title : Modelling a game of rugby using Markov processes
 keywords      : Rugby, WRU, Python, Sage, Markov decision processes
 type          : BSc.

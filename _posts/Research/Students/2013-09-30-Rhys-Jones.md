@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Rhys Jones
+categories    : [research, student, past]
 project_title : Modelling Rugby Lineout Strategies Using Game Theory
 keywords      : Rugby
 type          : BSc.

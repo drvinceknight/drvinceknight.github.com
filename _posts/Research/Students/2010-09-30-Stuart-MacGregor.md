@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Stuart MacGregor
+categories    : [research, student, past]
 project_title : A study into two player hide and seek games verifying results from game theory using monte carlo simulation, with a particular application to anti-submarine warfare
 keywords      : Game Theory, Hide and Seek Games, Monte Carlo Simulation
 type          : BSc.

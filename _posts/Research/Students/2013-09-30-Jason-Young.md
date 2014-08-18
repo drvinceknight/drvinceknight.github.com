@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Jason Young
+categories    : [research, student, past]
 project_title : Jason is using Markov Decision Processes to study a system of two queues in series.
 keywords      : Markov Decision Processes, Queueing Theory.
 type          : MMath

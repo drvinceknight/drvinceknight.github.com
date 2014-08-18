@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Ceri Morse
+categories    : [research, student, past]
 project_title : Modelling Lineout Strategies using Game Theory
 keywords      : WRU, Lineout, Rugby, Game Theory
 type          : BSc.

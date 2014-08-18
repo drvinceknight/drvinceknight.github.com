@@ -1,6 +1,7 @@
 ---
 layout        : post
 name          : Tamsin Griffiths
+categories    : [research, student, past]
 project_title : Troops to Task Tool and Refugee Estimation
 keywords      : System Dynamics, Dynamical systems, Lanchester
 type          : BSc.
