@@ -66,7 +66,10 @@ The following is some [Sage](http://sagemath.org/) code that will simulate the p
 
 ### Alternative
 
-This **is not** an efficient way of calculating pi.
+As can be seen in the following gif this **is not** an efficient way of calculating pi:
+
+![](http://drvinceknight.github.io/EmbeddedEnterpriseExchange/Images/darts.gif)
+
 Here is a formula by Srinivasa Ramanujan (1887-1920) that is much more efficient:
 
 $$\pi = \frac{9801}{\sqrt{8}}\left(\sum_{k=0}^{\infty}\frac{(4k)!(1103+26390k)}{(k!)^4396^{4k}}\right)^{-1}$$
