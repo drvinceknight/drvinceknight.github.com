@@ -8,7 +8,7 @@ comments      : false
 
 ### Requirements:
 
-Sufficient copies of the [http://drvinceknight.github.io/GeometryProbabilityandIntegration/grid.pdf](grid.pdf) file and ten sided dice (depending on numbers students can be paired up).
+Sufficient copies of the [grid.pdf](http://drvinceknight.github.io/GeometryProbabilityandIntegration/grid.pdf) file and ten sided dice (depending on numbers students can be paired up).
 
 
 ### Instructions
