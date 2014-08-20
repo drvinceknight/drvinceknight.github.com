@@ -1,8 +1,7 @@
 ---
-layout        : post
-name          : Leanne Smith
+layout        : page
 categories    : outreach
-title : Modelling emergency medical vehicle services
+title : Geometry, Probability and pi
 keywords      : outreach, pi, geometry
 comments      : false
 ---
