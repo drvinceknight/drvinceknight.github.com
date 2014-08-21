@@ -3,17 +3,35 @@ layout: default
 title: Other
 ---
 
-<h1><a href='/other/UsefulLinks'>Useful Links</a></h1>
-<br>
+<div class="home">
+    <h1><a href='/other/UsefulLinks'>Useful Links</a></h1>
 
-<h1><a href='/other/MediaAppearances'>Media Appearances</a></h1>
+    <h1><a href='/other/MediaAppearances'>Media Appearances</a></h1>
 
-<p>
-<ul>
-{% for appearance in site.categories.media limit:5 %}
-  <li>
-  {{appearance.date | date: "%Y-%m-%d"}}: <a href="{{appearance.url }}"> {{ appearance.title }} </a>
-  </li>
-{% endfor %}
-</ul>
-</p>
+    <p>
+    Here are my latest appearances:
+    </p>
+    <p>
+    <ul>
+    {% for appearance in site.categories.media limit:5 %}
+      <li>
+      {{appearance.date | date: "%Y-%m-%d"}}: <a href="{{appearance.url }}"> {{ appearance.title }} </a>
+      </li>
+    {% endfor %}
+    </ul>
+    </p>
+
+    <h1>Gambit, Sage and Game Theory</h1>
+    <p>I am involved in the integration of <a href='http://sagemath.org/'>Sage</a> and <a href='http://gambit.sourceforge.net/'>Gambit</a>:</p>
+    <p>
+        <ul>
+            <li>Gambit sage-integration branch: <a href='https://github.com/tturocy/gambit/tree/sage_integration'>here</a></li>
+            <li>Sage game theory github development repository: <a href='https://github.com/tturocy/gambit/tree/sage_integratio://github.com/theref/sage-game-theory'>here</a></li>
+        </ul>
+    </p>
+
+    <h1>Jog2Nog</h1>
+    <p><a href='http://jog2nog.blogspot.co.uk/'>Here is the story of how my wife and I got engaged.</a></p>
+
+    <p><a href='https://plus.google.com/s/jog2nog'>Here</a> are the G+ posts we wrote as we were going.</p>
+</div>
