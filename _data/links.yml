@@ -26,6 +26,74 @@
   url         : https://www.gnu.org/philosophy/no-word-attachments.html
   description : "Unless it's for editing I really don't like it when Word documents are sent via email... This is a good piece by Stallman explaining why it's a bad idea."
 
-- title       : Health Systems
+- title       : health systems
   url         : http://www.palgrave-journals.com/hs/index.html
   description : I sit on the editorial board of this journal.
+
+- title       : Inkscape
+  url         : http://www.inkscape.org/en/
+  description : A great open source vector drawing package
+
+- title       : Jog2Nog
+  url         : http://jog2nog.blogspot.co.uk/
+  description : "How Zoë and I got engaged: best adventure ever."
+
+- title       : Jonathan Gillard
+  url         : http://www.jonathangillard.co.uk/
+  description : "A colleague's personal webpage."
+
+- title       : Julie Vile
+  url         : http://www.julievile.co.uk/
+  description : "A colleague's personal webpage."
+
+- title       : LANCS Initiative
+  url         : http://www.lancs-initiative.ac.uk/
+  description : A huge grant that funded my postdoc and lectureship. A collaboration between Lancasts, Nottingham, Cardiff and Southampton.
+
+- title       : Math Ed Matters
+  url         : http://maamathedmatters.blogspot.co.uk/
+  description : A blog about math ed run by Dana Ernst and Angie Hodge.
+
+- title       : Math Ed workshop
+  url         : http://mathsevents.cf.ac.uk/mathedworkshop/index.html
+  description : Mathematics education workshop in Cardiff organised by Paul Harper, Rob Wilson and myself.
+
+- title       : MathEd.net Wiki
+  url         : http://mathed.net/wiki/Main_Page
+  description : A wiki about Math Education that Raymond Johnson started.
+
+- title       : Michael Trick’s Operations Research Blog
+  url         : http://mat.gsia.cmu.edu/blog/
+  description : Nice blog by Michael Trick about Operational Research.
+
+- title       : OR in Schools
+  url         : http://learnaboutor.co.uk/
+  description : The OR in Schools (ORiS) website aiming. ORiS is an OR society initiative aiming to encourage Operational Research in schools.
+
+- title       : Paul Harper
+  url         : http://www.profpaulharper.com/
+  description : "A colleague's personal webpage"
+
+- title       : "Pivaders: Space invaders in 300 lines of Python code"
+  url         : https://github.com/russb78/pivaders
+  description : "Very cool repository: play space invaders in under 3 minutes (uses pygame)."
+
+- title       : Practical Vision Science
+  url         : http://tomwallis.info/
+  description : Nice blog with posts about open science.
+
+- title       : Punk Rock Operations Research
+  url         : http://punkrockor.wordpress.com/
+  description : Blog by Laura Mclay about Operational Research.
+
+- title       : Python Books
+  url         : http://pythonbooks.revolunet.com/
+  description : A website with free python books, the html file is on github and can be forked here.
+
+- title       : Sage
+  url         : http://sagemath.org/
+  description : Open source mathematics package (alternative to Mathematica, Maple...)
+
+- title       : WriteLaTeX
+  url         : https://www.writelatex.com/
+  description : A great cloud based LaTeX editor.
