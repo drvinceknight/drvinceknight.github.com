@@ -1,0 +1,16 @@
+---
+layout: default
+title: Media Appearances
+---
+
+<h1>Media Appearances</h1>
+
+<p>
+<ul>
+{% for appearance in site.categories.media limit:5 %}
+  <li>
+  {{appearance.date | date: "%Y-%m-%d"}}: <a href="{{appearance.url }}"> {{ appearance.title }} </a>
+  </li>
+{% endfor %}
+</ul>
+</p>

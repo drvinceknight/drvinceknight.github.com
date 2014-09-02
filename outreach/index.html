@@ -4,10 +4,13 @@ title: Outreach
 ---
 
 <div class="home">
+
+    <p>Here are some of the outreach activities I run:</p>
+
     <p>
         <ul>
-            {% for activity in activities %}
-                <li><a href='./{{activity.slug}}'>{{activity.title}}</a>: {{activity.description}}</li>
+            {% for activity in site.categories.outreach %}
+                <li><a href=' {{activity.url}} '>{{activity.title}}</a></li>
             {% endfor %}
         </ul>
     </p>
