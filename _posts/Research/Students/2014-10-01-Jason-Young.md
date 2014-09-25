@@ -6,7 +6,7 @@ project_title : Stochastic planning of patients
 keywords      : Markov Decision Processes, Queueing Theory.
 type          : PhD
 start_date    : 2014-10-01
-comments   : true
+comments      : true
 ---
 
 Jason will be designing a system to classify patients and plan for their length of stay.
