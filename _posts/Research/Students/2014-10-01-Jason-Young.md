@@ -1,9 +1,9 @@
 ---
 layout        : post
 name          : Jason Young
-categories    : [research, students, present]
+categories    : [research, students, current]
 project_title : Stochastic planning of patients
-keywords      : Markov Decision Processes, Queueing Theory.
+keywords      : Markov Decision Processes, Queueing Theory, Machine Learning
 type          : PhD
 start_date    : 2014-10-01
 comments      : true
