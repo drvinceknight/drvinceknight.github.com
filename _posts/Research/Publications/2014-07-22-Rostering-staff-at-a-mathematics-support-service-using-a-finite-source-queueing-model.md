@@ -6,7 +6,7 @@ date       : 2014-07-22
 journal    : IMA J Management Math
 authors    : Jonathan Gillard, Vincent Knight, Julie Vile, Robert Wilson
 keywords   : Queueing Theory, Rostering, Optimisation, Mathematics Support
-pub_url: http://www.sciencedirect.com/science/article/pii/S0377221713003019
+pub_url    : http://imaman.oxfordjournals.org/content/early/2014/09/04/imaman.dpu017.abstract
 comments   : true
 ---
 
