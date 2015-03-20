@@ -1,0 +1,11 @@
+- name        : Axelrod
+  url         : http://axelrod.readthedocs.org/
+  description : "A Python library/github project that replicates Axelrod's tournament."
+
+- name        : Game Theory in Sage
+  url         : https://github.com/theref/sage-game-theory
+  description : "A bunch of code to continue the integration of Game Theoretic capabilities in to Sage."
+
+- name        : Virtual Microscope
+  url         : https://github.com/evildmp/VirtualMicroscope
+  description : "A web application to display and annotate scanned slides."
