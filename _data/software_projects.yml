@@ -9,3 +9,7 @@
 - name        : Virtual Microscope
   url         : https://github.com/evildmp/VirtualMicroscope
   description : "A web application to display and annotate scanned slides."
+
+- name        : ghtalks
+  url         : http://ghtalks.readthedocs.org/
+  description : "Organise and share your talks with gh-pages"
