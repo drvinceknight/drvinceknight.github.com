@@ -13,3 +13,7 @@
 - name        : ghtalks
   url         : http://ghtalks.readthedocs.org/
   description : "Organise and share your talks with gh-pages"
+
+- name        : sklDj
+  url         : https://github.com/drvinceknight/sklDj
+  description : "A Django web app interface to machine learning algorithms"
