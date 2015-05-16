@@ -26,9 +26,9 @@
 - title   : OR2 - Game Theory
   url     : http://drvinceknight.github.io/Year_3_game_theory_course/
   level   : BSc. Year 3
-  current : true
+  current : false
 
 - title   : Advanced Statistical Packages
   url     : http://drvinceknight.github.io/SAS-R/
   level   : MSc.
-  current : true
+  current : false
