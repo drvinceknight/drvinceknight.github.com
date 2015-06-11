@@ -5,7 +5,7 @@ categories    : [students, current, sage]
 project_title : Extending Game Theory in Sage
 keywords      : sagemath
 type          : Google Summer of Code
-start_date    : 2014-05-025
+start_date    : 2015-05-25
 comments      : true
 ---
 

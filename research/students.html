@@ -5,7 +5,7 @@ title: Research Students
 
 
 <h1>Current students</h1>
-<ol reversed>
+<ol>
 {% for student in site.categories.current %}
 <li><a href='{{student.url}}'>{{student.name}}</a> ({{student.type}}): {{student.project_title}} (Start: {{student.start_date}})</li>
 {% endfor %}
