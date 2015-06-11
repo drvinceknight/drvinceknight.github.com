@@ -9,7 +9,7 @@ start_date    : 2015-06-15
 comments      : false
 ---
 
-James built some of the original Game Theoretic capability in to [Sage](http://sagemath.org/) during the Summer of 2014.
+[James](https://plus.google.com/+JamesCampbell95/) built some of the original Game Theoretic capability in to [Sage](http://sagemath.org/) during the Summer of 2014.
 He will continue to work on Sage starting by implementing a test for degeneracy
 of games.
 
