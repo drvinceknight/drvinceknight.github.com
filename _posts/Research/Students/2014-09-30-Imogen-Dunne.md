@@ -1,12 +1,12 @@
 ---
 layout        : post
 name          : Imogen Dunne
-categories    : [research, students, current]
+categories    : [research, students, past]
 project_title : Understanding student learning in a large scale flipped classroom
 keywords      : Mathed, pedagogy, Flipped classroom
 type          : BSc.
 start_date    : 2014-09-30
-finish_date   : 2015-07-01
+finish_date   : 2015-06-08
 comments      : true
 ---
 
