@@ -17,3 +17,7 @@
 - name        : sklDj
   url         : https://github.com/drvinceknight/sklDj
   description : "A Django web app interface to machine learning algorithms"
+
+- name        : DjangoCon Europe 2015
+  url         : http://2015.djangocon.eu/
+  description : "I am on the organising committee for this year's DjangoCon Europe"
