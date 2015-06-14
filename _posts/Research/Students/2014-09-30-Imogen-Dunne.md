@@ -16,4 +16,4 @@ Imogen carried out a variety of statistical analysis of performance and
 questionnaires which lead to some very interesting results.
 We are currently working on a manuscript based on this but you can read a copy
 of her project
-[here]({{site.baseurl}}/assets/StudentProjects/ImogenDunneProject.pdf).
+[here](/{{site.baseurl}}/assets/StudentProjects/ImogenDunneProject.pdf).
