@@ -6,7 +6,7 @@ project_title : Building Game Theoretical Software in a Research Environment
 keywords      : Game Theory, Sage, Sagemath, Python
 type          : Summer
 start_date    : 2015-06-15
-comments      : false
+comments      : true
 ---
 
 [James](https://plus.google.com/+JamesCampbell95/) built some of the original Game Theoretic capability in to [Sage](http://sagemath.org/) during the Summer of 2014.
