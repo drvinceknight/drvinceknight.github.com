@@ -4,7 +4,7 @@ name          : Ffinian Sullivan
 categories    : [research, students, current]
 project_title : Understanding mixed behaviour in queue balking threshold policies
 keywords      : Game Theory, Sage, Sagemath, Python
-type          : Summer
+type          : Nuffield Research Placement
 start_date    : 2015-07-20
 comments      : true
 ---
