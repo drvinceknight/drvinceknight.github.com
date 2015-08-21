@@ -1,11 +1,12 @@
 ---
 layout        : post
 name          : Tobenna Peter Igwe
-categories    : [students, current, sage]
+categories    : [students, past, sage]
 project_title : Extending Game Theory in Sage
 keywords      : sagemath
 type          : Google Summer of Code
 start_date    : 2015-05-25
+finish_date   : 2015-08-21
 comments      : true
 ---
 

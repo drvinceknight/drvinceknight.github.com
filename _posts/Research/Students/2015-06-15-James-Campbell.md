@@ -1,11 +1,12 @@
 ---
 layout        : post
 name          : James Campbell
-categories    : [research, students, current]
+categories    : [research, students, past]
 project_title : Building Game Theoretical Software in a Research Environment
 keywords      : Game Theory, Sage, Sagemath, Python
 type          : Summer
 start_date    : 2015-06-15
+finish_date   : 2015-08-21
 comments      : true
 ---
 
