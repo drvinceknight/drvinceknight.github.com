@@ -1,7 +1,7 @@
 ---
 layout     : post
 title      : "BBC Radio Wales: Game Theory and Nash Equilibrium"
-date       : 2016-06-16
+date       : 2015-06-16
 categories : media
 comments   : false
 ---
