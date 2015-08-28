@@ -17,10 +17,10 @@ game. The findings of this and subsequent tournaments have been used
 to understand how certain types of behaviour (in particularly
 cooperative behaviour) can emerge in a variety of environments.
 
-This project will concentrate on the basics of this tournament and in
-particular on a paper from 2012 that showed a particular type of
-strategy could do well. From a theoretical point of view a good grasp
-of basic probability and linear algebra is required.
+This project will concentrate on the basics of this tournament and in particular
+on a [paper from 2012](http://www.pnas.org/content/109/26/10409.full) that
+showed a particular type of strategy could do well. From a theoretical point of
+view a good grasp of basic probability and linear algebra is required.
 
 The project will involve the use of an open [source library written in
 Python](http://axelrod-python.github.io/) and if things go well will hopefully
