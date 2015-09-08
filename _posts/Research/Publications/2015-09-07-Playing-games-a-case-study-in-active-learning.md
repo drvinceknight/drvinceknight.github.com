@@ -1,7 +1,7 @@
 ---
 layout     : publication
 categories : publications
-title      : "Playing games: a case study in active learning"
+title      : "Playing games: a case study in active learning applied to Game Theory"
 date       : 2015-09-07
 journal    : Connections
 authors    : Vincent Knight
