@@ -1,6 +1,6 @@
 ---
 layout        : post
-name          : Luen English
+name          : Sam Luen English
 categories    : [research, students, current]
 project_title : TBD
 keywords      : Healthcare
