@@ -2,8 +2,8 @@
 layout     : publication
 categories : publications
 title      : "Containment of socially optimal policies in multiple-facility Markovian queueing systems"
-date       : 2015-11-26
-journal    : Connections
+date       : 2015-11-25
+journal    : Journal of the Operational Research Society
 authors    : Rob Shone, Vincent Knight, Paul Harper, Janet Williams and John Minty
 keywords   : dynamic, equilibrium strategies, markov decision processes, optimal strategies, queues with balking
 pub_url    : "http://www.palgrave-journals.com/doifinder/10.1057/jors.2015.98"
