@@ -11,7 +11,7 @@
 - title   : OR Methods
   url     : http://drvinceknight.github.io/OR_Methods/
   level   : MSc.
-  current : true
+  current : false
 
 - title   : Introduction to Object Oriented Programming
   url     : http://drvinceknight.github.io/Introduction_to_OOP/
@@ -26,7 +26,7 @@
 - title   : OR2 - Game Theory
   url     : http://drvinceknight.github.io/Year_3_game_theory_course/
   level   : BSc. Year 3
-  current : false
+  current : true
 
 - title   : Advanced Statistical Packages
   url     : http://drvinceknight.github.io/SAS-R/
