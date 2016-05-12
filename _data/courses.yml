@@ -1,7 +1,7 @@
 - title   : Computing for Mathematics
   url     : http://drvinceknight.github.io/Computing_for_mathematics/
   level   : BSc. Year 1
-  current : true
+  current : false
 
 - title   : MSc. Week 0
   url     : http://drvinceknight.github.io/MSc_week_0/
@@ -16,7 +16,7 @@
 - title   : Introduction to Object Oriented Programming
   url     : http://drvinceknight.github.io/Introduction_to_OOP/
   level   : MSc.
-  current : true
+  current : false
 
 - title   : Introduction to LaTeX
   url     : http://drvinceknight.github.io/Introduction_to_LaTeX/
@@ -26,7 +26,7 @@
 - title   : OR2 - Game Theory
   url     : http://drvinceknight.github.io/Year_3_game_theory_course/
   level   : BSc. Year 3
-  current : true
+  current : false
 
 - title   : Advanced Statistical Packages
   url     : http://drvinceknight.github.io/SAS-R/
