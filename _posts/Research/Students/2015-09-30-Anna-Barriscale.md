@@ -6,6 +6,7 @@ project_title : Memory one strategies in the iterated prisoner's dilemma
 keywords      : Game Theory, Axelrod, Python
 type          : BSc.
 start_date    : 2015-09-30
+finish_date   : 2016-05-21
 comments      : true
 ---
 
