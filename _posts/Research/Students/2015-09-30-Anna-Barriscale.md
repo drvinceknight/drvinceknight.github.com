@@ -1,7 +1,7 @@
 ---
 layout        : post
 name          : Anna Barriscale
-categories    : [research, students, current]
+categories    : [research, students]
 project_title : Memory one strategies in the iterated prisoner's dilemma
 keywords      : Game Theory, Axelrod, Python
 type          : BSc.
