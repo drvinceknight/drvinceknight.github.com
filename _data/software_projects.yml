@@ -30,3 +30,6 @@
   url         : "http://na.pycon.org/"
   description : "I help run the Pycon Namibia conference"
 
+- name        : Ciw
+  url         : "https://github.com/CiwPython/"
+  description : "A Python library for simulation queueing networks"
