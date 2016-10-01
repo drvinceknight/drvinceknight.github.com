@@ -44,6 +44,10 @@ with open("../_data/software_projects.yml", "r") as f:
 with open("../_data/software_communities.yml", "r") as f:
     software_communities = yaml.load(f)
 
+# Read roles
+with open("../_data/roles.yml", "r") as f:
+    roles = yaml.load(f)
+
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
@@ -60,6 +64,7 @@ pdf = build_pdf(tpl.render(appointments=appointments,
                            outreach_activities=outreach_activities,
                            software_projects=software_projects,
                            software_communities=software_communities,
+                           roles=roles,
                           ),
                 texinputs=[current_dir, ''])
 pdf.save_to("vince-knight.pdf")

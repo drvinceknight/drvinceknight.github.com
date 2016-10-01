@@ -19,6 +19,16 @@
 
 \begin{resume}
 
+\vspace{1cm} % Gap between title and text
+
+\begin{itemize}
+%- for role in roles
+
+    \item {\sl \VAR{role.title}}
+
+%- endfor
+\end{itemize}
+
 \section{\centerline{APPOINTMENTS}}
 
 \vspace{8pt}
