@@ -4,19 +4,27 @@ title: Publication List
 ---
 <div class="home">
 
-    <p>Here is my full list of publications (click on the link for more information). My <a href='http://scholar.google.co.uk/citations?user=xC1CYgMAAAAJ&hl=en'> Google Scholar page</a> might at times be more up to date.</p>
+    <h2>Publication list</h2>
 
     <p>
     <ol reversed>
-    {% for paper in site.categories.publications %}
+    {% for publication in site.data.publications %}
       <li>
-      {{paper.date |  date: "%b %-d %Y" }}:
-      <a href="{{paper.url}}">
-            {{ paper.title }}
-        </a>
-        in <a href="{{ paper.pub_url }}">{{ paper.journal }}</a>.
+      {{ publication.date }}: <b>{{ publication.title }}</b>
+        {% for author in publication.authors %}
+            {{author}},
+        {% endfor %}
+        {% if publication.url %}
+            in <a href="{{ publication.url }}">{{ publication.pub_details }}</a>.
+        {% else %}
+            in {{ publication.pub_details }}.
+        {% endif %}
       </li>
     {% endfor %}
     </ol>
     </p>
+
+    My <a href='http://scholar.google.co.uk/citations?user=xC1CYgMAAAAJ&hl=en'>
+        Google Scholar page</a> might at times be more up to date.</p>
+
 </div>
