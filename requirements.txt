@@ -1,0 +1,2 @@
+pyyaml=3.12
+latex>=0.6.2.dev1

@@ -1,0 +1,16 @@
+%- extends "base.latex"
+
+%- block body
+
+\begin{center}
+    \Huge Positions
+\end{center}
+
+%- for position in positions|sort(attribute='start_date', reverse=True)
+\VAR{position.title}  \hfill \VAR{position.start_date} - \VAR{position.end_date}\\
+\VAR{position.location}
+
+
+%- endfor
+
+%- endblock
