@@ -1,0 +1,14 @@
+---
+layout : default
+title  : Roles
+---
+
+<div class="home">
+    <h1>Roles</h1>
+
+        <ul>
+            {% for role in site.data.roles %}
+            <li>{{ role.title }}</li>
+            {% endfor %}
+        </ul>
+</div>
