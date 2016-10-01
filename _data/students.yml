@@ -3,6 +3,7 @@
   start_date : 2016
   end_date : present
   subject : "Machine learning and the Prisoner's Dilemma"
+  url : "https://twitter.com/nikoletaglyn"
 
 - name : James Campbell
   type : BSc
@@ -15,6 +16,7 @@
   subject : "Jackson networks and healthcare"
   start_date : 2014
   end_date : present
+  url : "http://www.geraintianpalmer.org.uk/"
 
 - name : Rhys Ward
   type : Summer

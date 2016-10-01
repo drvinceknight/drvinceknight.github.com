@@ -4,18 +4,19 @@ title: Research Students
 ---
 
 
-<h1>Current students</h1>
-<ol reversed>
-{% assign sorted_pages = (site.categories.current | sort: 'start_date') %}
-{% for student in sorted_pages reversed %}
-<li><a href='{{student.url}}'>{{student.name}}</a> ({{student.type}}): {{student.project_title}} (Start: {{student.start_date}})</li>
-{% endfor %}
-</ol>
+<h2>Research students</h2>
 
-<h1>Past students</h1>
 <ol reversed>
-{% assign sorted_pages = (site.categories.past | sort: 'finish_date') %}
-{% for student in sorted_pages reversed %}
-<li><a href='{{student.url}}'>{{student.name}}</a> ({{student.type}}): {{student.project_title}} (Finish: {{student.finish_date}})</li>
+{% for student in site.data.students %}
+<li>
+
+{% if student.url %}
+<a href='{{student.url}}'>{{student.name}}</a>
+{% else %}
+{{student.name}}
+{% endif %}
+
+({{student.type}}): {{student.subject}} ({{student.start_date}} -
+{{student.end_date}})</li>
 {% endfor %}
 </ol>
