@@ -92,7 +92,6 @@
 
 %- endfor
 
-
 \section{\centerline{TEACHING}}
 
 \vspace{12pt} % Gap between title and text
@@ -116,6 +115,23 @@ Courses I have taught in the past:
 
     %- if not course.current
 \item \VAR{course.title}: \VAR{course.short_description}
+    %- endif
+
+%- endfor
+\end{etaremune}
+
+\section{\centerline{MEDIA}}
+
+\vspace{12pt} % Gap between title and text
+
+
+\begin{etaremune}
+%- for appearance in media
+
+\item \VAR{appearance.date}: \VAR{appearance.outlet}
+    %- if appearance.subject
+       -
+       \VAR{appearance.subject}
     %- endif
 
 %- endfor
