@@ -36,6 +36,14 @@ with open("../_data/media.yml", "r") as f:
 with open("../_data/outreach_activities.yml", "r") as f:
     outreach_activities = yaml.load(f)
 
+# Read software projects
+with open("../_data/software_projects.yml", "r") as f:
+    software_projects = yaml.load(f)
+
+# Read software communities
+with open("../_data/software_communities.yml", "r") as f:
+    software_communities = yaml.load(f)
+
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
@@ -50,6 +58,8 @@ pdf = build_pdf(tpl.render(appointments=appointments,
                            grants=grants,
                            media=media,
                            outreach_activities=outreach_activities,
+                           software_projects=software_projects,
+                           software_communities=software_communities,
                           ),
                 texinputs=[current_dir, ''])
 pdf.save_to("cv.pdf")

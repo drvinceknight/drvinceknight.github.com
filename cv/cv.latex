@@ -146,6 +146,29 @@ Courses I have taught in the past:
 %- endfor
 \end{itemize}
 
+\section{\centerline{SOFTWARE PROJECTS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{itemize}
+%- for project in software_projects
+
+    \item \VAR{project.name}: \VAR{project.description}
+
+%- endfor
+\end{itemize}
+
+\section{\centerline{SOFTWARE COMMUNITY}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{itemize}
+%- for community in software_communities
+
+    \item \VAR{community.name}: \VAR{community.description}
+
+%- endfor
+\end{itemize}
 
 \end{resume}
 \end{document}

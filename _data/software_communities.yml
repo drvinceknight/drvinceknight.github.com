@@ -1,0 +1,15 @@
+- name        : PyDiff
+  url         : "http://2015.djangocon.eu/"
+  description : "I help organise the Cardiff Pyton user group meetup."
+
+- name        : DjangoCon Europe 2015
+  url         : http://2015.djangocon.eu/
+  description : "I was on the organising committee for this year's DjangoCon Europe."
+
+- name        : Python Namibia
+  url         : "http://na.pycon.org/"
+  description : "I help run the Pycon Namibia conference."
+
+- name        : PyCon UK
+  url         : "http://pyconuk.org/"
+  description : "I am on the orgnising committee for PyCon UK."
