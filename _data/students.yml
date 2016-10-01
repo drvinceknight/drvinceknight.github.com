@@ -1,0 +1,155 @@
+- name : Nikoleta Glynatsi
+  type : PhD
+  start_date : 2016
+  end_date : present
+  subject : "Machine learning and the Prisoner's Dilemma"
+
+- name : James Campbell
+  type : BSc
+  subject : "Fingerprinter prisoner's Dilemma strategies"
+  start_date : 2016
+  end_date : present
+
+- name : Geraint Palmer
+  type : PhD
+  subject : "Jackson networks and healthcare"
+  start_date : 2014
+  end_date : present
+
+- name : Rhys Ward
+  type : Summer
+  subject : "Building Game Theoretical Software in a Research Environment"
+  start_date: 2015
+  end_date: 2015
+
+- name : James Campbell
+  type : Summer
+  subject : "Building Game Theoretical Software in a Research Environment"
+  end_date: 2015
+  start_date: 2015
+
+- name : Tobenna Peter Igwe
+  type : Google Summer of Code
+  subject : "Extending Game Theory in Sage"
+  end_date: 2015
+  start_date: 2015
+
+- name : Ffinian Sullivan
+  type : Nuffield Research Placement
+  subject : "Understanding mixed behaviour in queue balking threshold policies"
+  end_date: 2015
+  start_date: 2015
+
+- name : Hannah Lorrimore
+  type : Summer
+  subject : "Building Game Theoretical Software in a Research Environment"
+  end_date: 2015
+  start_date: 2015
+
+- name : Imogen Dunne
+  type : BSc.
+  subject : "The Effect of Personality Traits on Academic Achievement in Flipped versus Traditional Learning Environments"
+  end_date: 2015
+  start_date: 2014
+
+- name : Rob Shone
+  type : PhD
+  subject : "Individually and Socially Optimal Policies in Queueing Systems with Multiple Heterogeneous Facilities"
+  end_date: 2014
+  start_date: 2011
+
+- name : James Campbell
+  type : Summer
+  subject : "Building Game Theoretical Software in a Research Environment"
+  end_date: 2014
+  start_date: 2014
+
+- name : Rhys Jones
+  type : BSc.
+  subject : "Modelling Rugby Lineout Strategies Using Game Theory"
+  end_date: 2014
+  start_date: 2013
+
+- name : Jason Young
+  type : MMath
+  subject : "Markov Decision Processes for the study a system of two queues in series."
+  end_date: 2014
+  start_date: 2013
+
+- name : Angelico Fetta
+  type : PhD
+  subject : "Agent Based Simulation for Complex Health Systems Interventions"
+  end_date: 2014
+  start_date: 2011
+
+- name : Izabela Komenda
+  type : PhD
+  subject : "Bed management in a critical care unit"
+  end_date: 2013
+  start_date: 2010
+
+- name : Ceri Morse
+  type : BSc.
+  subject : "Modelling Lineout Strategies using Game Theory"
+  end_date: 2013
+  start_date: 2012
+
+- name : Leanne Smith
+  type : PhD
+  subject : "Modelling emergency medical vehicle services"
+  end_date: 2013
+  start_date: 2008
+
+- name : Jason Young
+  type : Summer
+  subject : "Understanding the effect of selfish behaviour in a series of 2 queues"
+  end_date: 2012
+  start_date: 2012
+
+- name : Julie Vile
+  type : PhD
+  subject : "Time-dependent stochastic modelling for predicting demand and scheduling of emergency medical services"
+  end_date: 2012
+  start_date: 2009
+
+- name : Chappman Sin
+  type : BSc.
+  subject : "Mathematical modelling of Risk (the board game)"
+  end_date: 2012
+  start_date: 2011
+
+- name : Iain Reynolds
+  type : Summer
+  subject : "Modelling patient choice in healthcare systems development and application of a discrete event simulation with agent-based functionality"
+  end_date: 2011
+  start_date: 2011
+
+- name : Tatjana Timofejeva
+  type : BSc.
+  subject : "Impact of unscheduled care Modelling time varying activities at a Hospital"
+  end_date: 2011
+  start_date: 2010
+
+- name : Stuart MacGregor
+  type : BSc.
+  subject : "A study into two player hide and seek games verifying results from game theory using monte carlo simulation, with a particular application to anti-submarine warfare"
+  end_date: 2011
+  start_date: 2010
+
+- name : Catherine Fortune
+  type : BSc.
+  subject : "Game Theory and the Lemke-Howson algorithm"
+  end_date: 2011
+  start_date: 2010
+
+- name : Fern Gould
+  type : BSc.
+  subject : "Game Theory and the Iterated Prisoner's Dilemma"
+  end_date: 2010
+  start_date: 2009
+
+- name : Tamsin Griffiths
+  type : BSc.
+  subject : "Troops to Task Tool and Refugee Estimation"
+  end_date: 2010
+  start_date: 2009

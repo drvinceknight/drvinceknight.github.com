@@ -64,6 +64,21 @@
 %- endfor
 \end{etaremune}
 
+\section{\centerline{RESEARCH STUDENTS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{etaremune}
+%- for student in students|sort(attribute='start_date', reverse=True)
+
+
+\item
+    \VAR{student.name} (\VAR{student.type}) \hfill \VAR{student.start_date} -
+    \VAR{student.end_date}\\
+\textbf{\VAR{student.subject}}\\
+
+%- endfor
+\end{etaremune}
 
 \end{resume}
 \end{document}
