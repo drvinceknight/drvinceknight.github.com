@@ -3,7 +3,7 @@ from latex.jinja2 import make_env
 from latex import build_pdf
 import yaml
 
-with open("positions.yml", "r") as f:
+with open("../_data/positions.yml", "r") as f:
     positions = yaml.load(f)
 
 env = make_env(loader=FileSystemLoader('.'))
