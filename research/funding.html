@@ -1,0 +1,20 @@
+---
+layout: default
+title: Publication List
+---
+<div class="home">
+
+    <h2>Grant funding</h2>
+
+    <p>
+    <ol reversed>
+    {% for grant in site.data.grants %}
+      <li>
+      {{ grant.source }}: <b>{{ grant.title }}</b>, £{{ grant.amount }},
+      ({{ grant.start_date }} - {{ grant.end_date }})
+      </li>
+    {% endfor %}
+    </ol>
+    </p>
+
+</div>
