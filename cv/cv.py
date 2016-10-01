@@ -62,4 +62,4 @@ pdf = build_pdf(tpl.render(appointments=appointments,
                            software_communities=software_communities,
                           ),
                 texinputs=[current_dir, ''])
-pdf.save_to("cv.pdf")
+pdf.save_to("vince-knight.pdf")
