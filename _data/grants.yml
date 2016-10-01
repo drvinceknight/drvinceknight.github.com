@@ -1,0 +1,58 @@
+- source : "Cardiff and Vale University Health Board"
+  title : Operational Research Modelling to Support Cardiff and Vale UHB
+  amount : 371427
+  start_date : 2013
+  end_date : 2018
+
+- source : EPSRC
+  title : "Identifying and modelling victim, business regulatory and malware behaviours in a changing cyberthreat landscape"
+  amount : 101659
+  start_date : 2013
+  end_date : 2016
+
+
+- source : Aneurin Bevan Health Board
+  title : "Creation of a Mathematical/OR Modelling Unit to Support the Aneurin Bevan Health Board"
+  amount : 319944
+  start_date : 2013
+  end_date : 2015
+
+
+- source : ESRC
+  title : "Hate speech? Understanding the modelling of social media identity formation and behaviour through the Cardiff Online Social Media Observatory (COSMOS)"
+  amount : 7015
+  start_date : 2013
+  end_date : 2016
+
+
+- source : "Health Foundation and Cardiff and Vale University Health Board"
+  title : "Estimating quality improvement and cost reduction for the patient and local health economy of transferring ENT/audiology services into a community setting"
+  amount : 61237
+  start_date : 2013
+  end_date : 2014
+
+
+- source : LANCS (EPSRC)
+  title : "Post-Doctoral Training Scheme Grant: Investigating the Effects of Individual Behaviour on Hierarchical queueing Systems"
+  amount : 5000
+  start_date : 2012
+  end_date : 2012
+
+
+- source : Cardiff University CUROP Award
+  title : "Developing and Evaluating Mathematical Teaching Resources through Open Source Software"
+  amount : 2200
+  start_date : 2012
+  end_date : 2012
+
+- source : LANCS (EPSRC)
+  title : "Post-Doctoral Training Scheme Grant: Choice and Healthcare Investigation Project"
+  amount : 2500
+  start_date : 2010
+  end_date : 2011
+
+- source : Cardiff University CUROP Award
+  title : "Patient Choice: A Discrete Event Simulation"
+  amount : 2500
+  start_date : 2010
+  end_date : 2012

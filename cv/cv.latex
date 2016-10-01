@@ -80,6 +80,19 @@
 %- endfor
 \end{etaremune}
 
+\section{\centerline{GRANT FUNDING}}
+
+\vspace{12pt} % Gap between title and text
+
+%- for grant in grants
+
+\sl{\VAR{grant.source}}\\
+\VAR{grant.title}\\
+\pounds\VAR{"{:,}".format(grant.amount)}\hfill{\VAR{grant.start_date} - \VAR{grant.end_date}}
+
+%- endfor
+
+
 \section{\centerline{TEACHING}}
 
 \vspace{12pt} % Gap between title and text

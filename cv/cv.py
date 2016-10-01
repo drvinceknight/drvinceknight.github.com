@@ -24,6 +24,10 @@ with open("../_data/students.yml", "r") as f:
 with open("../_data/courses.yml", "r") as f:
     courses = yaml.load(f)
 
+# Read grants
+with open("../_data/grants.yml", "r") as f:
+    grants = yaml.load(f)
+
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
 env = make_env(loader=FileSystemLoader('.'))
@@ -34,6 +38,7 @@ pdf = build_pdf(tpl.render(appointments=appointments,
                            publications=publications,
                            students=students,
                            courses=courses,
+                           grants=grants,
                           ),
                 texinputs=[current_dir, ''])
 pdf.save_to("cv.pdf")
