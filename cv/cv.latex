@@ -43,6 +43,27 @@
 %- endfor
 
 
+\section{\centerline{PUBLICATIONS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{etaremune}
+%- for publication in publications|sort(attribute='date', reverse=True)
+
+
+\item
+\VAR{publication.date}: \textbf{\VAR{publication.title}}\\
+\VAR{publication.authors|join(', ')}\\
+\textbf{\VAR{publication.pub_details}}
+%- if publication.url
+\\
+\url{\VAR{publication.url}}
+%- endif
+\\
+
+%- endfor
+\end{etaremune}
+
 
 \end{resume}
 \end{document}

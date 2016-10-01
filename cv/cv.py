@@ -12,13 +12,18 @@ with open("../_data/appointments.yml", "r") as f:
 with open("../_data/qualifications.yml", "r") as f:
     qualifications = yaml.load(f)
 
+# Read publications
+with open("../_data/publications.yml", "r") as f:
+    publications = yaml.load(f)
+
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
 env = make_env(loader=FileSystemLoader('.'))
 tpl = env.get_template('cv.latex')
 
 pdf = build_pdf(tpl.render(appointments=appointments,
-                           qualifications=qualifications
+                           qualifications=qualifications,
+                           publications=publications
                           ),
                 texinputs=[current_dir, ''])
 pdf.save_to("cv.pdf")
