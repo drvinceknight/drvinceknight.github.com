@@ -8,50 +8,31 @@ title  : Vince Knight
 
     <h1><a href="{{ site.baseurl }}/teaching">Teaching</a></h1>
 
-        <p>Here are courses I am currently teaching:</p>
-        <p>
         <ul>
-        {% for course in site.data.courses %}
-         {% if course.current %}
-          <li>
-            <a href="{{course.url}}">
-              {{ course.title }}
-            </a>
-          </li>
-         {% endif %}
-        {% endfor %}
+            <li>Courses</li>
         </ul>
-        </p>
 
-        <h1><a href="{{ site.baseurl }}/research">Research</a></h1>
+    <h1><a href="{{ site.baseurl }}/research">Research</a></h1>
 
-        <p>Here is a list of my latest papers:</p>
-
-        <p>
         <ul>
-        {% for paper in site.categories.publications limit:5 %}
-          <li>
-            <a href="{{paper.url }}">
-                {{ paper.title }}
-            </a>
-            in <a href="{{ paper.pub_url }}">{{ paper.journal }}</a>.
-          </li>
-        {% endfor %}
+            <li><a href="{{ site.baseurl }}/research/publications">Publications</a></li>
+            <li>Research students</li>
+            <li>Research funding</li>
         </ul>
-        </p>
 
-        <p>Here is a list of current research students I am working with (<a
-            href='{{ site.baseurl }}/research/students/'>here
-            is a list of all past and present</a>):</p>
-        <p>
+    <h1><a href="{{ site.baseurl }}/software">Software</a></h1>
+
         <ul>
-        {% for student in site.categories.current %}
-          <li>
-            <a href="{{student.url }}">
-                {{ student.name }} ({{student.type}})
-            </a>
-          </li>
-        {% endfor %}
+            <li>Python libraries</li>
+            <li>Community</li>
         </ul>
-        <p>
+
+    <h1><a href="{{ site.baseurl }}/engagement">Engagement</a></h1>
+
+        <ul>
+            <li><a href="{{ site.baseurl }}/unpeudemath">My blog: un peu de
+                math</a></li>
+            <li>Outreach activities</li>
+            <li>Media</li>
+        </ul>
 </div>
