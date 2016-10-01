@@ -2,12 +2,23 @@ from jinja2.loaders import FileSystemLoader
 from latex.jinja2 import make_env
 from latex import build_pdf
 import yaml
+import os
 
-with open("../_data/positions.yml", "r") as f:
-    positions = yaml.load(f)
+# Read appointments
+with open("../_data/appointments.yml", "r") as f:
+    appointments = yaml.load(f)
+
+# Read qualifications
+with open("../_data/qualifications.yml", "r") as f:
+    qualifications = yaml.load(f)
+
+current_dir = os.path.abspath(os.path.dirname(__file__))
 
 env = make_env(loader=FileSystemLoader('.'))
-tpl = env.get_template('doc.latex')
+tpl = env.get_template('cv.latex')
 
-pdf = build_pdf(tpl.render(positions=positions))
-pdf.save_to("example.pdf")
+pdf = build_pdf(tpl.render(appointments=appointments,
+                           qualifications=qualifications
+                          ),
+                texinputs=[current_dir, ''])
+pdf.save_to("cv.pdf")
