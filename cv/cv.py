@@ -32,6 +32,10 @@ with open("../_data/grants.yml", "r") as f:
 with open("../_data/media.yml", "r") as f:
     media = yaml.load(f)
 
+# Read outreach
+with open("../_data/outreach_activities.yml", "r") as f:
+    outreach_activities = yaml.load(f)
+
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
@@ -45,6 +49,7 @@ pdf = build_pdf(tpl.render(appointments=appointments,
                            courses=courses,
                            grants=grants,
                            media=media,
+                           outreach_activities=outreach_activities,
                           ),
                 texinputs=[current_dir, ''])
 pdf.save_to("cv.pdf")

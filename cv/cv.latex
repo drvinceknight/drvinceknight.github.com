@@ -133,6 +133,19 @@ Courses I have taught in the past:
 %- endfor
 \end{etaremune}
 
+\section{\centerline{OUTREACH}}
+
+\vspace{12pt} % Gap between title and text
+
+
+\begin{itemize}
+%- for activity in outreach_activities
+
+\item \VAR{activity.title}
+
+%- endfor
+\end{itemize}
+
 
 \end{resume}
 \end{document}
