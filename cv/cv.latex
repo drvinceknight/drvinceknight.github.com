@@ -80,5 +80,34 @@
 %- endfor
 \end{etaremune}
 
+\section{\centerline{TEACHING}}
+
+\vspace{12pt} % Gap between title and text
+
+Courses I am currently teaching:
+
+\begin{etaremune}
+%- for course in courses
+
+    %- if course.current
+\item \VAR{course.title}: \VAR{course.short_description}
+    %- endif
+
+%- endfor
+\end{etaremune}
+
+Courses I have taught in the past:
+
+\begin{etaremune}
+%- for course in courses
+
+    %- if not course.current
+\item \VAR{course.title}: \VAR{course.short_description}
+    %- endif
+
+%- endfor
+\end{etaremune}
+
+
 \end{resume}
 \end{document}

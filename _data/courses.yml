@@ -2,33 +2,40 @@
   url     : http://drvinceknight.github.io/cfm/
   level   : BSc. Year 1
   current : true
+  short_description : "A course introducing programming to mathematics students."
 
 - title   : MSc. Week 0
   url     : http://drvinceknight.github.io/MSc_week_0/
   level   : MSc.
   current : false
+  short_description : "An overview of fundamental mathematics concepts for new MSc students."
 
 - title   : OR Methods
   url     : http://drvinceknight.github.io/OR_Methods/
   level   : MSc.
   current : false
+  short_description : "A course covering: queueing theory, game theory and Markov processes."
 
 - title   : Introduction to Object Oriented Programming
   url     : http://drvinceknight.github.io/Introduction_to_OOP/
   level   : MSc.
-  current : false
+  current : true
+  short_description : "A hackathon introduces students to fundemantal aspects of object oriented prgramming."
 
 - title   : Introduction to LaTeX
   url     : http://drvinceknight.github.io/Introduction_to_LaTeX/
   level   : BSc. Year 3
   current : false
+  short_description : "A brief introduction to LaTeX."
 
 - title   : OR2 - Game Theory
   url     : http://drvinceknight.github.io/Year_3_game_theory_course/
   level   : BSc. Year 3
-  current : false
+  current : true
+  short_description : "A final year mathematics course covering introductory game theory."
 
 - title   : Advanced Statistical Packages
   url     : http://drvinceknight.github.io/SAS-R/
   level   : MSc.
   current : false
+  short_description : "A course teaching the SAS and R software packages."
