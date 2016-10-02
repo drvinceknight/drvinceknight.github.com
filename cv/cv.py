@@ -54,17 +54,23 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 env = make_env(loader=FileSystemLoader('.'))
 tpl = env.get_template('cv.latex')
 
-pdf = build_pdf(tpl.render(appointments=appointments,
-                           qualifications=qualifications,
-                           publications=publications,
-                           students=students,
-                           courses=courses,
-                           grants=grants,
-                           media=media,
-                           outreach_activities=outreach_activities,
-                           software_projects=software_projects,
-                           software_communities=software_communities,
-                           roles=roles,
-                          ),
-                texinputs=[current_dir, ''])
+tex = tpl.render(appointments=appointments,
+                 qualifications=qualifications,
+                 publications=publications,
+                 students=students,
+                 courses=courses,
+                 grants=grants,
+                 media=media,
+                 outreach_activities=outreach_activities,
+                 software_projects=software_projects,
+                 software_communities=software_communities,
+                 roles=roles,
+                 )
+
+# Write tex
+with open("vince-knight.tex", 'w') as f:
+    f.write(tex)
+
+# Write pdf
+pdf = build_pdf(tex, texinputs=[current_dir, ''])
 pdf.save_to("vince-knight.pdf")
