@@ -3,6 +3,7 @@
 \usepackage{helvet} % Default font is the helvetica postscript font
 \usepackage{hyperref}
 \usepackage{etaremune}
+\usepackage{multicol}
 
 \newsectionwidth{0pt} % Stops section indenting
 
@@ -21,6 +22,7 @@
 
 \vspace{1cm} % Gap between title and text
 
+\begin{multicols}{2}
 \begin{itemize}
 %- for role in roles
 
@@ -28,6 +30,7 @@
 
 %- endfor
 \end{itemize}
+\end{multicols}
 
 \section{\centerline{APPOINTMENTS}}
 
