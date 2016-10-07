@@ -3,41 +3,181 @@ layout : default
 title  : Vince Knight
 ---
 
-        <div>
-        <h1><a href="{{ site.baseurl }}/teaching">Teaching</a></h1>
+<div>
+    <h1>Teaching</h1>
 
+    <div class="flex">
+        <div>
+            <h2>Courses I am currently teaching</h2>
+
+            <p>
             <ul>
-                <li><a href="{{ site.baseurl }}/teaching/courses">Courses</a></li>
+                {% for course in site.data.courses %}
+                {% if course.current %}
+                <li>
+                <a href="{{course.url}}">
+                    {{ course.title }}
+                </a>
+                </li>
+                {% endif %}
+                {% endfor %}
             </ul>
+            </p>
         </div>
 
         <div>
-        <h1><a href="{{ site.baseurl }}/research">Research</a></h1>
+            <h2>Courses I have taught in the past</h2>
+
+            <p>
             <ul>
-                <li><a href="{{ site.baseurl }}/research/publications">Publications</a></li>
-                <li><a href="{{ site.baseurl }}/research/students">Research students</a></li>
-                <li><a href="{{ site.baseurl }}/research/funding">Research
-                    funding</a></li>
+                {% for course in site.data.courses %}
+                {% if course.current != true %}
+                <li>
+                <a href="{{course.url}}">
+                    {{ course.title }}
+                </a>
+                </li>
+                {% endif %}
+                {% endfor %}
             </ul>
+            </p>
         </div>
-
-        <div>
-        <h1><a href="{{ site.baseurl }}/software">Software</a></h1>
-
-            <ul>
-                <li><a href="{{ site.baseurl }}/software/projects">Projects</a></li>
-                <li><a href="{{ site.baseurl }}/software/community">Community</a></li>
-            </ul>
-        </div>
-
-        <div>
-        <h1><a href="{{ site.baseurl }}/engagement">Engagement</a></h1>
-
-            <ul>
-                <li><a href="{{ site.baseurl }}/unpeudemath">My blog: un peu de
-                    math</a></li>
-                <li><a href="{{ site.baseurl }}/engagement/outreach">Outreach activities</li>
-                <li><a href="{{ site.baseurl }}/engagement/media">Media</a></li>
-            </ul>
-
+    </div>
 </div>
+
+<div>
+    <h1>Research</h1>
+    <h2>Publications</h2>
+
+    <p>
+    <ol reversed>
+        {% for publication in site.data.publications %}
+        <li>
+        {{ publication.date }}: <b>{{ publication.title }}</b>
+        {% for author in publication.authors %}
+        {{author}},
+        {% endfor %}
+        {% if publication.url %}
+        in <a href="{{ publication.url }}">{{ publication.pub_details }}</a>.
+        {% else %}
+        in {{ publication.pub_details }}.
+        {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+    </p>
+
+    <h2>Research students</h2>
+
+    <p>
+    <ol reversed>
+        {% for student in site.data.students %}
+        <li>
+
+        {% if student.url %}
+        <a href='{{student.url}}'>{{student.name}}</a>
+        {% else %}
+        {{student.name}}
+        {% endif %}
+
+        ({{student.type}}): {{student.subject}} ({{student.start_date}} -
+        {{student.end_date}})</li>
+        {% endfor %}
+    </ol>
+    </p>
+
+    <h2>Research funding</h2>
+
+    <p>
+    <ol reversed>
+        {% for grant in site.data.grants %}
+        <li>
+        {{ grant.source }}: <b>{{ grant.title }}</b>, £{{ grant.amount }},
+        ({{ grant.start_date }} - {{ grant.end_date }})
+        </li>
+        {% endfor %}
+    </ol>
+    </p>
+</div>
+
+<div>
+    <h1>Software</h1>
+
+    <div class="flex">
+        <div>
+            <h2>Projects</h2>
+
+            <p>
+            <ul>
+                {% for project in site.data.software_projects %}
+                <li>
+                <a href="{{project.url }}">
+                    {{ project.name }}: {{ project.description }}
+                </a>
+                </li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+
+        <div>
+            <h2>Community</h2>
+            <p>
+            <ul>
+                {% for community in site.data.software_communities %}
+                <li>
+                <a href="{{project.url }}">
+                    {{ community.name }}: {{ community.description }}
+                </a>
+                </li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+
+    </div>
+
+    <div>
+        <h1>Engagement</h1>
+
+        <div class="flex">
+
+            <h2>
+                Blog: <a href="{{ site.baseurl }}/unpeudemath">un peu de math</a>.
+            </h2>
+
+            <div>
+                <h2>Outreach activities</h2>
+
+                <p>
+                <ul>
+                    {% for activity in site.data.outreach_activities %}
+                    <li>
+                    {{ activity.title }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                </p>
+            </div>
+
+            <div>
+                <h2>Media</h2>
+
+                <p>
+                <ol reversed>
+                    {% for appearance in site.data.media %}
+                    <li>
+                    {{ appearance.date }}: <b>{{ appearance.outlet }}</b>
+                    {% if appearance.url %}
+                    - <a href="{{ appearance.url }}">{{ appearance.subject }}</a>.
+                    {% else %}
+                    - {{ appearance.subject }}.
+                    {% endif %}
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+            </p>
+
+
+        </div>
