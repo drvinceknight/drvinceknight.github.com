@@ -13,3 +13,7 @@
 - name        : PyCon UK
   url         : "http://pyconuk.org/"
   description : "I am on the orgnising committee for PyCon UK."
+
+- name        : School of mathematics code club
+  url         : "http://cardiffmathematicscodeclub.github.io/"
+  description : "I help run a code club open to mathematics students."
