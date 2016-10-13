@@ -11,6 +11,13 @@
   start_date : 2016
   end_date : present
 
+- name : Cindy Huang
+  type : Nuffield Research Placement
+  subject : "Investigating deadlock in queues with vacation and baulking"
+  end_date: 2016
+  start_date: 2016
+
+
 - name : Geraint Palmer
   type : PhD
   subject : "Jackson networks and healthcare"
