@@ -32,6 +32,18 @@
 \end{itemize}
 \end{multicols}
 
+\section{\centerline{RESEARCH INTERESTS}}
+
+\vspace{1cm} % Gap between title and text
+
+\begin{itemize}
+%- for interest in interests
+
+    \item {\sl \VAR{interest.title}: \VAR{interest.description}}
+
+%- endfor
+\end{itemize}
+
 \section{\centerline{APPOINTMENTS}}
 
 \vspace{8pt}
@@ -40,6 +52,7 @@
 \sl{\VAR{appointment.title}}  \hfill \VAR{appointment.start_date} -
 \VAR{appointment.end_date}\\
 \VAR{appointment.location}\\
+
 %- endfor
 
 
@@ -55,7 +68,6 @@
 
 %- endfor
 
-
 \section{\centerline{PUBLICATIONS}}
 
 \vspace{12pt} % Gap between title and text
@@ -66,8 +78,11 @@
 
 \item
 \VAR{publication.date}: \textbf{\VAR{publication.title}}\\
-\VAR{publication.authors|join(', ')}\\
+\VAR{publication.authors|join(', ')}
+%- if publication.pub_details
+\\
 \textbf{\VAR{publication.pub_details}}
+%- endif
 %- if publication.url
 \\
 \url{\VAR{publication.url}}
@@ -150,6 +165,9 @@ Courses I have taught in the past:
 
 \vspace{12pt} % Gap between title and text
 
+I participate in a variety of mathematics outreach activities.
+
+\vspace{12pt} % Gap between title and text
 
 \begin{itemize}
 %- for activity in outreach_activities

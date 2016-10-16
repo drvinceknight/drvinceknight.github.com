@@ -16,6 +16,34 @@
   date : 2016
   pub_details : "Accepted in the journal of the operational research society."
 
+- title :  "Editorial: Operations Research for Health Care ESI XXXI — OR applied to Health in a Modern World."
+  authors :
+    - Aringhieri, R.
+    - Knight, V.
+    - Smith, H.
+  date : 2016
+  pub_details : "Health Systems"
+
+- title : "Virtual Machine Warmup Blows Hot and Cold"
+  authors :
+    - Barrett, E.
+    - Bolz, C. F.
+    - Killick, R.
+    - Knight, V.
+    - Mount, S.
+    - Tratt, L.
+  date : 2016
+  url : "http://arxiv.org/abs/1602.00602"
+
+- title :  "Editorial: Operations Research for Health Care ESI XXXI — OR applied to Health in a Modern World."
+  authors :
+    - Aringhieri, R.
+    - Knight, V.
+    - Smith, H.
+  date : 2016
+  pub_details : "Operations Research for Health Care, 8, 22–23."
+  url : "http://doi.org/10.1016/j.orhc.2016.01.002"
+
 - title : "An Open Framework for the Reproducible Study of the Iterated
 Prisoner’s Dilemma."
   authors :
@@ -231,6 +259,15 @@ one."
     - Knight VA
   date : 2011
   pub_details : "Journal of the Operational Research Society."
+
+- title : "Operational Research Informing National Health Policy"
+  authors :
+    - Harper PR
+    - Knight VA
+    - Vieira I
+    - Williams JW
+  date : 2011
+  pub_details : "Cardiff University. ISBN: 978-0-9569158-0-1"
 
 - title : Bed Management in a Critical Care Unit.
   authors :
