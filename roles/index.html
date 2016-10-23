@@ -11,4 +11,17 @@ title  : Roles
             <li>{{ role.title }}</li>
             {% endfor %}
         </ul>
+
+    <h1>Awards</h1>
+
+        <ul>
+            {% for award in site.data.awards %}
+                {% if award.url %}
+                <li>{{award.date}}:
+                    <a href="{{award.url}}">{{ award.title }}</a></li>
+                {% else %}
+                    <li>{{award.date}}: {{ award.title }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
 </div>

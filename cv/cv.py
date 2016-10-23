@@ -52,6 +52,10 @@ with open("../_data/roles.yml", "r") as f:
 with open("../_data/research_topics.yml", "r") as f:
     interests = yaml.load(f)
 
+# Read awards
+with open("../_data/awards.yml", "r") as f:
+    awards = yaml.load(f)
+
 
 current_dir = os.path.abspath(os.path.dirname(__file__))
 
@@ -70,6 +74,7 @@ tex = tpl.render(appointments=appointments,
                  software_communities=software_communities,
                  roles=roles,
                  interests=interests,
+                 awards=awards,
                  )
 
 # Write tex

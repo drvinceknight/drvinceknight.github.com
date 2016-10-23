@@ -32,6 +32,18 @@
 \end{itemize}
 \end{multicols}
 
+\section{\centerline{AWARDS}}
+
+\vspace{1cm} % Gap between title and text
+
+\begin{itemize}
+%- for award in awards
+
+    \item {\sl \VAR{award.date}: \VAR{award.title}}
+
+%- endfor
+\end{itemize}
+
 \section{\centerline{RESEARCH INTERESTS}}
 
 \vspace{1cm} % Gap between title and text
