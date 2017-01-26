@@ -28,7 +28,7 @@
   current : false
   short_description : "A brief introduction to LaTeX."
 
-- title   : OR2 - Game Theory
+- title   : Game Theory
   url     : http://drvinceknight.github.io/Year_3_game_theory_course/
   level   : BSc. Year 3
   current : true
