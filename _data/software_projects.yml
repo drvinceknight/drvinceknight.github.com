@@ -10,6 +10,10 @@
   url         : "https://github.com/CiwPython/"
   description : "A Python library for simulation queueing networks"
 
+- name        : Conference Scheduler
+  url         : "https://github.com/PyconUK/ConferenceScheduler"
+  description : "A Python library to schedule conferences using integer linear programming"
+
 - name        : Game Theory in Sage
   url         : "https://github.com/theref/sage-game-theory"
   description : "A collection of code to continue the integration of Game Theoretic capabilities in to Sage."
