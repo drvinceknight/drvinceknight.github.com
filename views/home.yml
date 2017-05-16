@@ -4,7 +4,6 @@ context:
   static:
     page-title: Vincent Knight
   dynamic:
-    appointments: session.query(Appointment).order_by(Appointment.start_date.desc())
     courses: session.query(Course)
     publications: session.query(Publication).order_by(Publication.date.desc())
     collaborators: session.query(Collaborator)
