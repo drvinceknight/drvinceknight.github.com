@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<div>
+  	<h1>Teaching</h1>
+
+    <div class="flex">
+
+        <div>
+        <h2>Current courses</h2>
+          <p>
+		  <ul>
+			{% for course in courses %}
+                {% if course.current %}
+                    <li>{{ course.title }}</li>
+                {% endif %}
+			{% endfor %}
+		  </ul>
+          </p>
+        </div>
+
+        <div>
+
+        <h2>Not current</h2>
+          <p>
+		  <ul>
+			{% for course in courses %}
+                {% if not course.current %}
+                    <li>{{ course.title }}</li>
+                {% endif %}
+			{% endfor %}
+		  </ul>
+          </p>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div>
+
+    <h1>Research</h1>
+        <h2>Interests</h2>
+        <p>
+            <ul>
+                {% for topic in research_topics %}
+                    <li>{{ topic.title }}: {{ topic.description }}</li>
+                {% endfor %}
+            </ul>
+         </p>
+
+        <h2>Publications</h2>
+        <p>
+            <ol reversed>
+                {% for publication in publications %}
+                    <li> {{publication.date}}: <b>{{publication.title}}</b>:
+                        {% for author in publication.authors %}
+                            {% if author.pk == "me" %}
+                                {{ author.name }}{{ "," if not loop.last }}
+                            {% else %}
+                            <a href=/collaborators/{{author.pk}}/>{{author.name}}</a>{{ "," if not loop.last }}
+                            {% endif %}
+                        {% endfor %} -
+                        {% if publication.url is not none %}
+                            <a href={{publication.url}}>{{publication.details}}</a>.
+                        {% else %}
+                            {{publication.details}}.
+                        {% endif %}
+
+                    </li>
+                {% endfor %}
+            </ol>
+        </p>
+
+        <h2>Students</h2>
+        <p>
+            <ol reversed>
+                {% for project in student_projects %}
+                    <li>
+                        <a href= /collaborators/{{ project.student.pk }}/>{{ project.student.name }}</a>
+                        ({{ project.type }}): {{project.subject}}
+                        ({{ project.start_date }} - {{ project.end_date }})
+                    </li>
+                {% endfor %}
+            </ol>
+        </p>
+
+        <h2>Funding</h2>
+        <p>
+            <ol reversed>
+                {% for fund in funds %}
+                    <li>
+                        {{ fund.source }}: <b>{{ fund.title }},</b>
+                        £{{ fund.amount }}, ({{ fund.start_date }} - {{ fund.end_date }})
+                    </li>
+                {% endfor %}
+            </ol>
+        </p>
+
+</div>
+
+<hr>
+
+<div>
+
+    <h1>Software</h1>
+
+        <h2>Projects</h2>
+
+        <p>
+            <ul>
+                {% for project in software_projects %}
+                    <li>
+                        <a href={{ project.url }}>{{ project.name }}</a>:
+                        {{ project.description }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </p>
+
+        <h2>Communities</h2>
+        <p>
+
+            <ul>
+                {% for community in software_communities %}
+                    <li>
+                        <a href={{ community.url }}>{{ community.name }}</a>:
+                        {{ community.description }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </p>
+
+</div>
+
+<hr>
+
+<div>
+
+    <h1>Engagement</h1>
+
+        <h2>Outreach activities</h2>
+            <p>
+            <ul>
+                {% for activity in outreach_activities %}
+                    <li>
+                        {{ activity.title }}
+                    </li>
+                {% endfor %}
+            </ul>
+            </p>
+
+        <h2>Media appearances</h2>
+
+            <p>
+            <ol reversed>
+                {% for appearance in media_appearances %}
+                    <li>
+                        {{ appearance.date.strftime('%Y-%m-%d') }}:
+                        <b>{{ appearance.outlet}}</b> -
+                        {% if appearance.url %}
+                            <a href={{ appearance.url }}>{{ appearance.subject }}</a>
+                        {% else %}
+                            {{ appearance.subject }}
+                        {% endif %}
+                    </li>
+                    </li>
+                {% endfor %}
+            </ol>
+            </p>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+path:
+  template: /collaborators/{{ collaborator.pk }}
+  for-each:
+    collaborator: session.query(Collaborator).all()
+template: collaborator
+context:
+  static:
+      page-title: Vincent Knight

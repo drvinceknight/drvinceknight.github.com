@@ -1,0 +1,5 @@
+title   : String
+url     : String
+level   : String
+current : Boolean
+short_description : String

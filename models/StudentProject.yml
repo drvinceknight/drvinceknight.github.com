@@ -1,0 +1,6 @@
+student    : Collaborator -> student_projects
+end_date   : String
+start_date : String
+subject    : String
+url        : String
+type       : String
