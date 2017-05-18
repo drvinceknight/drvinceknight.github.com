@@ -91,9 +91,9 @@
 \item
 \VAR{publication.date}: \textbf{\VAR{publication.title}}\\
 \VAR{publication.authors|join(', ')}
-%- if publication.pub_details
+%- if publication.details
 \\
-\textbf{\VAR{publication.pub_details}}
+\textbf{\VAR{publication.details}}
 %- endif
 %- if publication.url
 \\
@@ -142,7 +142,7 @@ Courses I am currently teaching:
 %- for course in courses
 
     %- if course.current
-\item \VAR{course.title}: \VAR{course.short_description}
+\item \VAR{course.title}: \VAR{course.description}
     %- endif
 
 %- endfor
@@ -154,7 +154,7 @@ Courses I have taught in the past:
 %- for course in courses
 
     %- if not course.current
-\item \VAR{course.title}: \VAR{course.short_description}
+\item \VAR{course.title}: \VAR{course.description}
     %- endif
 
 %- endfor
