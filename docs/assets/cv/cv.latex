@@ -1,0 +1,217 @@
+\documentclass[10pt]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+
+\usepackage{helvet} % Default font is the helvetica postscript font
+\usepackage{hyperref}
+\usepackage{etaremune}
+\usepackage{multicol}
+
+\newsectionwidth{0pt} % Stops section indenting
+
+
+\begin{document}
+
+\name{Dr. Vincent A. Knight\\ \\} % Your name at the top
+
+% If you don't want one of the addresses, simply remove all the text in the first or second \address{} bracket
+
+\address{{\bf Cardiff University} \\ School of Mathematics \\ Senghennydd Road \\ Cardiff, CF24 4AG \\ (+44) 29 2087 5548} % Your address 1
+
+\address{\hfill{\href{http://www.vknight.org}{www.vknight.org}}\\ \hfill{G+: \href{https://plus.google.com/+VincentKnight/posts}{+Vincent Knight}}\\ \hfill{twitter: \href{https://twitter.com/drvinceknight}{@drvinceknight}}\\ \hfill{github: \href{https://github.com/drvinceknight}{drvinceknight}}\\\hfill{blog: \href{http://drvinceknight.blogspot.co.uk/}{Un peu de math}}} % Your address 2
+
+\begin{resume}
+
+\vspace{1cm} % Gap between title and text
+
+\begin{multicols}{2}
+\begin{itemize}
+%- for role in roles
+
+    \item {\sl \VAR{role.title}}
+
+%- endfor
+\end{itemize}
+\end{multicols}
+
+\section{\centerline{AWARDS}}
+
+\vspace{1cm} % Gap between title and text
+
+\begin{itemize}
+%- for award in awards
+
+    \item {\sl \VAR{award.date}: \VAR{award.title}}
+
+%- endfor
+\end{itemize}
+
+\section{\centerline{RESEARCH INTERESTS}}
+
+\vspace{1cm} % Gap between title and text
+
+\begin{itemize}
+%- for interest in interests
+
+    \item {\sl \VAR{interest.title}: \VAR{interest.description}}
+
+%- endfor
+\end{itemize}
+
+\section{\centerline{APPOINTMENTS}}
+
+\vspace{8pt}
+
+%- for appointment in appointments|sort(attribute='start_date', reverse=True)
+\sl{\VAR{appointment.title}}  \hfill \VAR{appointment.start_date} -
+\VAR{appointment.end_date}\\
+\VAR{appointment.location}\\
+
+%- endfor
+
+
+\section{\centerline{ACADEMIC QUALIFICATIONS}}
+
+\vspace{8pt} % Gap between title and text
+
+%- for qualification in qualifications|sort(attribute='date', reverse=True)
+
+{\sl \VAR{qualification.title}},\\
+\textbf{\VAR{qualification.remark}}\\
+\VAR{qualification.from}\hfill \VAR{qualification.date}
+
+%- endfor
+
+\section{\centerline{PUBLICATIONS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{etaremune}
+%- for publication in publications|sort(attribute='date', reverse=True)
+
+
+\item
+\VAR{publication.date}: \textbf{\VAR{publication.title}}\\
+\VAR{publication.authors|join(', ')}
+%- if publication.details
+\\
+\textbf{\VAR{publication.details}}
+%- endif
+%- if publication.url
+\\
+\url{\VAR{publication.url}}
+%- endif
+\\
+
+%- endfor
+\end{etaremune}
+
+\section{\centerline{RESEARCH STUDENTS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{etaremune}
+%- for student in students|sort(attribute='start_date', reverse=True)
+
+
+\item
+    \VAR{student.name} (\VAR{student.type}) \hfill \VAR{student.start_date} -
+    \VAR{student.end_date}\\
+\textbf{\VAR{student.subject}}\\
+
+%- endfor
+\end{etaremune}
+
+\section{\centerline{GRANT FUNDING}}
+
+\vspace{12pt} % Gap between title and text
+
+%- for grant in grants
+
+\sl{\VAR{grant.source}}\\
+\VAR{grant.title}\\
+\pounds\VAR{"{:,}".format(grant.amount)}\hfill{\VAR{grant.start_date} - \VAR{grant.end_date}}
+
+%- endfor
+
+\section{\centerline{TEACHING}}
+
+\vspace{12pt} % Gap between title and text
+
+Courses I am currently teaching:
+
+\begin{etaremune}
+%- for course in courses
+
+    %- if course.current
+\item \VAR{course.title}: \VAR{course.description}
+    %- endif
+
+%- endfor
+\end{etaremune}
+
+Courses I have taught in the past:
+
+\begin{etaremune}
+%- for course in courses
+
+    %- if not course.current
+\item \VAR{course.title}: \VAR{course.description}
+    %- endif
+
+%- endfor
+\end{etaremune}
+
+\section{\centerline{MEDIA}}
+
+\vspace{12pt} % Gap between title and text
+
+
+\begin{etaremune}
+%- for appearance in media
+
+\item \VAR{appearance.date}: \VAR{appearance.outlet} - \VAR{appearance.subject}
+
+%- endfor
+\end{etaremune}
+
+\section{\centerline{OUTREACH}}
+
+\vspace{12pt} % Gap between title and text
+
+I participate in a variety of mathematics outreach activities.
+
+\vspace{12pt} % Gap between title and text
+
+\begin{itemize}
+%- for activity in outreach_activities
+
+\item \VAR{activity.title}
+
+%- endfor
+\end{itemize}
+
+\section{\centerline{SOFTWARE PROJECTS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{itemize}
+%- for project in software_projects
+
+    \item \VAR{project.name}: \VAR{project.description}
+
+%- endfor
+\end{itemize}
+
+\section{\centerline{SOFTWARE COMMUNITY}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{itemize}
+%- for community in software_communities
+
+    \item \VAR{community.name}: \VAR{community.description}
+
+%- endfor
+\end{itemize}
+
+\end{resume}
+\end{document}
