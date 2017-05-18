@@ -1,4 +1,4 @@
 all: vince-knight.pdf
 
-vince-knight.pdf: ../_data/*.yml cv.latex
+vince-knight.pdf: ../data/*/* cv.latex
 	python cv.py
