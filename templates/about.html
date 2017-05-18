@@ -4,6 +4,15 @@
 <div>
   <h1>About me</h1>
 
+  	<h2>Appointments</h2>
+        <p>
+		  <ul>
+			{% for appointment in appointments %}
+			 	<li>{{appointment.end_date}} - {{appointment.start_date}}: {{ appointment.title }} - {{appointment.location}}</li>
+			{% endfor %}
+		  </ul>
+        </p>
+
   	<h2>Roles</h2>
         <p>
 		  <ul>
@@ -22,11 +31,12 @@
 		  </ul>
         </p>
 
-  	<h2>Appointments</h2>
+  	<h2>Qualification</h2>
         <p>
 		  <ul>
-			{% for appointment in appointments %}
-			 	<li>{{appointment.end_date}} - {{appointment.start_date}}: {{ appointment.title }} - {{appointment.location}}</li>
+			{% for qualification in qualifications %}
+			 	<li>{{qualification.date}} - {{qualification.from}}: {{
+                    qualification.title }} - {{qualification.remark}}</li>
 			{% endfor %}
 		  </ul>
         </p>

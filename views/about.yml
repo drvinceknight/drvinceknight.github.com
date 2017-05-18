@@ -7,3 +7,4 @@ context:
     appointments: session.query(Appointment).order_by(Appointment.start_date.desc())
     roles: session.query(Role).order_by(Role.start_date.desc()).all()
     awards: session.query(Award).order_by(Award.date.desc()).all()
+    qualifications: session.query(Qualification).order_by(Qualification.date.desc()).all()
