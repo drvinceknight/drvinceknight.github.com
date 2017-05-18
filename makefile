@@ -1,2 +1,2 @@
 all:
-	cd cv; make
+	cd assets/cv; make

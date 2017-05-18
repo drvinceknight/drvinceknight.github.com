@@ -5,7 +5,7 @@ import yaml
 import os
 import glob
 
-data_dir = "../data/"
+data_dir = "../../data/"
 
 def read_dir(directory):
     """
