@@ -14,7 +14,7 @@
 		  <ul>
 			{% for course in courses %}
                 {% if course.current %}
-                    <li>{{ course.title }}</li>
+                    <li><a href="{{ course.url }}">{{ course.title }}</a></li>
                 {% endif %}
 			{% endfor %}
 		  </ul>
@@ -28,7 +28,7 @@
 		  <ul>
 			{% for course in courses %}
                 {% if not course.current %}
-                    <li>{{ course.title }}</li>
+                    <li><a href="{{ course.url }}">{{ course.title }}</a></li>
                 {% endif %}
 			{% endfor %}
 		  </ul>
