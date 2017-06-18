@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div>
+    <h1>{{ collaborator.name }}
+        {% if collaborator.url %}
+         - <a href={{ collaborator.url }}>{{ collaborator.url }}</a>
+        {% endif %}
+    </h1>
+
+    {% if collaborator.publications %}
+        <p>Here is a list of publications written with {{ collaborator.name }}:
+          <p>
+            <ol reversed>
+                {% for publication in collaborator.publications %}
+                    <li> {{publication.date}}: <b>{{publication.title}}</b>:
+                        {% for author in publication.authors %}
+                            {% if author.pk == "me" %}
+                                {{ author.name }}{{ "," if not loop.last }}
+                            {% else %}
+                            <a href={{root}}/collaborators/{{author.pk}}/>{{author.name}}</a>{{ "," if not loop.last }}
+                            {% endif %}
+                        {% endfor %} -
+                        {% if publication.url is not none %}
+                            <a href={{publication.url}}>{{publication.details}}</a>.
+                        {% else %}
+                            {{publication.details}}.
+                        {% endif %}
+
+                    </li>
+                {% endfor %}
+            </ol>
+          </p>
+    {% endif %}
+
+    {% if collaborator.student_projects %}
+        <p>Here is a list of student projects undertaken with {{ collaborator.name }}:
+          <p>
+            <ol reversed>
+                {% for project in collaborator.student_projects %}
+                    <li>
+                        ({{ project.type }}): {{project.subject}}
+                        ({{ project.start_date }} - {{ project.end_date }})
+                    </li>
+                {% endfor %}
+            </ol>
+          </p>
+    {% endif %}
+</div>
+{% endblock %}

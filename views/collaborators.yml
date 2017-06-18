@@ -1,7 +1,0 @@
-path: /collaborators/
-template: collaborators     # The .html is automatically added by Statik
-context:
-  static:
-    page-title: Vincent Knight
-  dynamic:
-    collaborators: session.query(Collaborator).order_by(Collaborator.name)

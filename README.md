@@ -1,1 +1,3 @@
-Code for a basic site. One day this will become my main site.
+Code for my personal website.
+
+Source files in `src`, powered by`jinja2`.

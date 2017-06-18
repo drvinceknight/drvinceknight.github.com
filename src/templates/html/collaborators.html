@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+<div>
+This is a list of all my collaborators: co-authors and students.
+with.
+
+  <h1>List of collaborators</h1>
+
+  <p>
+  <ol reversed>
+    {% for collaborator in collaborators %}
+      {% if collaborator.pk != "me" %}
+          <li><a href=./{{collaborator.pk}}/>{{collaborator.name}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+  </p>
+
+</div>
+{% endblock %}

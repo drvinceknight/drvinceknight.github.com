@@ -1,5 +1,0 @@
-title   : String
-url     : String
-authors : Collaborator[] -> publications
-date    : String
-details : String
