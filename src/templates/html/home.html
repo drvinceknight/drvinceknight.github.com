@@ -63,7 +63,7 @@
                             <a href=./collaborators/{{author.pk}}/>{{author.name}}</a>{{ "," if not loop.last }}
                             {% endif %}
                         {% endfor %} -
-                        {% if publication.url is not none %}
+                        {% if publication.url %}
                             <a href={{publication.url}}>{{publication.details}}</a>.
                         {% else %}
                             {{publication.details}}.
