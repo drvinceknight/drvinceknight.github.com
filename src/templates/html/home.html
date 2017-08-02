@@ -55,7 +55,14 @@
         <p>
             <ol reversed>
                 {% for publication in publications %}
-                    <li> {{publication.date}}: <b>{{publication.title}}</b>:
+                    <li> {{publication.date}}:
+
+                        {% if publication.url %}
+                            <a href={{publication.url}}><b>{{publication.title}}</b>:</a>
+                        {% else %}
+                            <b>{{publication.title}}</b>:
+                        {% endif %}
+
                         {% for author in publication.authors %}
                             {% if author.pk == "me" %}
                                 {{ author.name }}{{ "," if not loop.last }}
@@ -63,11 +70,7 @@
                             <a href=./collaborators/{{author.pk}}/>{{author.name}}</a>{{ "," if not loop.last }}
                             {% endif %}
                         {% endfor %} -
-                        {% if publication.url %}
-                            <a href={{publication.url}}>{{publication.details}}</a>.
-                        {% else %}
-                            {{publication.details}}.
-                        {% endif %}
+                            {{publication.details}}
 
                     </li>
                 {% endfor %}
