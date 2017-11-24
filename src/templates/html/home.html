@@ -28,7 +28,11 @@
 		  <ul>
 			{% for course in courses %}
                 {% if not course.current %}
-                    <li><a href="{{ course.url }}">{{ course.title }}</a></li>
+                {% if course.url  %}
+                        <li><a href="{{ course.url }}">{{ course.title }}</a></li>
+                    {% else %}
+                        <li>{{ course.title }}</li>
+                    {% endif %}
                 {% endif %}
 			{% endfor %}
 		  </ul>
