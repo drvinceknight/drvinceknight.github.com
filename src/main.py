@@ -68,6 +68,7 @@ def read_data(data_dir):
     kwargs["collaborators"] = sorted(collaborators.values(),
                                      key=lambda d: d["name"])
     kwargs["awards"].sort(key=lambda x: x["date"], reverse=True)
+    kwargs["roles"].sort(key=lambda x: x["start_date"], reverse=True)
     return kwargs
 
 
