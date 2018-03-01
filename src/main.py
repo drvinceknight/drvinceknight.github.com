@@ -70,6 +70,7 @@ def read_data(data_dir):
     kwargs["awards"].sort(key=lambda x: x["date"], reverse=True)
     kwargs["roles"].sort(key=lambda x: x["start_date"], reverse=True)
     kwargs["qualifications"].sort(key=lambda x: x["date"], reverse=True)
+    kwargs["funds"].sort(key=lambda x: x["start_date"], reverse=True)
 
     return kwargs
 
