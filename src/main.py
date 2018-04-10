@@ -30,7 +30,8 @@ def read_data(data_dir):
                            ("roles", "Role"),
                            ("media", "Media"),
                            ("interests", "ResearchTopic"),
-                           ("awards", "Award")):
+                           ("awards", "Award"),
+                           ("examiners", "Examination")):
         kwargs[var] = read_dir("{}{}".format(data_dir, directory))
 
     collaborators = {}
@@ -71,6 +72,7 @@ def read_data(data_dir):
     kwargs["roles"].sort(key=lambda x: x["start_date"], reverse=True)
     kwargs["qualifications"].sort(key=lambda x: x["date"], reverse=True)
     kwargs["funds"].sort(key=lambda x: x["start_date"], reverse=True)
+    kwargs["examiners"].sort(key=lambda x: x["start_date"], reverse=True)
 
     return kwargs
 

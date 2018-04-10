@@ -22,6 +22,15 @@
 		  </ul>
         </p>
 
+  	<h2>Examiner roles</h2>
+        <p>
+		  <ul>
+			{% for examiner in examiners %}
+                <li>{{examiner.end_date}} - {{examiner.start_date}}: {{ examiner.title }}</li>
+			{% endfor %}
+		  </ul>
+        </p>
+
   	<h2>Awards</h2>
         <p>
 		  <ul>
