@@ -5,6 +5,7 @@ from latex import build_pdf
 import yaml
 import os
 import glob
+import markdown
 
 def read_dir(directory):
     """
@@ -147,15 +148,29 @@ def build_about(data, templates_dir):
     with open("../about/index.html", "w") as f:
         f.write(html)
 
+def build_teaching_philosophy(data, templates_dir):
+    data["root"] = ".."
+    with open("./md/tch/main.md", "r") as f:
+        md = f.read()
+    content = markdown.markdown(md)
+    data["content"] = content
+    html = render_template(templates_dir=templates_dir,
+                           template_file="teaching-philosophy.html",
+                           template_vars=data)
+    with open("../tch-phi/index.html", "w") as f:
+        f.write(html)
+
 
 if __name__ == "__main__":
     data_dir = "./data/"
     assets_dir = "../assets/"
+    html_templates = "./templates/html/"
+    tex_tamplates = "./templates/latex/"
     data = read_data(data_dir=data_dir)
 
-    build_index(data=data, templates_dir="./templates/html/")
-    build_collaborators(data=data, templates_dir="./templates/html/")
-    build_about(data=data, templates_dir="./templates/html/")
+    build_index(data=data, templates_dir=html_templates)
+    build_collaborators(data=data, templates_dir=html_templates)
+    build_about(data=data, templates_dir=html_templates)
+    build_teaching_philosophy(data=data, templates_dir=html_templates)
 
-    build_cv(data=data, assets_dir=assets_dir,
-             templates_dir="./templates/latex/")
+    build_cv(data=data, assets_dir=assets_dir, templates_dir=tex_tamplates)
