@@ -29,11 +29,11 @@ Whilst these approaches are not traditional they constitute evidence based
 practice [2, 3, 4, 6] and I hope that one day they will in fact be traditional.
 
 If there is any doubt as to the effectiveness of active learning approaches, for
-example [7], which identifies no such relationship, inciting curiosity and
+example [7] inciting curiosity and
 engagement are still beneficial to the students' learning. Indeed in [8] the
 greatest predictors of academic performance are identified not as general
 intelligence [9], but personality factors such as conscientiousness and
-openness. Thus my main role and indeed responsibility in is to help
+openness. Thus my main role and indeed responsibility is to help
 students gain an interest and enthusiasm for the subject. This is something I
 continuously strive to get better at.
 
