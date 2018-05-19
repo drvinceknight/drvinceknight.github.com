@@ -3,3 +3,4 @@ _site
 *checkpoint.ipynb
 Gemfile.lock
 public/
+*.mypy_cache*
