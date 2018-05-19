@@ -4,10 +4,10 @@ their own understanding of a subject. My main ideas behind this were formed from
 reading [1].
 
 Further to this, I believe it is important to be able to offer a rationale for
-all my teaching practice. Using a particular approach because of a traditional
+all my pedagogic practice. Using a particular approach because of a traditional
 context is not a sufficient and valid reason. This does not preclude my use of
 traditional methods. An excellent text regarding evidence based practice in
-teaching is [2]  (a book I would recommend to all students).
+learning is [2]  (a book I would recommend to all students).
 
 Based on a wide range of evidence (for example [3, 4]) I aim to create an active
 learning framework in my courses. My favored definition of active learning is
@@ -17,7 +17,7 @@ from [4]:
 > students in the learning process. In short active learning requires students
 > to do meaningful learning activities and think about what they are doing."
 
-My classes will usually be of the form of a flipped learning environment [5]
+My classes are a flipped learning environment [5]
 making use of web technologies for the transfer of content ensuring class
 meetings can be used appropriately for:
 
