@@ -28,14 +28,15 @@ meetings can be used appropriately for:
 Whilst these approaches are not traditional they constitute evidence based
 practice [2, 3, 4, 6] and I hope that one day they will in fact be traditional.
 
-If there is any doubt as to the effectiveness of active learning approaches, for
-example [7]. Inciting curiosity and
-engagement are still beneficial to the students' learning. Indeed in [8] the
-greatest predictors of academic performance are identified not as general
-intelligence [9], but personality factors such as conscientiousness and
-openness. Thus my main role and indeed responsibility is to help
-students gain an interest and enthusiasm for the subject. This is something I
-continuously strive to get better at.
+There might be some doubt as to the effectiveness of active learning approaches:
+for example [7] is a paper where no specific effectiveness of active learning
+was found in a particular class. Inciting curiosity and engagement are still
+known to be beneficial to students' learning. Indeed in [8] the greatest
+predictors of academic performance are identified not as general intelligence
+[9], but personality factors such as conscientiousness and openness. Thus my
+main role and indeed responsibility is to help students gain an interest and
+enthusiasm for the subject. This is something I continuously strive to get
+better at.
 
 Furthermore, I am conscious that some students would feel excluded by
 my approaches. Indeed: a lifetime of education in passive learning environments
