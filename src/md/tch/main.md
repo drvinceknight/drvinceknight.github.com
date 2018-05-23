@@ -1,23 +1,29 @@
 I believe learning takes place in a social constructivist framework which
 implies my role as an educator is to empower and motivate students to build
 their own understanding of a subject. My main ideas behind this were formed from
-reading [1].
+reading
+[[1]](https://books.google.co.uk/books/about/Approaches_To_Learning_A_Guide_For_Teach.html?id=C82nud-9W6MC).
 
 Further to this, I believe it is important to be able to offer a rationale for
 all my pedagogic practice. Using a particular approach because of a traditional
 context is not a sufficient and valid reason. This does not preclude my use of
 traditional methods. An excellent text regarding evidence based practice in
-learning is [2]  (a book I would recommend to all students).
+learning is [[2]](https://makeitstick.net/)  (a book I would recommend to all
+students).
 
-Based on a wide range of evidence (for example [3, 4]) I aim to create an active
-learning framework in my courses. My favored definition of active learning is
-from [4]:
+Based on a wide range of evidence (for example
+[[3](http://www.pnas.org/content/111/23/8410),
+[4](http://www4.ncsu.edu/unity/lockers/users/f/felder/public/Papers/Prince_AL.pdf)])
+I aim to create an active learning framework in my courses. My favored
+definition of active learning is from
+[[4]](http://www4.ncsu.edu/unity/lockers/users/f/felder/public/Papers/Prince_AL.pdf):
 
 > "Active learning is generally defined as any instructional method that engages
 > students in the learning process. In short active learning requires students
 > to do meaningful learning activities and think about what they are doing."
 
-My classes are a flipped learning environment [5]
+My classes are a flipped learning environment
+[[5]](https://sty.presswarehouse.com/books/BookDetail.aspx?productID=468277)
 making use of web technologies for the transfer of content ensuring class
 meetings can be used appropriately for:
 
@@ -26,21 +32,28 @@ meetings can be used appropriately for:
 - reactive discussions.
 
 Whilst these approaches are not traditional they constitute evidence based
-practice [2, 3, 4, 6] and I hope that one day they will in fact be traditional.
+practice [[2](https://makeitstick.net/),
+[3](http://www.pnas.org/content/111/23/8410),
+[4](http://www4.ncsu.edu/unity/lockers/users/f/felder/public/Papers/Prince_AL.pdf),
+[6](https://aapt.scitation.org/doi/abs/10.1119/1.18809)] and I hope that one day
+they will in fact be traditional.
 
 There might be some doubt as to the effectiveness of active learning approaches:
-for example [7] is a paper where no specific effectiveness of active learning
-was found in a particular class. Inciting curiosity and engagement are still
-known to be beneficial to students' learning. Indeed in [8] the greatest
-predictors of academic performance are identified not as general intelligence
-[9], but personality factors such as conscientiousness and openness. Thus my
-main role and indeed responsibility is to help students gain an interest and
-enthusiasm for the subject. This is something I continuously strive to get
-better at.
+for example [[7]](https://www.ncbi.nlm.nih.gov/pubmed/22135373) is a paper where
+no specific effectiveness of active learning was found in a particular class.
+Inciting curiosity and engagement are still known to be beneficial to students'
+learning. Indeed in
+[[8]](https://www.sciencedirect.com/science/article/pii/S104160801400106X) the
+greatest predictors of academic performance are identified not as general
+intelligence
+[[9]](http://www.jstor.org/stable/1412107?seq=1#page_scan_tab_contents), but
+personality factors such as conscientiousness and openness. Thus my main role
+and indeed responsibility is to help students gain an interest and enthusiasm
+for the subject. This is something I continuously strive to get better at.
 
-Furthermore, I am conscious that some students would feel excluded by
-my approaches. Indeed: a lifetime of education in passive learning environments
-is not something that will be immediately broken, thus:
+Furthermore, I am conscious that some students would feel excluded by my
+approaches. Indeed: a lifetime of education in passive learning environments is
+not something that will be immediately broken, thus:
 
 - I share my rationale and philosophy with all my students;
 - The content delivery I aim to use allows students who do not want to engage in
@@ -48,8 +61,10 @@ is not something that will be immediately broken, thus:
   learning outcome) to "consume" the content passively.
 
 I aim to continuously reflect on my practice, for example publishing peer
-reviewed articles such as [10]. Importantly, as in all evidence based practice,
-when the evidence indicates that I should change my practice: I will.
+reviewed articles such as
+[[10]](https://journals.gre.ac.uk/index.php/msor/article/view/254). Importantly,
+as in all evidence based practice, when the evidence indicates that I should
+change my practice: I will.
 
 # References
 
@@ -81,7 +96,7 @@ when the evidence indicates that I should change my practice: I will.
    Evidence and
    implications."](https://www.sciencedirect.com/science/article/pii/S104160801400106X)
    Learning and Individual Differences 34 (2014): 24-32.
-9. Spearman, Charles. ["General Intelligence," objectively determined and
+9. Spearman, Charles. ["'General Intelligence', objectively determined and
    measured."](http://www.jstor.org/stable/1412107?seq=1#page_scan_tab_contents)
    The American Journal of Psychology 15.2 (1904): 201-292.
 10. Knight, Vincent. ["Playing Games: A Case Study in Active Learning Applied to
