@@ -99,6 +99,10 @@
 \\
 \url{\VAR{publication.url}}
 %- endif
+%- if publication.preprint_url
+\\
+\url{\VAR{publication.preprint_url}}
+%- endif
 \\
 
 %- endfor

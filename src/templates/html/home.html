@@ -76,6 +76,11 @@
                         {% endfor %} -
                             {{publication.details}}
 
+                        {% if publication.preprint_url %}
+                            <a href={{publication.preprint_url}}><b>- (Preprint)</b></a>
+                        {% endif %}
+
+
                     </li>
                 {% endfor %}
             </ol>

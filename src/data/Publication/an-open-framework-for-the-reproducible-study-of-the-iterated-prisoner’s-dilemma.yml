@@ -22,7 +22,8 @@ authors:
 - luis-visintini
 - karl-molden.
 date: 2016
-details: Journal of open research software.
+details: Journal of open research software
 title: "An Open Framework for the Reproducible Study of the Iterated Prisoner\u2019\
   s Dilemma."
-url: http://openresearchsoftware.metajnl.com/article/10.5334/jors.125/
+url: "http://openresearchsoftware.metajnl.com/article/10.5334/jors.125/"
+preprint_url: "https://arxiv.org/abs/1604.00896"
