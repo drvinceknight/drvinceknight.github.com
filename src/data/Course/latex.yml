@@ -1,4 +1,5 @@
-current: false
-level: BSc. Year 3
+current: true
+level: Any
 title: Introduction to LaTeX
+url: https://drvinceknight.github.io/tex/
 description: A brief introduction to LaTeX
