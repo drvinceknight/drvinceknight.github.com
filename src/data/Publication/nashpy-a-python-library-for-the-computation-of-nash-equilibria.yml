@@ -2,5 +2,6 @@ authors:
 - me
 - james-campbell
 date: 2018
-details: Submitted to Journal of Open Source Software
+details: Journal of Open Source Software
 title: "Nashpy: a Python library for the computation of Nash equilibria"
+url: "https://doi.org/10.21105/joss.00904"
