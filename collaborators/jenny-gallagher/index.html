@@ -5,6 +5,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/skeleton.css">
     <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
 
 
@@ -27,39 +29,30 @@
 </head>
 <body>
 
-    <header class="site-header">
+    <header>
+    <div class="row">
+        <div class="three.columns">
+            <a class="logo" href="../../">Vincent Knight</a>
+        </div>
+        <div class="nine.columns">
+              <input id="nav" type="checkbox">
+              <label for="nav"></label>
+              <nav>
+                    <ul>
+						   <li><a class="page-link" href="./">Home</a></li>
+          <li><a class="page-link" href="../../blog/">Blog</a></li>
+          <li><a class="page-link" href="../../about/">About Me</a></li>
+          <li><a class="page-link" href="../../collaborators/">Collaborators</a></li>
+          <li><a class="page-link" href="../../speak/">Talks</a></li>
+          <li><a class="page-link" href="../../tch-phi/">Teaching Philosophy</a></li>
 
-  <div class="wrap">
-
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
-          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
-            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
-            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
-            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-      <div class="trigger">
-          <a class="page-link" href="../../">Home</a>
-          <a class="page-link" href="../../blog/">Blog</a>
-          <a class="page-link" href="../../about/">About Me</a>
-          <a class="page-link" href="../../collaborators/">Collaborators</a>
-          <a class="page-link" href="../../speak/">Talks</a>
-          <a class="page-link" href="../../tch-phi/">Teaching Philosophy</a>
-      </div>
-    </nav>
-
-  </div>
+                    </ul>
+              </nav>
+        </div>
+    </div>
 </header>
 
-<div class="page-content">
-    <div class="wrap">
-      <div class="home">
+<div class="container">
     
 
 <div>
@@ -103,42 +96,47 @@
     
 </div>
 
-      </div>
-    </div>
 </div>
 
-    <footer class="site-footer">
-
-<div class="wrap">
-
-
     <div class=flex>
-        <span class="username">
-            Github: <a href="https://github.com/drvinceknight">
-                drvinceknight
-        </a></span>
-        <span class="username">Twitter: <a
-                href="https://twitter.com/drvinceknight">
-                drvinceknight</a></span>
 
 
-        <span class="username">Mail: <a href="mailto:knightva@cf.ac.uk">knightva@cf.ac.uk</a></span>
-        <span class="username">Blog: <a href="http://drvinceknight.github.io/unpeudemath/">un peu de math</a></span>
-        <span class="username">YouTube: <a href="https://www.youtube.com/channel/UCJoZNbN4ziZBIfzC1zjuHYA">+Vincent Knight</a></span>
-        <span class="username">Instagram: <a
-                href="https://www.instagram.com/vincent.knight/">vincent.knight</a></span>
-        <span class="username">Photo: <a
-              href="../../assets/vince-knight-lo.png">lo</a> <a
-              href="../../assets/vince-knight-hi.jpg">hi</a></span>
-        <span class="username">CV: <a href="../../assets/vince-knight.pdf">pdf</a>
-            <a href="../../assets/vince-knight.tex">tex</a>
-        </span>
-    </div>
+    <center>
+    <p style="font-size: small;">
+    Mail: <a href="mailto:knightva@cf.ac.uk">knightva@cf.ac.uk</a>
+    Instagram: <a href="https://www.instagram.com/vincent.prytherch/">vincent.prytherch</a>
+    Photo: <a href="../../assets/vince-knight-lo.png">lo</a> 
+           <a href="../../assets/vince-knight-hi.jpg">hi</a>
+    CV:
+        <a href="../../assets/vince-knight.tex">tex</a>
+    </p>
+</div>
 
+<div class="container">
+    <center>
+    <p style="font-size: small;">
+    Source code:
+    <a href="https://github.com/drvinceknight/drvinceknight.github.com">@drvinceknight</a>
+    Powered by:
+        <a href="https://www.python.org/">Python</a>
+        <a href="https://www.mathjax.org/">Mathjax</a>
+        <a href="https://pages.github.com/">Github pages</a>
+        <a href="http://getskeleton.com/">Skeleton css</a>
+    </p>
+    </center>
+</div>
 
-  </div>
+<script>
+    document.querySelector('header nav ul').addEventListener('click', function(){
+        document.querySelector('#nav').checked = false;
+    });
 
-  </footer>
+    var menuHeight = document.querySelector('header').offsetHeight;
+    document.querySelectorAll('.section-title').forEach(function(a){
+        a.style.paddingTop = menuHeight + 'px';
+        a.style.marginTop = '-' + menuHeight + 'px';
+    });
+</script>
 
 </body>
 </html>

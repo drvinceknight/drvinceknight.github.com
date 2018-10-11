@@ -1,32 +1,39 @@
-<footer class="site-footer">
-
-<div class="wrap">
+<div class=flex>
 
 
-    <div class=flex>
-        <span class="username">
-            Github: <a href="https://github.com/drvinceknight">
-                drvinceknight
-        </a></span>
-        <span class="username">Twitter: <a
-                href="https://twitter.com/drvinceknight">
-                drvinceknight</a></span>
+    <center>
+    <p style="font-size: small;">
+    Mail: <a href="mailto:knightva@cf.ac.uk">knightva@cf.ac.uk</a>
+    Instagram: <a href="https://www.instagram.com/vincent.prytherch/">vincent.prytherch</a>
+    Photo: <a href="{{root}}/assets/vince-knight-lo.png">lo</a> 
+           <a href="{{root}}/assets/vince-knight-hi.jpg">hi</a>
+    CV:
+        <a href="{{root}}/assets/vince-knight.tex">tex</a>
+    </p>
+</div>
 
+<div class="container">
+    <center>
+    <p style="font-size: small;">
+    Source code:
+    <a href="https://github.com/drvinceknight/drvinceknight.github.com">@drvinceknight</a>
+    Powered by:
+        <a href="https://www.python.org/">Python</a>
+        <a href="https://www.mathjax.org/">Mathjax</a>
+        <a href="https://pages.github.com/">Github pages</a>
+        <a href="http://getskeleton.com/">Skeleton css</a>
+    </p>
+    </center>
+</div>
 
-        <span class="username">Mail: <a href="mailto:knightva@cf.ac.uk">knightva@cf.ac.uk</a></span>
-        <span class="username">Blog: <a href="http://drvinceknight.github.io/unpeudemath/">un peu de math</a></span>
-        <span class="username">YouTube: <a href="https://www.youtube.com/channel/UCJoZNbN4ziZBIfzC1zjuHYA">+Vincent Knight</a></span>
-        <span class="username">Instagram: <a
-                href="https://www.instagram.com/vincent.knight/">vincent.knight</a></span>
-        <span class="username">Photo: <a
-              href="{{root}}/assets/vince-knight-lo.png">lo</a> <a
-              href="{{root}}/assets/vince-knight-hi.jpg">hi</a></span>
-        <span class="username">CV: <a href="{{root}}/assets/vince-knight.pdf">pdf</a>
-            <a href="{{root}}/assets/vince-knight.tex">tex</a>
-        </span>
-    </div>
+<script>
+    document.querySelector('header nav ul').addEventListener('click', function(){
+        document.querySelector('#nav').checked = false;
+    });
 
-
-  </div>
-
-  </footer>
+    var menuHeight = document.querySelector('header').offsetHeight;
+    document.querySelectorAll('.section-title').forEach(function(a){
+        a.style.paddingTop = menuHeight + 'px';
+        a.style.marginTop = '-' + menuHeight + 'px';
+    });
+</script>
