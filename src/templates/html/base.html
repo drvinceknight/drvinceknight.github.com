@@ -5,6 +5,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{root}}/assets/css/main.css">
+    <link rel="stylesheet" href="{{root}}/assets/css/normalize.css">
+    <link rel="stylesheet" href="{{root}}/assets/css/skeleton.css">
     <link rel="shortcut icon" href="{{root}}/assets/favicon.ico" type="image/x-icon">
 
 
@@ -29,12 +31,8 @@
 
     {% include "header.html" %}
 
-<div class="page-content">
-    <div class="wrap">
-      <div class="home">
+<div class="container">
     {% block body %}{% endblock %}
-      </div>
-    </div>
 </div>
 
     {% include "footer.html" %}
