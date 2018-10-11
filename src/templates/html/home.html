@@ -6,7 +6,6 @@
   	<h1>Teaching</h1>
 
         <h2>Current courses</h2>
-          <p>
 		  <ul>
 			{% for course in courses %}
                 {% if course.current %}
@@ -14,11 +13,9 @@
                 {% endif %}
 			{% endfor %}
 		  </ul>
-          </p>
 
 
         <h2>Not current</h2>
-          <p>
 		  <ul>
 			{% for course in courses %}
                 {% if not course.current %}
@@ -30,22 +27,18 @@
                 {% endif %}
 			{% endfor %}
 		  </ul>
-          </p>
 
 <hr>
 
     <h1>Research</h1>
         <h2>Interests</h2>
-        <p>
             <ul>
                 {% for topic in interests %}
                     <li>{{ topic.title }}: {{ topic.description }}</li>
                 {% endfor %}
             </ul>
-         </p>
 
         <h2>Publications</h2>
-        <p>
             <ol reversed>
                 {% for publication in publications %}
                     <li> {{publication.date}}:
@@ -73,10 +66,8 @@
                     </li>
                 {% endfor %}
             </ol>
-        </p>
 
         <h2>Students</h2>
-        <p>
             <ol reversed>
                 {% for project in student_projects %}
                     <li>
@@ -86,10 +77,8 @@
                     </li>
                 {% endfor %}
             </ol>
-        </p>
 
         <h2>Funding</h2>
-        <p>
             <ol reversed>
                 {% for fund in funds %}
                     <li>
@@ -98,7 +87,6 @@
                     </li>
                 {% endfor %}
             </ol>
-        </p>
 
 
 <hr>
@@ -107,8 +95,6 @@
     <h1>Software</h1>
 
         <h2>Projects</h2>
-
-        <p>
             <ul>
                 {% for project in software_projects %}
                     <li>
@@ -117,10 +103,8 @@
                     </li>
                 {% endfor %}
             </ul>
-        </p>
 
         <h2>Communities</h2>
-        <p>
 
             <ul>
                 {% for community in software_communities %}
@@ -130,7 +114,6 @@
                     </li>
                 {% endfor %}
             </ul>
-        </p>
 
 
 <hr>
@@ -139,7 +122,6 @@
     <h1>Engagement</h1>
 
         <h2>Outreach activities</h2>
-            <p>
             <ul>
                 {% for activity in outreach_activities %}
                     <li>
@@ -147,11 +129,9 @@
                     </li>
                 {% endfor %}
             </ul>
-            </p>
 
         <h2>Media appearances</h2>
 
-            <p>
             <ol reversed>
                 {% for appearance in media %}
                     <li>
@@ -166,5 +146,4 @@
                     </li>
                 {% endfor %}
             </ol>
-            </p>
 {% endblock %}

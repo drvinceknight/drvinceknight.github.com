@@ -7,7 +7,6 @@ This is a list of all my collaborators: co-authors and students.
 
   <h1>List of collaborators</h1>
 
-  <p>
   <ol reversed>
     {% for collaborator in collaborators %}
       {% if collaborator.pk != "me" %}
@@ -15,6 +14,5 @@ This is a list of all my collaborators: co-authors and students.
       {% endif %}
     {% endfor %}
   </ol>
-  </p>
 
 {% endblock %}

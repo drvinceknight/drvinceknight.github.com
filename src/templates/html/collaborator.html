@@ -10,7 +10,6 @@
 
 {% if collaborator.publications %}
     <p>Here is a list of publications written with {{ collaborator.name }}:
-      <p>
         <ol reversed>
             {% for publication in collaborator.publications %}
                 <li> {{publication.date}}: <b>{{publication.title}}</b>:
@@ -30,12 +29,10 @@
                 </li>
             {% endfor %}
         </ol>
-      </p>
 {% endif %}
 
 {% if collaborator.student_projects %}
     <p>Here is a list of student projects undertaken with {{ collaborator.name }}:
-      <p>
         <ol reversed>
             {% for project in collaborator.student_projects %}
                 <li>
@@ -44,6 +41,5 @@
                 </li>
             {% endfor %}
         </ol>
-      </p>
 {% endif %}
 {% endblock %}
