@@ -1,0 +1,28 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ <!--
+ // Create an array of the links to choose from:
+ var links = new Array();
+ links[0] = "https://docs.google.com/forms/d/e/1FAIpQLSfZroWvMazMe1CZ5Xu5OvnYoqf8IjBLTJCS3SIukRblQNxw2Q/viewform?usp=sf_link";
+ links[1] = "https://docs.google.com/forms/d/e/1FAIpQLScUrhjoHcmBgcHELiqLQLwJErqGj8dKTaGHrbIzZnh2aQjSmg/viewform?usp=sf_link";
+ links[2] = "https://docs.google.com/forms/d/e/1FAIpQLSd19FmcHYQ08BiUio0DsMAYyKJsypcIFpdgE0ngGPCNzsjG1g/viewform?usp=sf_link";
+
+ links[3] = "  ";
+ links[4] = "  ";
+ links[5] = "  ";
+
+
+ function openLink() {
+   // Chooses a random link:
+   var i = Math.floor(Math.random() * links.length);
+   // Directs the browser to the chosen target:
+   parent.location = links[i];
+   return false;
+ }
+ //-->
+ </script>
+ </head>
+ <body onload="openLink();">
+ </body>
+ </html>
