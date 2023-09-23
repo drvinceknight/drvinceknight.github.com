@@ -14,7 +14,7 @@ def read_dir(directory):
     dictionaries = []
     for f in glob.glob("{}/*yml".format(directory)):
         with open(f, "r") as f:
-            dictionaries.append(yaml.load(f))
+            dictionaries.append(yaml.safe_load(f))
     return dictionaries
 
 def read_data(data_dir):
@@ -38,7 +38,7 @@ def read_data(data_dir):
     collaborators = {}
     for yaml_file in glob.glob("{}Collaborator/*yml".format(data_dir)):
         with open(yaml_file, "r") as f:
-            d = yaml.load(f)
+            d = yaml.safe_load(f)
             pk = yaml_file[len(data_dir + "Collaborator/"):-len(".yml")]
             d["pk"] = pk
             collaborators[pk] = d
