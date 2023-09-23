@@ -85,6 +85,29 @@
 
 %- endfor
 
+\section{\centerline{BOOKS}}
+
+\vspace{12pt} % Gap between title and text
+
+\begin{etaremune}
+%- for book in books|sort(attribute='date', reverse=True)
+
+
+\item
+\VAR{book.date}: \textbf{\VAR{book.title}}\\
+\VAR{book.authors|join(', ')}
+%- if book.details
+\\
+\textbf{\VAR{book.details}}
+%- endif
+%- if book.url
+\\
+\url{\VAR{book.url}}
+%- endif
+\\
+
+%- endfor
+\end{etaremune}
 \section{\centerline{PUBLICATIONS}}
 
 \vspace{12pt} % Gap between title and text

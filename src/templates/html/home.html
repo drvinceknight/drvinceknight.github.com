@@ -38,6 +38,31 @@
                 {% endfor %}
             </ul>
 
+        <h2>Books</h2>
+            <ol reversed>
+                {% for book in books %}
+                    <li> {{book.date}}:
+
+                        {% if book.url %}
+                            <a href={{book.url}}><b>{{book.title}}</b>:</a>
+                        {% else %}
+                            <b>{{book.title}}</b>:
+                        {% endif %}
+
+                        {% for author in book.authors %}
+                            {% if author.pk == "me" %}
+                                {{ author.name }}{{ "," if not loop.last }}
+                            {% else %}
+                            <a href=./collaborators/{{author.pk}}/>{{author.name}}</a>{{ "," if not loop.last }}
+                            {% endif %}
+                        {% endfor %} -
+                            {{book.details}}
+
+
+
+                    </li>
+                {% endfor %}
+            </ol>
         <h2>Publications</h2>
             <ol reversed>
                 {% for publication in publications %}

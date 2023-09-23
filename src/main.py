@@ -22,6 +22,7 @@ def read_data(data_dir):
     for var, directory in (("appointments", "Appointment"),
                            ("qualifications", "Qualification"),
                            ("publications", "Publication"),
+                           ("books", "Book"),
                            ("student_projects", "StudentProject"),
                            ("courses", "Course"),
                            ("funds", "Funding"),
@@ -53,6 +54,16 @@ def read_data(data_dir):
             except KeyError:
                 collaborators[author]["publications"] = [publication]
 
+
+    for book in kwargs["books"]:
+        for pos, author in enumerate(book["authors"]):
+            book["authors"][pos] = {"pk": author, "name":
+                                           collaborators[author]["name"]}
+            try:
+                collaborators[author]["publications"].append(publication)
+            except KeyError:
+                collaborators[author]["publications"] = [publication]
+
     kwargs["student_projects"].sort(key=lambda d: str(d["start_date"]),
                                     reverse=True)
     for project in kwargs["student_projects"]:
@@ -66,6 +77,7 @@ def read_data(data_dir):
     kwargs["software_projects"].sort(key=lambda x: x["name"])
     kwargs["software_communities"].sort(key=lambda x: x["name"])
     kwargs["publications"].sort(key=lambda x: x["date"], reverse=True)
+    kwargs["books"].sort(key=lambda x: x["date"], reverse=True)
     kwargs["media"].sort(key=lambda x: x["date"], reverse=True)
     kwargs["collaborators"] = sorted(collaborators.values(),
                                      key=lambda d: d["name"])
@@ -89,6 +101,9 @@ def build_cv(data, templates_dir, assets_dir):
     for publication in data["publications"]:
         publication["authors"] = [author["name"]
                                   for author in publication["authors"]]
+    for book in data["books"]:
+        book["authors"] = [author["name"]
+                                  for author in book["authors"]]
     for project in data["student_projects"]:
         project["name"] = project["student"]["name"]
 
