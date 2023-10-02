@@ -8,7 +8,7 @@ Further to this, I believe it is important to be able to offer a rationale for
 all my pedagogic practice. Using a particular approach because of a traditional
 context is not a sufficient and valid reason. This does not preclude my use of
 traditional methods. An excellent text regarding evidence based practice in
-learning is [[2]](https://makeitstick.net/)  (a book I would recommend to all
+learning is [[2]](https://makeitstick.net/) (a book I would recommend to all
 students).
 
 Based on a wide range of evidence (for example
@@ -60,6 +60,9 @@ not something that will be immediately broken, thus:
   an active learning framework (despite the evidence for this providing a better
   learning outcome) to "consume" the content passively.
 
+I also aim to consider further aspects of exclusivity in my teaching as
+suggested by papers like [[11]](https://osf.io/preprints/socarxiv/3r2ez/)
+
 I aim to continuously reflect on my practice, for example publishing peer
 reviewed articles such as
 [[10]](https://journals.gre.ac.uk/index.php/msor/article/view/254). Importantly,
@@ -102,3 +105,5 @@ change my practice: I will.
 10. Knight, Vincent. ["Playing Games: A Case Study in Active Learning Applied to
     Game Theory."](https://journals.gre.ac.uk/index.php/msor/article/view/254)
     MSOR Connections 14.1 (2015): 28-38.
+11. Guest, O., & Forbes, S. H. ["Teaching coding inclusively: if this, then what?"](https://doi.org/10.31235/osf.io/3r2ez)
+    SocArXiv, (2023).
