@@ -1,7 +1,7 @@
 data==0.4
 decorator==4.0.11
 funcsigs==1.0.2
-future==0.16.0
+future==0.18.3
 jinja2==2.9.6
 latex==0.6.4
 markdown==2.6.11
