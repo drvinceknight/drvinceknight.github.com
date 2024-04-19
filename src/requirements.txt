@@ -6,7 +6,7 @@ jinja2==2.9.6
 latex==0.6.4
 markdown==2.6.11
 markupsafe==1.0
-pyyaml==3.12
+pyyaml==5.4
 shutilwhich==1.1.0
 six==1.10.0
 tempdir==0.7.1
