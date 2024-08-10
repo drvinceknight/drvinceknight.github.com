@@ -1,8 +1,10 @@
 authors:
-- me
-- marc-harper
-- nikoleta-glynatsi
-- jon-gillard
-date: 2019
+  - me
+  - marc-harper
+  - nikoleta-glynatsi
+  - jon-gillard
+date: 2024
 title: "Recognising and evaluating the effectiveness of extortion in the Iterated Prisoner's Dilemma"
 preprint_url: "https://arxiv.org/abs/1904.00973"
+url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304641"
+details: PLOS One
