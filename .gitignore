@@ -1,7 +1,3 @@
 _site
-*.DS_Store
-*checkpoint.ipynb
-Gemfile.lock
-public/
-*.mypy_cache*
-env/
+.sass-cache
+.jekyll-metadata
