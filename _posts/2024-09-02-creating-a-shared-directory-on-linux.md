@@ -16,7 +16,7 @@ shared computer that can be `scp`'d back and forth to.
 $ sudo groupadd jokeying
 ```
 
-Her I'm creating a group called `jokeying` (for a paper I'm working on).
+Here I'm creating a group called `jokeying` (for a paper I'm working on).
 
 ### Adding users to the new shared group
 
