@@ -23,7 +23,7 @@ young and do not remember it at all.
 ### Earliest memory
 
 I lived to the age of about 7 in [Mthatha, South Africa](https://en.wikipedia.org/wiki/Mthatha).
-I have some found childhood memories and often wonder what would happen if I'd stayed in South Africa.
+I have some fond childhood memories and often wonder what would happen if I'd stayed in South Africa.
 Perhaps, I'd have a South African accent and be a big springbok fan? But I
 don't.
 
