@@ -2,7 +2,6 @@
 layout: post
 title: "Visiting lectureship at the University of Namibia and PyCon NA 2024"
 date: 2024-10-18
-categories: blog
 comments: true
 ---
 
