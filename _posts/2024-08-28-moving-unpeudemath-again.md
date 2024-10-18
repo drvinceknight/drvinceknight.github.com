@@ -2,7 +2,6 @@
 layout: post
 title: "Moving my posts"
 date: 2024-08-01
-categories: blog
 comments: true
 ---
 
