@@ -22,21 +22,21 @@ Here's the list:
 5. Omar Khayyam (1048–1131 CE, Persia) – Solutions to cubic equations and a poet.
 6. Thābit ibn Qurra (826–901 CE, Iraq) – Contributed to number theory and geometry.
 7. Liu Hui (c. 225–295 CE, China) – Contributions to geometry and approximation of π.
-8. Al-Samawal al-Maghribi (c. 1130–1180 CE, Morocco) – Work on algebra and polynomials.---2. Early Modern Mathematicians (1500–1800)
+8. Al-Samawal al-Maghribi (c. 1130–1180 CE, Morocco) – Work on algebra and polynomials.
 9. Maria Gaetana Agnesi (1718–1799, Italy) – Wrote one of the first comprehensive calculus textbooks.
 10. Émilie du Châtelet (1706–1749, France) – Advanced Newton’s work and translated his "Principia."
 11. Benjamin Banneker (1731–1806, USA) – African-American mathematician, astronomer, and surveyor.
 12. Sophie Germain (1776–1831, France) – Work on elasticity theory and Fermat's Last Theorem.
 13. Carl Friedrich Gauss (1777–1855, Germany) – Wide contributions, including number theory and statistics.
 14. José Mariano Mociño (1757–1820, Mexico) – Contributions to botany and mathematics.
-15. Sacrobosco (13th century, England) – Work on spherical geometry.---3. 19th-Century Mathematicians
+15. Sacrobosco (13th century, England) – Work on spherical geometry.
 16. Ada Lovelace (1815–1852, UK) – First computer programmer; work on algorithms for the Analytical Engine.
 17. Mary Somerville (1780–1872, UK) – Popularized Laplace's work and wrote on astronomy and mathematics.
 18. Sofia Kovalevskaya (1850–1891, Russia) – First woman to earn a PhD in mathematics; work on partial differential equations.
 19. J.J. Sylvester (1814–1897, UK) – Work on matrix theory and algebra.
 20. Charles Loring Brace (1826–1890, USA) – Advocated for algebraic research in education.
 21. Florence Nightingale (1820–1910, UK) – Pioneer of statistical graphics in public health.
-22. Évariste Galois (1811–1832, France) – Laid the groundwork for group theory.---4. 20th-Century Mathematicians
+22. Évariste Galois (1811–1832, France) – Laid the groundwork for group theory.
 23. Emmy Noether (1882–1935, Germany) – Groundbreaking work in abstract algebra and physics.
 24. Mary Cartwright (1900–1998, UK) – Work on chaos theory and differential equations.
 25. Marjorie Lee Browne (1914–1979, USA) – African-American mathematician; advanced mathematics education.
@@ -49,7 +49,7 @@ Here's the list:
 32. Elbert Frank Cox (1895–1969, USA) – First African-American to earn a PhD in mathematics.
 33. S. S. Pillai (1901–1950, India) – Contributions to number theory.
 34. Chike Obi (1921–2008, Nigeria) – Pioneer in modern Nigerian mathematics.
-35. C. R. Rao (1920–2023, India) – Contributions to statistics and information theory.---5. Contemporary Mathematicians (Late 20th to 21st Century)
+35. C. R. Rao (1920–2023, India) – Contributions to statistics and information theory.
 36. Ingrid Daubechies (b. 1954, Belgium) – Wavelets and image compression.
 37. Maryam Mirzakhani (1977–2017, Iran) – First woman to win the Fields Medal.
 38. Ruth Gonzalez (b. 20th century, USA) – First Latina to earn a PhD in math.
@@ -60,18 +60,18 @@ Here's the list:
 43. Jonathan Farley (b. 1970, USA) – Lattice theory and social justice in math.
 44. Mangala Narlikar (b. 1948, India) – Work in astronomy and math.
 45. Ramanujan (1887–1920, India) – Self-taught genius; contributions to number theory.
-46. George Polya (1887–1985, Hungary) – Mathematical problem-solving techniques.---6. Underrepresented Figures
+46. George Polya (1887–1985, Hungary) – Mathematical problem-solving techniques.
 47. Alice T. Schafer (1915–2009, USA) – Advocate for women in mathematics.
 48. Shakuntala Devi (1929–2013, India) – Mental calculation prodigy.
 49. Alena Buyx (21st century, Germany) – Applied ethics and mathematical modeling.
 50. Ali Nesin (b. 1956, Turkey) – Founder of math villages to teach young talent.
 51. John Mighton (b. 1957, Canada) – Advocate for math accessibility.
 52. Alan Turing (1912–1954, UK) – Foundations of computer science and cryptography.
-53. Sophie Morel (b. 1979, France) – Young leader in arithmetic geometry.---7. Inspirational Figures from History
+53. Sophie Morel (b. 1979, France) – Young leader in arithmetic geometry.
 54. Bertrand Russell (1872–1970, UK) – Foundations of logic and set theory.
 55. Henri Poincaré (1854–1912, France) – Dynamical systems and topology.
 56. Zaha Hadid (1950–2016, Iraq/UK) – Architecture with heavy mathematical influence.
-57. Norbert Wiener (1894–1964, USA) – Founder of cybernetics.---8. Names to Spark Curiosity
+57. Norbert Wiener (1894–1964, USA) – Founder of cybernetics.
 58. Grace Hopper (1906–1992, USA) – Pioneer of computer programming.
 59. Evelyn Boyd Granville (1924–2023, USA) – African-American trailblazer in computer science.
 60. Takakazu Seki (1642–1708, Japan) – Developed Japanese calculus (wasan).
