@@ -10,7 +10,7 @@ files (too large to use a standard approach) to a file.
 
 The command is:
 
-```python
+```bash
 $ find data/ -type f -exec tail -n+2 {} \; > main.csv
 ```
 
