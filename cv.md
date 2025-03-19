@@ -16,6 +16,9 @@ permalink: /cv/
 
 ## Awards
 
+- 2025: Nominated for Cardiff University Enriching Student Life Awards: Most Impactful and Outstanding Use of Assessment as Learning
+- 2025: Nominated for Cardiff University Enriching Student Life Awards: Most Outstanding Learning Experience
+- 2025: Nominated for Cardiff University Enriching Student Life Awards: Personal Tutor of the Year
 - 2024: Nominated for Cardiff University Enriching Student Life Awards: Most Outstanding Learning Experience
 - 2021: Lyn Thomas award award in recognition of academic OR research which best demonstrates both novelty and real world impact backed up by evidence.
 - 2020: School of Mathematics student award for personal tutor of the year
