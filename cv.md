@@ -46,6 +46,9 @@ permalink: /cv/
 
 ## Examiner
 
+- 2025: External PhD examiner: Nick Jelicic (University College of London - May)
+- 2024: Internal PhD examiner: Eferhonore Efe-Eyefia (January)
+- 2023: Internal PhD examiner: Elizabeth Williams (May)
 - 2018: External PhD examiner: Junchi Tan (Strathclyde University - August)
 - 2018: External PhD examiner: Ryan Palmer (University College of London - March)
 - 2017: External PhD examiner: Shu Pan (University of Southampton - November)
