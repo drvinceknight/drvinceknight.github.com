@@ -49,7 +49,7 @@ Another way to frame it might be: I’m not flipping the structure at all. I’m
 
 And one more point about this book:
 
-> **I don’t think universities should be teaching commercial software by default —  
+> **I don’t think universities should (ethically) be teaching commercial software —  
 > I’ll write up more thoughts on that at some point.**
 
 But really, we don’t have to — at least not in my field (others may vary).  
