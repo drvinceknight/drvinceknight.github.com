@@ -57,7 +57,8 @@ permalink: /cv/
 
 ## Roles
 
-- 2022-present: Student Voice Coordinator
+- 2025-present: Programme lead for MSc in AI + Statistical Analysis
+- 2022-2025: Student Voice Coordinator
 - 2019-present: Topic editor for the Journal of Open Source Software
 - 2018: Local organiser of the SSI Collaborations 2018 Conference
 - 2018-present: Data Innovation Research Institute Management Board
