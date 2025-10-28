@@ -11,4 +11,5 @@ authors:
 published_date: 2025
 details: IMA Journal of Management Mathematics
 title: "On the Optimisation of Heterogeneous Ambulance Fleet Allocations"
+direct_url: "https://academic.oup.com/imaman/article/36/4/691/8190187"
 ---
