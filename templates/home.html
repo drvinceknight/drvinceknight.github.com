@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}{{ blog_title }}{% endblock %}
+
+{% block content %}
+
+<div class="intro">
+  <img class="avatar" src="{{ latest_photo_url }}" alt="Vincent Knight">
+  <p>{{ description }}</p>
+</div>
+
+<hr>
+
+{% if blog_posts %}
+<h2>Latest post</h2>
+{% set latest = blog_posts[0] %}
+<p><small>{{ latest.date }}</small> &mdash; <a href="/posts/{{ latest.slug }}/">{{ latest.title }}</a></p>
+{{ latest.excerpt }}
+{% endif %}
+
+<hr>
+
+{% set current_courses = courses | selectattr("current") | list %}
+{% if current_courses %}
+<h2>Teaching</h2>
+<ul>
+  {% for course in current_courses %}
+  <li>
+    {% if course.direct_url %}
+    <a href="{{ course.direct_url }}">{{ course.title }}</a>
+    {% else %}
+    {{ course.title }}
+    {% endif %}
+    {% if course.level %} <small>({{ course.level }})</small>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<hr>
+
+{% if software_list %}
+<h2>Software</h2>
+<ul>
+  {% for tool in software_list %}
+  <li>
+    <a href="{{ tool.direct_url }}">{{ tool.title }}</a>: {{ tool.description }}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<hr>
+
+{% if publications %}
+<h2 id="publications">Publications ({{ publications | length }})</h2>
+
+{% set books = publications | selectattr("tags") | list %}
+
+{% set book_list = [] %}
+{% set article_list = [] %}
+{% for p in publications %}
+  {% if "book" in p.tags %}{% set _ = book_list.append(p) %}{% endif %}
+  {% if "article" in p.tags %}{% set _ = article_list.append(p) %}{% endif %}
+{% endfor %}
+
+{% if book_list %}
+<h3>Books</h3>
+<ul>
+  {% for pub in book_list %}
+  <li>
+    {{ pub.published_date }}:
+    <a href="/posts/{{ pub.slug }}/">{{ pub.title }}</a>.
+    {% if pub.direct_url %}
+    <a href="{{ pub.direct_url }}">{{ pub.details }}</a>.
+    {% elif pub.details %}{{ pub.details }}.{% endif %}
+    {% if pub.authors %}
+    {% for author in pub.authors %}
+    <a href="/collaborators/{{ author | slugify }}/">{{ author }}</a>{% if not loop.last %},{% else %}.{% endif %}
+    {% endfor %}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if article_list %}
+<h3>{{ article_list | length }} Articles</h3>
+<ul>
+  {% for pub in article_list %}
+  <li>
+    {{ pub.published_date }}:
+    <a href="/posts/{{ pub.slug }}/">{{ pub.title }}</a>.
+    {% if pub.direct_url %}
+    <a href="{{ pub.direct_url }}">{{ pub.details }}</a>.
+    {% elif pub.details %}{{ pub.details }}.{% endif %}
+    {% if pub.authors %}
+    {% for author in pub.authors %}
+    <a href="/collaborators/{{ author | slugify }}/">{{ author }}</a>{% if not loop.last %},{% else %}.{% endif %}
+    {% endfor %}
+    {% endif %}
+    {% if pub.preprint_direct_url %}
+    <strong><a href="{{ pub.preprint_direct_url }}">Preprint.</a></strong>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,8 @@
+Vincent Knight is a Chair at Cardiff University's School of Mathematics. His research spans Game Theory, applied stochastic modelling, healthcare analytics, and the pedagogy of mathematics. He is particularly interested in strategic behaviour in queues, evolutionary dynamics of the Iterated Prisoner's Dilemma, and active learning approaches.
+
+Vincent has authored 60 peer-reviewed articles and 3 books, including "Python for Mathematics", published by Taylor and Francis. He has supervised 42 research students at BSc, MSc, MMath, and PhD level.
+
+He is an active contributor to the open-source scientific software community, maintaining projects including Axelrod, CoopGt, dwys, Nashpy, nbchkr, Sold. He is a Fellow of the Sustainable Software Institute and a topic editor for the Journal of Open Source Software.
+
+Website: https://vknight.org
+GitHub: https://github.com/drvinceknight

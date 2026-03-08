@@ -1,0 +1,160 @@
+(% macro escape(s) %)((- s | latex_escape -))(% endmacro %)
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+\usepackage{etaremune}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1.2em}{0.5em}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, parsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=2pt, parsep=0pt}
+
+\pagestyle{plain}
+
+\begin{document}
+
+{\LARGE \textbf{Dr.\ Vincent A.\ Knight}}
+
+\medskip
+Cardiff University, School of Mathematics, Senghennydd Road, Cardiff, CF24 4AG\\
+\href{https://vknight.org}{vknight.org} \quad
+\href{https://github.com/drvinceknight}{github.com/drvinceknight} \quad
+\href{https://twitter.com/drvinceknight}{@drvinceknight}
+
+\bigskip
+
+%% ----------------------------------------------------------------
+\section{Research Interests}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in research_interests %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Appointments}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in appointments %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Academic Qualifications}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in qualifications %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Awards}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in awards %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Funding}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in funding %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Books}
+%% ----------------------------------------------------------------
+
+\begin{etaremune}
+(% for pub in books %)
+\item
+  (( pub.published_date )): \textbf{(( pub.title | latex_escape ))}\\
+  (% if pub.authors %)(( pub.authors | join(", ") | latex_escape ))\\(% endif %)
+  (% if pub.details %)\textbf{(( pub.details | latex_escape ))}\\(% endif %)
+  (% if pub.direct_url %)\url{(( pub.direct_url ))}\\(% endif %)
+(% endfor %)
+\end{etaremune}
+
+%% ----------------------------------------------------------------
+\section{Publications}
+%% ----------------------------------------------------------------
+
+\begin{etaremune}
+(% for pub in articles %)
+\item
+  (( pub.published_date )): \textbf{(( pub.title | latex_escape ))}\\
+  (% if pub.authors %)(( pub.authors | join(", ") | latex_escape ))\\(% endif %)
+  (% if pub.details %)\textbf{(( pub.details | latex_escape ))}\\(% endif %)
+  (% if pub.direct_url %)\url{(( pub.direct_url ))}\\(% endif %)
+  (% if pub.preprint_direct_url %)\url{(( pub.preprint_direct_url ))}\\(% endif %)
+(% endfor %)
+\end{etaremune}
+
+%% ----------------------------------------------------------------
+\section{Software}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for tool in software_list %)
+  \item \textbf{(( tool.title | latex_escape ))}: (( tool.description | latex_escape ))
+  (% if tool.direct_url %)\url{(( tool.direct_url ))}(% endif %)
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Research Students}
+%% ----------------------------------------------------------------
+
+\begin{etaremune}
+(% for student in students %)
+\item
+  (( student.title | latex_escape ))
+  (% set degrees = student.tags | reject("equalto", "student") | list %)
+  (% if degrees %)(((( degrees | join(", ") | latex_escape ))))(% endif %)
+  \hfill (( student.year ))\\
+  (% if student.content_html | striptags %)(( student.content_html | striptags | trim | latex_escape ))(% endif %)
+(% endfor %)
+\end{etaremune}
+
+%% ----------------------------------------------------------------
+\section{Roles and Service}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in roles %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Examiner}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in examiner %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+
+\end{document}

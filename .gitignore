@@ -1,4 +1,34 @@
-_site
-.sass-cache
+# Python
+__pycache__/
+.venv/
+
+# macOS
+.DS_Store
+
+# Old Jekyll artefacts
+_site/
+.sass-cache/
 .jekyll-metadata
 env/
+
+# LaTeX build artefacts (the .tex source files in assets/cv/ are kept)
+assets/*.aux
+assets/*.fdb_latexmk
+assets/*.fls
+assets/*.log
+assets/*.pdf
+
+# Original unprocessed photo (renamed copy lives in assets/photos/)
+assets/54799818142_33c5dc0de8_o.jpeg
+
+# Old hi-res photo superseded by assets/photos/
+assets/vince-knight-hi.jpg
+
+# Leftover config files from migration
+Makefile
+mkdocs.yml
+pelicanconf.py
+publishconf.py
+tasks.py
+output/
+site/

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Collaborators - {{ blog_title }}{% endblock %}
+
+{% block content %}
+
+<h2>Collaborators</h2>
+
+<div class="stat-row">
+  <div class="stat-card">
+    <span class="stat-number">{{ n_publications }}</span>
+    <span class="stat-label">Publications</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">{{ collaborators | length }}</span>
+    <span class="stat-label">Co-authors</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">{{ avg_coauthors_per_paper }}</span>
+    <span class="stat-label">Avg. co-authors per paper</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-number">{{ years_publishing }}</span>
+    <span class="stat-label">Years publishing</span>
+  </div>
+</div>
+
+{% if network_svg %}
+<h3>Co-authorship network</h3>
+<p><small>
+  Nodes are people I have co-authored with, linked if they share a publication.
+  Size and label reflect number of connections; hover for details.
+  {{ net_nodes }} people &middot; {{ net_edges }} connections &middot;
+  density {{ net_density }} &middot; {{ net_components }} connected group{% if net_components != 1 %}s{% endif %}.
+</small></p>
+{{ network_svg }}
+{% if net_top %}
+<p><small>Most connected:
+  {% for name, deg in net_top %}
+  <strong>{{ name }}</strong> ({{ deg }}){% if not loop.last %}, {% endif %}
+  {% endfor %}.
+</small></p>
+{% endif %}
+{% endif %}
+
+<hr>
+
+<ul>
+  {% for person in collaborators %}
+  <li>
+    {% if person.slug %}
+    <a href="/collaborators/{{ person.slug }}/">{{ person.title }}</a>
+    {% else %}
+    {{ person.title }}
+    {% endif %}
+    <small>({{ person.pub_count }} publication{% if person.pub_count != 1 %}s{% endif %})</small>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

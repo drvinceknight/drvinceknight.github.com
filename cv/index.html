@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Vitae - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Curriculum Vitae</h2>
+
+
+<p>
+  <small>
+    <a href="/assets/cv/cv.tex">Full CV (.tex)</a> &nbsp;&middot;&nbsp;
+    <a href="/assets/cv/cv-short.tex">Short CV (.tex)</a> &nbsp;&middot;&nbsp;
+    <a href="/assets/cv/bio.txt">Short bio (.txt)</a>
+  </small>
+</p>
+
+
+<div class="photo-gallery">
+  
+  <div class="photo-gallery-item">
+    <a href="/assets/photos/2025.jpg" target="_blank" title="2025">
+      <img src="/assets/photos/2025.jpg" alt="Vincent Knight 2025">
+    </a>
+    <small>2025</small>
+  </div>
+  
+  <div class="photo-gallery-item">
+    <a href="/assets/photos/2023.jpg" target="_blank" title="2023">
+      <img src="/assets/photos/2023.jpg" alt="Vincent Knight 2023">
+    </a>
+    <small>2023</small>
+  </div>
+  
+</div>
+
+
+
+<h2 id="appointments">Appointments</h2>
+<ul>
+<li>2024-present: Chair - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+<li>2024-present: Visiting Lecturer - University of Namibia 🇳🇦</li>
+<li>2016-2024: Senior Lecturer/Associate Professor - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+<li>2013-present: Fellow of the Higher Education Academy - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+<li>2016-present: Fellow of Sustainable Software Institute - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+<li>2011-2016: Lecturer/Assistant Professor - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+<li>2009-2011: Post Doctoral Researcher - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿</li>
+</ul>
+<h2 id="awards">Awards</h2>
+<ul>
+<li>2025: Nominated for Cardiff University Enriching Student Life Awards: Most Impactful and Outstanding Use of Assessment as Learning</li>
+<li>2025: Nominated for Cardiff University Enriching Student Life Awards: Most Outstanding Learning Experience</li>
+<li>2025: Nominated for Cardiff University Enriching Student Life Awards: Personal Tutor of the Year</li>
+<li>2024: Nominated for Cardiff University Enriching Student Life Awards: Most Outstanding Learning Experience</li>
+<li>2021: Lyn Thomas award award in recognition of academic OR research which best demonstrates both novelty and real world impact backed up by evidence.</li>
+<li>2020: School of Mathematics student award for personal tutor of the year</li>
+<li>2020: School of Mathematics student award for best lecturer</li>
+<li>2020: School of Mathematics student award for most approachable member of staff</li>
+<li>2019: School of Mathematics student award for personal tutor of the year</li>
+<li>2019: School of Mathematics student award for most influential member of staff in the final year</li>
+<li>2019: School of Mathematics student award for best lecturer</li>
+<li>2018: Nominated for Cardiff University Enriching Student Life Awards: Most innovative member of staff</li>
+<li>2017: John Pinner award for contribution to the Python community</li>
+<li>2017: Times higher education award for international collaboration: Phoenix Project.</li>
+<li>2016: Shortlisted for Cardiff University Enriching Student Life Awards: Most innovative member of staff</li>
+<li>2016: School of Mathematics student award for best lecturer</li>
+<li>2015: Times higher education award for modelling unit</li>
+<li>2015: Shortlisted for Cardiff University Enriching Student Life Awards: Most innovative member of staff</li>
+<li>2014: Cardiff University Recognising Excellence Rising Star Award</li>
+<li>2005: Cardiff School of Mathematics - graduated top of my year</li>
+</ul>
+<h2 id="qualifications">Qualifications</h2>
+<ul>
+<li>2013 - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Postgraduate Certificate in University Teaching and Learning - Obtained with distinction</li>
+<li>2009 - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : Ph.D. in Enumerative Combinatorics - Alternating Sign Matrix Polytopes</li>
+<li>2005 - Cardiff University 🏴󠁧󠁢󠁷󠁬󠁳󠁿 : B.Sc. (Hons) Mathematics - Graduated top of my class</li>
+<li>2002 - Lycee du Pre Saint Sauver, St Claude, Jura, France 🇫🇷: Baccalaureat Scientifique - Fluent in French</li>
+</ul>
+<h2 id="examiner">Examiner</h2>
+<ul>
+<li>2025: External PhD examiner: Nick Jelicic (University College of London - May)</li>
+<li>2024: Internal PhD examiner: Eferhonore Efe-Eyefia (January)</li>
+<li>2023: Internal PhD examiner: Elizabeth Williams (May)</li>
+<li>2018: External PhD examiner: Junchi Tan (Strathclyde University - August)</li>
+<li>2018: External PhD examiner: Ryan Palmer (University College of London - March)</li>
+<li>2017: External PhD examiner: Shu Pan (University of Southampton - November)</li>
+<li>2015: Internal PhD supervisor: Elizabeth Rowse (August)</li>
+<li>2013-2016: External Examiner Greenwich University</li>
+</ul>
+<h2 id="roles">Roles</h2>
+<ul>
+<li>2025-present: Programme lead for MSc in AI + Statistical Analysis</li>
+<li>2022-2025: Student Voice Coordinator</li>
+<li>2019-present: Topic editor for the Journal of Open Source Software</li>
+<li>2018: Local organiser of the SSI Collaborations 2018 Conference</li>
+<li>2018-present: Data Innovation Research Institute Management Board</li>
+<li>2017-2023: Trustee of the UK Python Association</li>
+<li>2016-2017: Editor for the Cardiff Centre for Education Innovation Learning Hub</li>
+<li>2016-present: Member of the PyCon UK organising committee</li>
+<li>2016-present: Sustainable Software Institute Fellow</li>
+<li>2016-2018: Deputy director of engagement</li>
+<li>2015-present: Phoenix project advisory board</li>
+<li>2015-present: Cardiff Python User Group Meetup Organiser</li>
+<li>2015-2021: Mathematical modelling area editor for Health Systems</li>
+<li>2011-2017: Chair of Operational Research in Schools taskforce</li>
+</ul>
+<h2 id="funding">Funding</h2>
+<ul>
+<li>2021: Cardiff and Vale UHB: Analytics Modelling Unit, £545,760</li>
+<li>2019: EPSRC: Modelling Emergency Medical Services in Indonesia, £559,202</li>
+<li>2018: THIS (The Healthcare Improvement Studies) Institute: THIS Fellowship: Workforce Behaviours in Healthcare Queueing Systems: Mathematical Modelling informed by Ethnographic Methods, £136,660</li>
+<li>2018: Cardiff University CUROP Award: Further game theoretic dynamics of Rhino poaching, £2100.</li>
+<li>2015: Cwm Taf University Health Board: Matched funded PhD Studentship (algorithm evaluation and cluster initialisation), £35,000</li>
+<li>2015: Aneurin Bevan University Health Board: Mathematical Modelling Unit (continuation of funding), £655,663</li>
+<li>2014: Cardiff and Vale University Health Board: Matched Funded PhD Studentship (ICU modelling), £37,500</li>
+<li>2014: Aneurin Bevan University Health Board: Matched Funded PhD Studentship: Modelling Deadlock in Queueing System, £37,700</li>
+<li>2013: Sustainable software institute: Fellowship, £3,000</li>
+<li>2013: Health Foundation (SHINE award): Estimating quality improvement and cost reduction for the patient and local health economy of transferring ENT/audiology services into a community setting, £61,237</li>
+<li>2013: ESRC: Hate speech? Understanding the modelling of social media identity formation and behaviour through the Cardiff Online Social Media Observatory (COSMOS), £7,015</li>
+<li>2013: EPSRC: Identifying and modelling victim, business regulatory and malware behaviours in a changing cyberthreat landscape, £101,659</li>
+<li>2013: Cardiff and Vale University Health Board: Operational Research Modelling to Support Cardiff and Vale UHB, £371,427</li>
+<li>2013: Cardiff and Vale University Health Board: Mathematical modelling to support the Cardiff and Vale University Health Board, £195,000</li>
+<li>2013: Aneurin Bevan University Health Board: Creation of a Mathematical Modelling Unit to Support the Aneurin Bevan Health Board, £319,944</li>
+<li>2012: LANCS (EPSRC): Post-Doctoral Training Scheme Grant: Investigating the Effects of Individual Behaviour on Hierarchical queueing Systems, £5,000</li>
+<li>2012: Cardiff University CUROP Award: Developing and Evaluating Mathematical Teaching Resources through Open Source Software, £2,200</li>
+<li>2011: ESRC and Welsh Government: Maximising the Use of Existing Administrative data Sets for Wales trough computer Simulation Modelling and Simulation (Welsh Government Fellowship), £155,523</li>
+<li>2010: LANCS (EPSRC): Post-Doctoral Training Scheme Grant: Choice and Healthcare Investigation Project, £2,500</li>
+<li>2010: Cardiff University CUROP Award: Patient Choice: A Discrete Event Simulation, £2,500</li>
+</ul>
+
+
+<h2>Publications</h2>
+<p><small><a href="/#publications">63 publications</a></small></p>
+<svg viewBox="0 0 560 180" style="width:100%;opacity:0.9"><rect x="6.6" y="126.7" width="19.8" height="13.3" fill="var(--accent)" rx="2"/><text x="16.5" y="122.7" text-anchor="middle" font-size="11" fill="currentColor">1</text><rect x="39.5" y="126.7" width="19.8" height="13.3" fill="var(--accent)" rx="2"/><text x="49.4" y="122.7" text-anchor="middle" font-size="11" fill="currentColor">1</text><rect x="72.5" y="60.0" width="19.8" height="80.0" fill="var(--accent)" rx="2"/><text x="82.4" y="56.0" text-anchor="middle" font-size="11" fill="currentColor">6</text><rect x="105.4" y="73.3" width="19.8" height="66.7" fill="var(--accent)" rx="2"/><text x="115.3" y="69.3" text-anchor="middle" font-size="11" fill="currentColor">5</text><rect x="138.4" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="148.2" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="171.3" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="181.2" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="204.2" y="73.3" width="19.8" height="66.7" fill="var(--accent)" rx="2"/><text x="214.1" y="69.3" text-anchor="middle" font-size="11" fill="currentColor">5</text><rect x="237.2" y="60.0" width="19.8" height="80.0" fill="var(--accent)" rx="2"/><text x="247.1" y="56.0" text-anchor="middle" font-size="11" fill="currentColor">6</text><rect x="270.1" y="73.3" width="19.8" height="66.7" fill="var(--accent)" rx="2"/><text x="280.0" y="69.3" text-anchor="middle" font-size="11" fill="currentColor">5</text><rect x="303.1" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="312.9" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="336.0" y="113.3" width="19.8" height="26.7" fill="var(--accent)" rx="2"/><text x="345.9" y="109.3" text-anchor="middle" font-size="11" fill="currentColor">2</text><rect x="368.9" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="378.8" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="401.9" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="411.8" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="434.8" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="444.7" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="467.8" y="113.3" width="19.8" height="26.7" fill="var(--accent)" rx="2"/><text x="477.6" y="109.3" text-anchor="middle" font-size="11" fill="currentColor">2</text><rect x="500.7" y="100.0" width="19.8" height="40.0" fill="var(--accent)" rx="2"/><text x="510.6" y="96.0" text-anchor="middle" font-size="11" fill="currentColor">3</text><rect x="533.6" y="20.0" width="19.8" height="120.0" fill="var(--accent)" rx="2"/><text x="543.5" y="16.0" text-anchor="middle" font-size="11" fill="currentColor">9</text><text x="16.5" y="172" text-anchor="middle" font-size="11" fill="currentColor">2008</text><text x="49.4" y="172" text-anchor="middle" font-size="11" fill="currentColor">2010</text><text x="82.4" y="172" text-anchor="middle" font-size="11" fill="currentColor">2011</text><text x="115.3" y="172" text-anchor="middle" font-size="11" fill="currentColor">2012</text><text x="148.2" y="172" text-anchor="middle" font-size="11" fill="currentColor">2013</text><text x="181.2" y="172" text-anchor="middle" font-size="11" fill="currentColor">2014</text><text x="214.1" y="172" text-anchor="middle" font-size="11" fill="currentColor">2015</text><text x="247.1" y="172" text-anchor="middle" font-size="11" fill="currentColor">2016</text><text x="280.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">2017</text><text x="312.9" y="172" text-anchor="middle" font-size="11" fill="currentColor">2018</text><text x="345.9" y="172" text-anchor="middle" font-size="11" fill="currentColor">2019</text><text x="378.8" y="172" text-anchor="middle" font-size="11" fill="currentColor">2020</text><text x="411.8" y="172" text-anchor="middle" font-size="11" fill="currentColor">2021</text><text x="444.7" y="172" text-anchor="middle" font-size="11" fill="currentColor">2022</text><text x="477.6" y="172" text-anchor="middle" font-size="11" fill="currentColor">2023</text><text x="510.6" y="172" text-anchor="middle" font-size="11" fill="currentColor">2024</text><text x="543.5" y="172" text-anchor="middle" font-size="11" fill="currentColor">2025</text></svg>
+
+
+
+<h2>42 Research students</h2>
+
+
+<svg viewBox="0 0 560 220" style="width:100%;opacity:0.9"><rect x="8.0" y="116.7" width="24.0" height="48.3" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 2</title></rect><text x="20.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2010</text><rect x="48.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="48.0" y="44.2" width="24.0" height="96.7" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 4</title></rect><rect x="48.0" y="20.0" width="24.0" height="24.2" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 1</title></rect><text x="60.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2011</text><rect x="88.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="88.0" y="116.7" width="24.0" height="24.2" fill="var(--green)" rx="2" opacity="0.85"><title>MMath: 1</title></rect><rect x="88.0" y="92.5" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><rect x="88.0" y="68.3" width="24.0" height="24.2" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 1</title></rect><text x="100.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2012</text><rect x="128.0" y="116.7" width="24.0" height="48.3" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 2</title></rect><rect x="128.0" y="92.5" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><text x="140.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2013</text><rect x="168.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="168.0" y="116.7" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><text x="180.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2014</text><rect x="208.0" y="140.8" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><rect x="208.0" y="44.2" width="24.0" height="96.7" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 4</title></rect><text x="220.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2015</text><rect x="248.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="248.0" y="116.7" width="24.0" height="24.2" fill="var(--teal)" rx="2" opacity="0.85"><title>MSc: 1</title></rect><rect x="248.0" y="92.5" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><rect x="248.0" y="44.2" width="24.0" height="48.3" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 2</title></rect><text x="260.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2016</text><rect x="288.0" y="140.8" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><rect x="288.0" y="68.3" width="24.0" height="72.5" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 3</title></rect><text x="300.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2017</text><rect x="328.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="328.0" y="116.7" width="24.0" height="24.2" fill="var(--teal)" rx="2" opacity="0.85"><title>MSc: 1</title></rect><rect x="328.0" y="68.3" width="24.0" height="48.3" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 2</title></rect><rect x="328.0" y="44.2" width="24.0" height="24.2" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 1</title></rect><text x="340.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2018</text><rect x="368.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><text x="380.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2019</text><rect x="408.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="408.0" y="116.7" width="24.0" height="24.2" fill="var(--green)" rx="2" opacity="0.85"><title>MMath: 1</title></rect><rect x="408.0" y="92.5" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><text x="420.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2020</text><rect x="448.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="448.0" y="116.7" width="24.0" height="24.2" fill="var(--green)" rx="2" opacity="0.85"><title>MMath: 1</title></rect><text x="460.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2021</text><rect x="488.0" y="140.8" width="24.0" height="24.2" fill="var(--accent-warm)" rx="2" opacity="0.85"><title>Short placement: 1</title></rect><text x="500.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2024</text><rect x="528.0" y="140.8" width="24.0" height="24.2" fill="var(--accent)" rx="2" opacity="0.85"><title>PhD: 1</title></rect><rect x="528.0" y="116.7" width="24.0" height="24.2" fill="var(--green)" rx="2" opacity="0.85"><title>MMath: 1</title></rect><rect x="528.0" y="92.5" width="24.0" height="24.2" fill="var(--yellow)" rx="2" opacity="0.85"><title>BSc: 1</title></rect><text x="540.0" y="179" text-anchor="middle" font-size="11" fill="currentColor">2025</text><rect x="80.0" y="203" width="9" height="9" fill="var(--accent)" rx="2"/><text x="93.0" y="212" font-size="10" fill="currentColor">PhD</text><rect x="160.0" y="203" width="9" height="9" fill="var(--teal)" rx="2"/><text x="173.0" y="212" font-size="10" fill="currentColor">MSc</text><rect x="240.0" y="203" width="9" height="9" fill="var(--green)" rx="2"/><text x="253.0" y="212" font-size="10" fill="currentColor">MMath</text><rect x="320.0" y="203" width="9" height="9" fill="var(--yellow)" rx="2"/><text x="333.0" y="212" font-size="10" fill="currentColor">BSc</text><rect x="400.0" y="203" width="9" height="9" fill="var(--accent-warm)" rx="2"/><text x="413.0" y="212" font-size="10" fill="currentColor">Short placement</text></svg>
+
+
+
+<svg viewBox="0 0 560 180" style="width:100%;opacity:0.9"><rect x="22.4" y="20.0" width="67.2" height="120.0" fill="var(--yellow)" rx="2"/><text x="56.0" y="16.0" text-anchor="middle" font-size="11" fill="currentColor">16</text><rect x="134.4" y="42.5" width="67.2" height="97.5" fill="var(--accent-warm)" rx="2"/><text x="168.0" y="38.5" text-anchor="middle" font-size="11" fill="currentColor">13</text><rect x="246.4" y="57.5" width="67.2" height="82.5" fill="var(--accent)" rx="2"/><text x="280.0" y="53.5" text-anchor="middle" font-size="11" fill="currentColor">11</text><rect x="358.4" y="110.0" width="67.2" height="30.0" fill="var(--green)" rx="2"/><text x="392.0" y="106.0" text-anchor="middle" font-size="11" fill="currentColor">4</text><rect x="470.4" y="125.0" width="67.2" height="15.0" fill="var(--teal)" rx="2"/><text x="504.0" y="121.0" text-anchor="middle" font-size="11" fill="currentColor">2</text><text x="56.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">BSc</text><text x="168.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">Short placement</text><text x="280.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">PhD</text><text x="392.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">MMath</text><text x="504.0" y="172" text-anchor="middle" font-size="11" fill="currentColor">MSc</text></svg>
+
+
+
+<p><small>
+  11 of 42 students have joint publications
+  (avg 1.0 per student).
+</small></p>
+
+
+<ul>
+  
+  <li>
+    <a href="/collaborators/alexis-griffiths/">Alex Griffiths</a>
+    
+    (MMath)
+    &mdash; 2025
+  </li>
+  
+  <li>
+    <a href="/collaborators/harry-foster/">Harry Foster</a>
+    
+    (PhD)
+    &mdash; 2025
+  </li>
+  
+  <li>
+    <a href="/collaborators/matilde-chiari/">Matilde Chiari</a>
+    
+    (BSc.)
+    &mdash; 2025
+  </li>
+  
+  <li>
+    <a href="/collaborators/thomas-watson/">Thomas Watson</a>
+    
+    (Summer)
+    &mdash; 2024
+  </li>
+  
+  <li>
+    <a href="/collaborators/henry-wilde/">Henry Wilde</a>
+    
+    (PhD)
+    &mdash; 2021
+  </li>
+  
+  <li>
+    <a href="/collaborators/katie-murphy/">Katie Murphy</a>
+    
+    (MMath)
+    &mdash; 2021
+  </li>
+  
+  <li>
+    <a href="/collaborators/katie-mcgoldrick/">Katie McGoldrick</a>
+    
+    (BSc)
+    &mdash; 2020
+  </li>
+  
+  <li>
+    <a href="/collaborators/michalis-panayides/">Michalis Panayides</a>
+    
+    (PhD)
+    &mdash; 2020
+  </li>
+  
+  <li>
+    <a href="/collaborators/sophie-shapcott/">Sophie Shapcott</a>
+    
+    (MMath)
+    &mdash; 2020
+  </li>
+  
+  <li>
+    <a href="/collaborators/thomas-rodwell/">Thomas Rodwell</a>
+    
+    (PhD)
+    &mdash; 2019
+  </li>
+  
+  <li>
+    <a href="/collaborators/ben-black/">Ben Black</a>
+    
+    (MSc)
+    &mdash; 2018
+  </li>
+  
+  <li>
+    <a href="/collaborators/eleanor-owen/">Eleanor Owen</a>
+    
+    (BSc)
+    &mdash; 2018
+  </li>
+  
+  <li>
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>
+    
+    (PhD)
+    &mdash; 2018
+  </li>
+  
+  <li>
+    <a href="/collaborators/solomon-keedle-isack/">Solomon Keedle-Isack</a>
+    
+    (Summer)
+    &mdash; 2018
+  </li>
+  
+  <li>
+    <a href="/collaborators/tara-hussain/">Tara Hussain</a>
+    
+    (BSc)
+    &mdash; 2018
+  </li>
+  
+  <li>
+    <a href="/collaborators/lewis-parsons/">Lewis Parsons</a>
+    
+    (Summer)
+    &mdash; 2017
+  </li>
+  
+  <li>
+    <a href="/collaborators/mansour-hakem/">Mansour Hakem</a>
+    
+    (Nuffield Research Placement)
+    &mdash; 2017
+  </li>
+  
+  <li>
+    <a href="/collaborators/toby-devlin/">Toby Devlin</a>
+    
+    (BSc)
+    &mdash; 2017
+  </li>
+  
+  <li>
+    <a href="/collaborators/will-guo/">Will Guo</a>
+    
+    (Nuffield Research Placement)
+    &mdash; 2017
+  </li>
+  
+  <li>
+    <a href="/collaborators/cindy-huang/">Cindy Huang</a>
+    
+    (Nuffield Research Placement)
+    &mdash; 2016
+  </li>
+  
+  <li>
+    <a href="/collaborators/james-campbell/">James Campbell</a>
+    
+    (BSc, Summer)
+    &mdash; 2016
+  </li>
+  
+  <li>
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>
+    
+    (PhD, MSc)
+    &mdash; 2016
+  </li>
+  
+  <li>
+    <a href="/collaborators/ffinian-sullivan/">Ffinian Sullivan</a>
+    
+    (Nuffield Research Placement)
+    &mdash; 2015
+  </li>
+  
+  <li>
+    <a href="/collaborators/hannah-lorrimore/">Hannah Lorrimore</a>
+    
+    (Summer)
+    &mdash; 2015
+  </li>
+  
+  <li>
+    <a href="/collaborators/imogen-dunne/">Imogen Dunne</a>
+    
+    (BSc.)
+    &mdash; 2015
+  </li>
+  
+  <li>
+    <a href="/collaborators/rhys-ward/">Rhys Ward</a>
+    
+    (Summer)
+    &mdash; 2015
+  </li>
+  
+  <li>
+    <a href="/collaborators/tobenna-peter-igwe/">Tobenna Peter Igwe</a>
+    
+    (Google Summer of Code)
+    &mdash; 2015
+  </li>
+  
+  <li>
+    <a href="/collaborators/angelico-fetta/">Angelico Fetta</a>
+    
+    (PhD)
+    &mdash; 2014
+  </li>
+  
+  <li>
+    <a href="/collaborators/rhys-jones/">Rhys Jones</a>
+    
+    (BSc.)
+    &mdash; 2014
+  </li>
+  
+  <li>
+    <a href="/collaborators/ceri-morse/">Ceri Morse</a>
+    
+    (BSc.)
+    &mdash; 2013
+  </li>
+  
+  <li>
+    <a href="/collaborators/izabela-komenda/">Izabela Komenda</a>
+    
+    (PhD)
+    &mdash; 2013
+  </li>
+  
+  <li>
+    <a href="/collaborators/leanne-smith/">Leanne Smith</a>
+    
+    (PhD)
+    &mdash; 2013
+  </li>
+  
+  <li>
+    <a href="/collaborators/chappman-sin/">Chappman Sin</a>
+    
+    (BSc.)
+    &mdash; 2012
+  </li>
+  
+  <li>
+    <a href="/collaborators/jason-young/">Jason Young</a>
+    
+    (MMath, Summer)
+    &mdash; 2012
+  </li>
+  
+  <li>
+    <a href="/collaborators/julie-vile/">Julie Vile</a>
+    
+    (PhD)
+    &mdash; 2012
+  </li>
+  
+  <li>
+    <a href="/collaborators/catherine-fortune/">Catherine Fortune</a>
+    
+    (BSc.)
+    &mdash; 2011
+  </li>
+  
+  <li>
+    <a href="/collaborators/iain-reynolds/">Iain Reynolds</a>
+    
+    (Summer)
+    &mdash; 2011
+  </li>
+  
+  <li>
+    <a href="/collaborators/rob-shone/">Rob Shone</a>
+    
+    (PhD, BSc)
+    &mdash; 2011
+  </li>
+  
+  <li>
+    <a href="/collaborators/stuart-macgregor/">Stuart MacGregor</a>
+    
+    (BSc.)
+    &mdash; 2011
+  </li>
+  
+  <li>
+    <a href="/collaborators/tatjana-timofejeva/">Tatjana Timofejeva</a>
+    
+    (BSc.)
+    &mdash; 2011
+  </li>
+  
+  <li>
+    <a href="/collaborators/fern-gould/">Fern Gould</a>
+    
+    (BSc.)
+    &mdash; 2010
+  </li>
+  
+  <li>
+    <a href="/collaborators/tamsin-griffiths/">Tamsin Griffiths</a>
+    
+    (BSc.)
+    &mdash; 2010
+  </li>
+  
+</ul>
+
+
+
+
+
+  </div>
+</body>
+</html>

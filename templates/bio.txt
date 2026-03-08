@@ -1,0 +1,8 @@
+Vincent Knight is a (( current_title )) at Cardiff University's School of Mathematics. His research spans Game Theory, applied stochastic modelling, healthcare analytics, and the pedagogy of mathematics. He is particularly interested in strategic behaviour in queues, evolutionary dynamics of the Iterated Prisoner's Dilemma, and active learning approaches.
+
+Vincent has authored (( articles | length )) peer-reviewed articles and (( books | length )) book(% if books | length != 1 %)s(% endif %)(% if featured_book %), including "(( featured_book.title ))"(% if featured_book.details %), published by (( featured_book.details ))(% endif %)(% endif %). He has supervised (( students | length )) research students at BSc, MSc, MMath, and PhD level.
+
+He is an active contributor to the open-source scientific software community(% if software_list %), maintaining projects including (% for tool in software_list %)(( tool.title ))(% if not loop.last %), (% endif %)(% endfor %)(% endif %). He is a Fellow of the Sustainable Software Institute and a topic editor for the Journal of Open Source Software.
+
+Website: https://vknight.org
+GitHub: https://github.com/drvinceknight

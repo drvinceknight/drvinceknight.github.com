@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} - {{ blog_title }}{% endblock %}
+
+{% block content %}
+
+{% set tags = post.tags or [] %}
+
+{# ------------------------------------------------------------------ #}
+{# Blog post                                                           #}
+{# ------------------------------------------------------------------ #}
+{% if "post" in tags %}
+
+<h2>{{ post.title }}</h2>
+<p><small>{{ post.date }}</small></p>
+
+{% if "article" in tags or "book" in tags %}
+<ul>
+  {% if post.authors %}
+  <li>Authors:
+    {% for author in post.authors %}
+    <a href="/collaborators/{{ author | slugify }}/">{{ author }}</a>{% if not loop.last %},{% else %}.{% endif %}
+    {% endfor %}
+  </li>
+  {% endif %}
+  {% if post.published_date %}<li>Date: {{ post.published_date }}</li>{% endif %}
+  {% if post.details %}
+  <li>Details:
+    {% if post.direct_url %}<a href="{{ post.direct_url }}">{{ post.details }}</a>
+    {% else %}{{ post.details }}{% endif %}
+  </li>
+  {% endif %}
+  {% if post.preprint_direct_url %}
+  <li><a href="{{ post.preprint_direct_url }}">Preprint.</a></li>
+  {% endif %}
+</ul>
+{% endif %}
+
+{{ post.content_html }}
+
+{% if post.comments %}
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+{% endif %}
+
+{# ------------------------------------------------------------------ #}
+{# Article or book                                                      #}
+{# ------------------------------------------------------------------ #}
+{% elif "article" in tags or "book" in tags %}
+
+<h2>{{ post.title }}</h2>
+
+<ul>
+  {% if post.authors %}
+  <li>Authors:
+    {% for author in post.authors %}
+    <a href="/collaborators/{{ author | slugify }}/">{{ author }}</a>{% if not loop.last %},{% else %}.{% endif %}
+    {% endfor %}
+  </li>
+  {% endif %}
+  {% if post.published_date %}<li>Date: {{ post.published_date }}</li>{% endif %}
+  {% if post.details %}
+  <li>Details:
+    {% if post.direct_url %}<a href="{{ post.direct_url }}">{{ post.details }}</a>
+    {% else %}{{ post.details }}{% endif %}
+  </li>
+  {% endif %}
+  {% if post.preprint_direct_url %}
+  <li><a href="{{ post.preprint_direct_url }}">Preprint.</a></li>
+  {% endif %}
+  {% if post.blog_post %}
+  <li><a href="/posts/{{ post.blog_post }}/">Blog post.</a></li>
+  {% endif %}
+</ul>
+
+{{ post.content_html }}
+
+{# ------------------------------------------------------------------ #}
+{# Software                                                            #}
+{# ------------------------------------------------------------------ #}
+{% elif "software" in tags %}
+
+<h2>
+  {% if post.direct_url %}
+  <a href="{{ post.direct_url }}">{{ post.title }}</a>
+  {% else %}{{ post.title }}{% endif %}
+</h2>
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+
+{{ post.content_html }}
+
+{# ------------------------------------------------------------------ #}
+{# Course                                                              #}
+{# ------------------------------------------------------------------ #}
+{% elif "course" in tags %}
+
+<h2>
+  {% if post.direct_url %}
+  <a href="{{ post.direct_url }}">{{ post.title }}</a>
+  {% else %}{{ post.title }}{% endif %}
+</h2>
+{% if post.level %}<p><small>{{ post.level }}</small></p>{% endif %}
+{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+{% if post.current %}<p><em>Currently running.</em></p>{% endif %}
+
+{{ post.content_html }}
+
+{# ------------------------------------------------------------------ #}
+{# Collaborator or student                                             #}
+{# ------------------------------------------------------------------ #}
+{% elif "collaborator" in tags or "student" in tags %}
+
+<h2>
+  {% if post.direct_url %}
+  <a href="{{ post.direct_url }}">{{ post.title }}</a>
+  {% else %}{{ post.title }}{% endif %}
+</h2>
+
+{{ post.content_html }}
+
+{% if "student" in tags %}
+<p>
+  &#x1F9D1;&#x200D;&#x1F393;
+  I worked with {{ post.title }} as a
+  {% set degree_tags = tags | reject("equalto", "student") | list %}
+  {{ degree_tags | join(", ") }} student.
+  {% if post.year %}({{ post.year }}){% endif %}
+</p>
+{% endif %}
+
+{% if publications %}
+<h3>{{ publications | length }} Publication{% if publications | length != 1 %}s{% endif %}</h3>
+<ol reversed>
+  {% for pub in publications %}
+  <li><a href="/posts/{{ pub.slug }}/">{{ pub.title }}</a></li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+{# ------------------------------------------------------------------ #}
+{# Generic page (e.g. CV)                                             #}
+{# ------------------------------------------------------------------ #}
+{% else %}
+
+{% if post.title %}<h2>{{ post.title }}</h2>{% endif %}
+
+{% if post.slug == "cv" %}
+<p>
+  <small>
+    <a href="/assets/cv/cv.tex">Full CV (.tex)</a> &nbsp;&middot;&nbsp;
+    <a href="/assets/cv/cv-short.tex">Short CV (.tex)</a> &nbsp;&middot;&nbsp;
+    <a href="/assets/cv/bio.txt">Short bio (.txt)</a>
+  </small>
+</p>
+
+{% if photos %}
+<div class="photo-gallery">
+  {% for photo in photos %}
+  <div class="photo-gallery-item">
+    <a href="{{ photo.url }}" target="_blank" title="{{ photo.year }}">
+      <img src="{{ photo.url }}" alt="Vincent Knight {{ photo.year }}">
+    </a>
+    <small>{{ photo.year }}</small>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endif %}
+
+{{ post.content_html }}
+
+{% if pub_by_year_svg %}
+<h2>Publications</h2>
+<p><small><a href="/#publications">{{ n_publications }} publication{% if n_publications != 1 %}s{% endif %}</a></small></p>
+{{ pub_by_year_svg }}
+{% endif %}
+
+{% if students %}
+<h2>{{ n_students }} Research students</h2>
+
+{% if students_by_year_svg %}
+{{ students_by_year_svg }}
+{% endif %}
+
+{% if degree_chart_svg %}
+{{ degree_chart_svg }}
+{% endif %}
+
+{% if avg_student_pubs %}
+<p><small>
+  {{ students_with_pubs }} of {{ n_students }} students have joint publications
+  (avg {{ avg_student_pubs }} per student).
+</small></p>
+{% endif %}
+
+<ul>
+  {% for student in students %}
+  <li>
+    <a href="/collaborators/{{ student.slug }}/">{{ student.title }}</a>
+    {% set degrees = student.tags | reject("equalto", "student") | list %}
+    {% if degrees %}({{ degrees | join(", ") }}){% endif %}
+    {% if student.year %}&mdash; {{ student.year }}{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endif %}
+
+{% endblock %}

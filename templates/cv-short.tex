@@ -1,0 +1,117 @@
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, margin=1.8cm]{geometry}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+\usepackage{etaremune}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0.8em}{0.3em}
+
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=2pt}
+
+\pagestyle{plain}
+
+\begin{document}
+
+{\Large \textbf{Dr.\ Vincent A.\ Knight}} \hfill
+Cardiff University, School of Mathematics\\
+\href{https://vknight.org}{vknight.org} \quad
+\href{https://github.com/drvinceknight}{github.com/drvinceknight} \quad
+\href{https://twitter.com/drvinceknight}{@drvinceknight}
+
+\medskip
+
+%% ----------------------------------------------------------------
+\section{Current Appointment}
+%% ----------------------------------------------------------------
+
+(% for item in appointments %)(% if "present" in item %)(( item | latex_escape ))\\
+(% endif %)(% endfor %)
+
+%% ----------------------------------------------------------------
+\section{Research Interests}
+%% ----------------------------------------------------------------
+
+\begin{multicols}{2}
+\begin{itemize}
+(% for item in research_interests %)
+  \item (( item | latex_escape ))
+(% endfor %)
+\end{itemize}
+\end{multicols}
+
+%% ----------------------------------------------------------------
+\section{Selected Awards}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in awards | list %)(% if loop.index <= 6 %)
+  \item (( item | latex_escape ))
+(% endif %)(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Books}
+%% ----------------------------------------------------------------
+
+\begin{etaremune}
+(% for pub in books %)
+\item
+  (( pub.published_date )): \textbf{(( pub.title | latex_escape ))}\\
+  (% if pub.authors %)(( pub.authors | join(", ") | latex_escape ))\\(% endif %)
+  (% if pub.details %)\textbf{(( pub.details | latex_escape ))}\\(% endif %)
+  (% if pub.direct_url %)\url{(( pub.direct_url ))}(% endif %)
+(% endfor %)
+\end{etaremune}
+
+%% ----------------------------------------------------------------
+\section{Selected Publications --- (( articles | length )) total}
+%% ----------------------------------------------------------------
+
+\begin{etaremune}
+(% for pub in articles %)(% if loop.index <= 10 %)
+\item
+  (( pub.published_date )): \textbf{(( pub.title | latex_escape ))}\\
+  (% if pub.authors %)(( pub.authors | join(", ") | latex_escape ))\\(% endif %)
+  (% if pub.details %)\textbf{(( pub.details | latex_escape ))}\\(% endif %)
+(% endif %)(% endfor %)
+\end{etaremune}
+
+%% ----------------------------------------------------------------
+\section{Selected Funding}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for item in funding | list %)(% if loop.index <= 6 %)
+  \item (( item | latex_escape ))
+(% endif %)(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Software}
+%% ----------------------------------------------------------------
+
+\begin{itemize}
+(% for tool in software_list %)
+  \item \textbf{(( tool.title | latex_escape ))}: (( tool.description | latex_escape ))
+  (% if tool.direct_url %)\url{(( tool.direct_url ))}(% endif %)
+(% endfor %)
+\end{itemize}
+
+%% ----------------------------------------------------------------
+\section{Research Students --- (( students | length )) total}
+%% ----------------------------------------------------------------
+
+(% set phd_students = students | selectattr("tags") | list %)
+PhD students: (% for student in students %)(% if "PhD" in student.tags %)(( student.title | latex_escape ))(% if not loop.last %), (% endif %)(% endif %)(% endfor %).
+
+\end{document}

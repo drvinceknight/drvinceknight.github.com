@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+<h2>Posts</h2>
+
+
+<div class="post-entry">
+  <p><small>2026-02-24</small> &mdash; <a href="/posts/2026-02-24-teaching-in-qazaqstan/">Teaching in Qazaqstan</a></p>
+  <p>Cardiff University has recently started a campus in
+<a href="https://www.bbc.com/news/articles/cj07p0yn7g7o">Kazakhstan</a>; I spent two weeks
+there teaching. In this post I'll discuss some of my experiences.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-11-03</small> &mdash; <a href="/posts/2025-11-03-line-breaking-in-vscode/">For VS code users: how to force a line width</a></p>
+  <p>I find using Github PRs a great way of reviewing writing as well as code. 
+This
+usually leads to a conversation about forcing a character length instead of the
+visual line wrapping when using VS code. As I'm not a VS code user myself I am often
+not able to show students who to do this.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-10-21</small> &mdash; <a href="/posts/2025-10-21-rrr/">Reviving, reproducing, and revisiting Axelrod's second tournament</a></p>
+  <p>Collaborators and I have just put a new preprint up on the arXiv: <a href="https://arxiv.org/abs/2510.15438">"Reviving,
+Reproducing and Revisiting Axelrod's second tournament"</a>.
+I'm really proud of this paper.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-07-16</small> &mdash; <a href="/posts/2025-07-16-gtb/">Game Theory Text Book</a></p>
+  <p>I have written my game theory notes as a text book which you can read <a href="https://vknight.org/gtb/">here</a>.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-07-01</small> &mdash; <a href="/posts/2025-07-01-sold/">Sold: A Python library for the study of Acutions</a></p>
+  <p>I have been playing around with auction theory, I put <code>sold</code> together which lets you simulate auctions:</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-06-09</small> &mdash; <a href="/posts/2025-06-09-equilibium-explorers/">A Game Theory Discord Server</a></p>
+  <p>A few Game Theorists and I (<a href="https://github.com/marcharper">Marc Harper</a> and <a href="https://nikoleta-v3.github.io">Nikoleta Glynatsi</a>)
+have put together a Discord Server for an online Game Theorist community.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-05-19</small> &mdash; <a href="/posts/2025-05-19-python-for-mathematics-book/">Python for Mathematics Book</a></p>
+  <p>Over the weekend, I received my author copies of <em>Python for Mathematics</em>.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-03-19</small> &mdash; <a href="/posts/2025-03-19-esla-nominations/">Thank you to the student who nominated me</a></p>
+  <p>I have been noniminated for 3 <a href="https://www.cardiffstudents.com/your-voice/academic-reps/eslas/">Enriching Student Life Awards</a>.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-02-18</small> &mdash; <a href="/posts/2025-02-19-getting-the-last-n-lines-from-a-large-number-of-files/">Getting specific contents of a large number of files</a></p>
+  <p>This is a short post showing how to <code>cat</code> the contents of a large number of
+files (too large to use a standard approach) to a file.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-01-19</small> &mdash; <a href="/posts/2025-01-29-names-of-mathematicians-as-group-names/">Names of Mathematicians as group names</a></p>
+  <p>I use group work for assessment in both my modules.
+For the second year I'm using blackboard's group system to facilitate the
+creation of the groups. It allows you to create names for the groups, and this
+year I decided to try and do something different than "Group 1", "Group 2",
+"Group 3".</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2025-01-13</small> &mdash; <a href="/posts/2025-01-13-two-new-publications/">Properties of winning strategies</a></p>
+  <p>Over the Christmas period my co-authors and I got news of the acceptance of a
+paper:</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2024-10-18</small> &mdash; <a href="/posts/2024-10-18-visiting-lectureship-in-namibia-and-pycon-na-2024/">Visiting lectureship at the University of Namibia and PyCon NA 2024</a></p>
+  <p>As part of the Cardiff University's partnership with the University of Namibia,
+the school of Mathematics
+worked with the Department of Science at the University of Namibia (UNAM) from 2015 to deliver two projects with lasting impact:</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2024-09-30</small> &mdash; <a href="/posts/2024-09-30-where-am-i-from/">Where am I from?</a></p>
+  <p>I have been teaching for about 15 years. One common point of interest from my
+students (sometimes more than what I am teaching) is where I am from? I usually
+let students try and figure it out, which until two years ago was what I thought
+was essentially impossible (bravo to Ilia!).</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2024-09-02</small> &mdash; <a href="/posts/2024-09-02-creating-a-shared-directory-on-linux/">Creating a shared directory on linux</a></p>
+  <p>This is a quick how to reminder for creating shared directories on linux. This
+is mainly to avoid committing large amounts of data files and instead using a
+shared computer that can be <code>scp</code>'d back and forth to.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2024-08-01</small> &mdash; <a href="/posts/2024-08-01-chair/">🪑</a></p>
+  <p>I have been promoted to a personal chair of Mathematics at Cardiff University.</p>
+</div>
+
+<div class="post-entry">
+  <p><small>2024-08-01</small> &mdash; <a href="/posts/2024-08-28-moving-unpeudemath-again/">Moving my posts</a></p>
+  <p>I am moving my blog to here.</p>
+</div>
+
+
+
+  </div>
+</body>
+</html>

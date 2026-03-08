@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+<div class="intro">
+  <img class="avatar" src="/assets/photos/2025.jpg" alt="Vincent Knight">
+  <p>I am a professor of Mathematics at Cardiff University. My interests are in teaching, research software, Game Theory and applied stochastic modelling.</p>
+</div>
+
+<hr>
+
+
+<h2>Latest post</h2>
+
+<p><small>2026-02-24</small> &mdash; <a href="/posts/2026-02-24-teaching-in-qazaqstan/">Teaching in Qazaqstan</a></p>
+<p>Cardiff University has recently started a campus in
+<a href="https://www.bbc.com/news/articles/cj07p0yn7g7o">Kazakhstan</a>; I spent two weeks
+there teaching. In this post I'll discuss some of my experiences.</p>
+
+
+<hr>
+
+
+
+<h2>Teaching</h2>
+<ul>
+  
+  <li>
+    
+    <a href="http://drvinceknight.github.io/cfm/">Computing for Mathematics</a>
+    
+     <small>(BSc. Year 1)</small>
+  </li>
+  
+  <li>
+    
+    <a href="http://drvinceknight.github.io/gt/">Game Theory</a>
+    
+     <small>(BSc. Year 3)</small>
+  </li>
+  
+  <li>
+    
+    <a href="https://drvinceknight.github.io/tex/">Writing with LaTeX</a>
+    
+     <small>(Any)</small>
+  </li>
+  
+  <li>
+    
+    <a href="https://github.com/drvinceknight/oop">Introduction to Object Oriented Programming</a>
+    
+     <small>(MSc.)</small>
+  </li>
+  
+  <li>
+    
+    <a href="http://drvinceknight.github.io/rsd/">Research Software Development</a>
+    
+     <small>(PhD)</small>
+  </li>
+  
+</ul>
+
+
+<hr>
+
+
+<h2>Software</h2>
+<ul>
+  
+  <li>
+    <a href="https://github.com/Axelrod-Python/Axelrod">Axelrod</a>: A research tool for the study of cooperation.
+  </li>
+  
+  <li>
+    <a href="https://github.com/drvinceknight/coopgt">CoopGt</a>: A library for the study of cooperative game theory.
+  </li>
+  
+  <li>
+    <a href="https://github.com/drvinceknight/dwys">dwys</a>: A language agnostic doctesting library.
+  </li>
+  
+  <li>
+    <a href="https://github.com/drvinceknight/nashpy">Nashpy</a>: A python library for 2 player games.
+  </li>
+  
+  <li>
+    <a href="https://github.com/drvinceknight/nbchkr">nbchkr</a>: A lightweight tool to grade notebook assignements.
+  </li>
+  
+  <li>
+    <a href="https://github.com/drvinceknight/sold">Sold</a>: A library for the study of auctions.
+  </li>
+  
+</ul>
+
+
+<hr>
+
+
+<h2 id="publications">Publications (63)</h2>
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+<h3>Books</h3>
+<ul>
+  
+  <li>
+    2025:
+    <a href="/posts/game-theory/">Game Theory: Theory, software, and research: game theory for the real world.</a>.
+    
+    <a href="https://vknight.org/gtb/">Released online only</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/python-for-mathematics/">Python for Mathematics</a>.
+    
+    <a href="https://www.routledge.com/Python-for-Mathematics/Knight/p/book/9781032582184">Taylor and Francis</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+  </li>
+  
+  <li>
+    2022:
+    <a href="/posts/applied-mathematics-with-open-source-software/">Applied Mathematics With Open-Source Software</a>.
+    
+    <a href="www.routledge.com/9780367348687">Taylor and Francis</a>.
+    
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+  </li>
+  
+</ul>
+
+
+
+<h3>60 Articles</h3>
+<ul>
+  
+  <li>
+    2025:
+    <a href="/posts/2025-10-21-rrr/">Reviving, reproducing, and revisiting Axelrod's second tournament</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/owen-campbell/">Owen Campbell</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/tj-gaffney/">Tj Gaffney</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/2510.15438">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/extortionist-trade-policies-in-a-multipolar-world/">Extortionist Trade Policies in a Multipolar World: The Rationale Behind the US Trade Policy Under Donald Trump</a>.
+    Submitted to the Journal of Theoretical Politics.
+    
+    
+    <a href="/collaborators/sebastian-krapohl/">Sebastian Krapohl</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/modelling-spatio-temporal-progression-of-cyberattacks-in-data-networks/">Modelling Spatio-Temporal Progression of Cyberattacks in Data Networks</a>.
+    IEEE BCCA-CERC Workshop 2025.
+    
+    
+    <a href="/collaborators/malik-shahzad-kaleem-awan/">Malik Shahzad Kaleem Awan</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/omer-rana/">Omer Rana</a>,
+    
+    <a href="/collaborators/pete-burnap/">Pete Burnap</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/on-the-optimisation-of-heterogeneous-ambulance-fleet-allocations/">On the Optimisation of Heterogeneous Ambulance Fleet Allocations</a>.
+    
+    <a href="https://academic.oup.com/imaman/article/36/4/691/8190187">IMA Journal of Management Mathematics</a>.
+    
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/syaribah-noor-brice/">Syaribah Noor Brice</a>,
+    
+    <a href="/collaborators/leanne-smith/">Leanne Smith</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/queues-under-stochastic-priority-switching/">Queues Under Stochastic Priority Switching</a>.
+    Journal of the Operational Research Society..
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/michalis-panayides/">Michalis Panayides</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/elizabeth-williams/">Elizabeth Williams</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/segmentation-analysis-and-the-recovery-of-queuing-parameters-via-the-wasserstein-distance-a-study-of-administrative-data-for-patients-with-chronic-obstructive-pulmonary-disease/">Optimizing healthcare queues: a case study on chronic respiratory illness</a>.
+    
+    <a href="https://academic.oup.com/imaman/article/36/2/255/7950739">IMA Journal of Management Mathematics</a>.
+    
+    
+    
+    <a href="/collaborators/henry-wilde/">Henry Wilde</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/kendal-smith/">Kendal Smith</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/2008.04295">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2025:
+    <a href="/posts/transforming-emergency-and-urgent-care-services-with-mathematical-modelling/">Transforming emergency and urgent care services with mathematical modelling</a>.
+    More UK Success Stories in Industrial Mathematics..
+    
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2024:
+    <a href="/posts/a-close-up-on-ambulance-service-estimation-in-indonesia-using-monte-carlo-simulation/">A Close-Up on Ambulance Service Estimation in Indonesia Using Monte Carlo Simulation</a>.
+    Interactive Journal of Medical Research.
+    
+    
+    <a href="/collaborators/syaribah-noor-brice/">Syaribah Noor Brice</a>,
+    
+    <a href="/collaborators/justin-boutilier/">Justin Boutilier</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2024:
+    <a href="/posts/properties-of-winning-iterated-prisoners-dilemma-strategies/">Properties of Winning Iterated Prisoner’s Dilemma Strategies</a>.
+    
+    <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012644&?utm_id=plos111&utm_source=internal&utm_medium=email&utm_campaign=author">Plos Computational Biology</a>.
+    
+    
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/2001.05911">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2024:
+    <a href="/posts/recognising-and-evaluating-the-effectiveness-of-extortion-in-the-iterated-prisoners-dilemma/">Recognising and evaluating the effectiveness of extortion in the Iterated Prisoner's Dilemma</a>.
+    
+    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0304641">PLOS One</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1904.00973">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2023:
+    <a href="/posts/a-novel-initialisation-based-on-hospital-resident-assignment-for-the-k-modes-algorithm/">A novel initialisation based on hospital-resident assignment for the k-modes algorithm</a>.
+    Accepted in Soft Computing (SOCO).
+    
+    
+    <a href="/collaborators/henry-wilde/">Henry Wilde</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/2002.02701">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2023:
+    <a href="/posts/optimising-heterogeneous-ambulance-fleet-allocations-in-jakarta/">Optimising Heterogeneous Ambulance Fleet Allocations in Jakarta</a>.
+    European Journal of Operational Research.
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/syaribah-noor-brice/">Syaribah Noor Brice</a>,
+    
+    <a href="/collaborators/leanne-smith/">Leanne Smith</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2022:
+    <a href="/posts/a-game-theoretic-model-of-the-behavioural-gaming-that-takes-place-at-the-ems-ed-interface/">A game theoretic model of the behavioural gaming that takes place at the EMS - ED interface</a>.
+    
+    <a href="https://www.sciencedirect.com/science/article/pii/S0377221722005549?via%3Dihub">European Journal of Operational Research</a>.
+    
+    
+    
+    <a href="/collaborators/michalis-panayides/">Michalis Panayides</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2022:
+    <a href="/posts/emergency-service-utilization-in-jakarta-indonesia-a-cross-sectional-study-of-patients-attending-hospital-emergency-departments/">Emergency services utilization in Jakarta (Indonesia): a cross-sectional study of patients attending hospital emergency departments</a>.
+    
+    <a href="https://bmchealthservres.biomedcentral.com/articles/10.1186/s12913-022-08061-8">BMC Health Services Research</a>.
+    
+    
+    
+    <a href="/collaborators/syaribah-noor-brice/">Syaribah Noor Brice</a>,
+    
+    <a href="/collaborators/justin-boutilier/">Justin Boutilier</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jen-lloyd/">Jen Lloyd</a>,
+    
+    <a href="/collaborators/aryono-djuned-pusponegoro/">Aryono Djuned Pusponegoro</a>,
+    
+    <a href="/collaborators/asti-puspita-rini/">Asti Puspita Rini</a>,
+    
+    <a href="/collaborators/jonathan-turnbull-ross/">Jonathan Turnbull Ross</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2021:
+    <a href="/posts/a-bibliometric-study-of-research-topics-collaboration-and-centrality-in-the-iterated-prisoners-dilemma/">A bibliometric study of research topics, collaboration and centrality in the Iterated Prisoner's Dilemma</a>.
+    
+    <a href="https://www.nature.com/articles/s41599-021-00718-9">Humanities and Social Sciences Communications</a>.
+    
+    
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1911.06128">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2021:
+    <a href="/posts/game-theory-and-python-an-educational-tutorial-to-game-theory-and-repeated-games-using-python/">Game Theory and Python: An educational tutorial to game theory and repeated games using Python</a>.
+    
+    <a href="https://doi.org/10.21105/jose.00078">Journal of Open Source Education</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2021:
+    <a href="/posts/modelling-changes-in=healthcare-demand-through-geographic-data-extrapolation/">Modelling changes in healthcare demand through geographic data extrapolation.</a>.
+    
+    <a href="https://www.tandfonline.com/doi/abs/10.1080/20476965.2021.1906764?journalCode=thss20">Health Systems</a>.
+    
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/cathy-brooks/">Cathy Brooks</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2020:
+    <a href="/posts/evolutionary-dataset-optimisation-learning-algorithm-quality-through-evolution/">Evolutionary Dataset Optimisation: Learning algorithm quality through evolution</a>.
+    
+    <a href="https://link.springer.com/article/10.1007/s10489-019-01592-4">Applied Intelligence</a>.
+    
+    
+    
+    <a href="/collaborators/henry-wilde/">Henry Wilde</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1907.13508">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2020:
+    <a href="/posts/matching-a-python-library-for-solving-matching-games/">Matching: A Python library for solving matching games</a>.
+    
+    <a href="https://joss.theoj.org/papers/10.21105/joss.02169">Journal of Open Source Software</a>.
+    
+    
+    
+    <a href="/collaborators/henry-wilde/">Henry Wilde</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2020:
+    <a href="/posts/using-a-theory-of-mind-to-find-best-responses-to-memory-one-strategies/">Using a theory of mind to find best responses to memory-one strategies</a>.
+    
+    <a href="https://www.nature.com/articles/s41598-020-74181-y">Accepted for publication in Scientific Reports</a>.
+    
+    
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1911.12112">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2019:
+    <a href="/posts/a-conservative-index-heuristic-for-routing-problems-with-multiple-heterogeneous-service-facilities/">A conservative index heuristic for routing problems with multiple heterogeneous service facilities</a>.
+    
+    <a href="https://link.springer.com/article/10.1007/s00186-020-00722-w?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst">Mathematical Methods of Operations Research</a>.
+    
+    
+    
+    <a href="/collaborators/rob-shone/">Rob Shone</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2019:
+    <a href="/posts/memory-depth-of-finite-state-machine-strategies-for-the-iterated-prisoners-dilemma/">Memory depth of finite state machine strategies for the iterated prisoner's dilemma</a>.
+    
+    
+    
+    <a href="/collaborators/tj-gaffney/">Tj Gaffney</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1912.04493">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2018:
+    <a href="/posts/determining-patient-outcomes-from-patient-letters-a-comparison-of-text-analysis-approaches/">Determining patient outcomes from patient letters: A comparison of text analysis approaches</a>.
+    
+    <a href="https://www.tandfonline.com/doi/full/10.1080/01605682.2018.1506559">Journal of the Operational Research Society</a>.
+    
+    
+    
+    <a href="/collaborators/jennifer-morgan/">Jennifer Morgan</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/andrew-nelson/">Andrew Nelson</a>,
+    
+    <a href="/collaborators/andreas-artemiou/">Andreas Artemiou</a>,
+    
+    <a href="/collaborators/alex-carney/">Alex Carney</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2018:
+    <a href="/posts/evolution-reinforces-cooperation-with-the-emergence-of-self-recognition-mechanisms/">Evolution Reinforces Cooperation with the Emergence of Self-Recognition Mechanisms: an empirical study of the Moran process for the iterated Prisoner's dilemma </a>.
+    
+    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0204981">PLOS One</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/owen-campbell/">Owen Campbell</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1707.06920">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2018:
+    <a href="/posts/nashpy-a-python-library-for-the-computation-of-nash-equilibria/">Nashpy: a Python library for the computation of Nash equilibria</a>.
+    
+    <a href="https://doi.org/10.21105/joss.00904">Journal of Open Source Software</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/james-campbell/">James Campbell</a>.
+    
+    
+    
+    <strong><a href="http://orca.cf.ac.uk/116002/">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2017:
+    <a href="/posts/an-evolutionary-game-theoretic-model-for-devaluing-rhinos/">An Evolutionary Game Theoretic Model of Rhino Horn Devaluation</a>.
+    
+    <a href="https://www.sciencedirect.com/science/article/pii/S0304380018303260">Ecological Modelling</a>.
+    
+    
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/tamsin-lee/">Tamsin Lee</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1712.07640">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2017:
+    <a href="/posts/ciw-an-open-source-discrete-event-simulation-library/">Ciw: An open source discrete event simulation library</a>.
+    
+    <a href="https://www.tandfonline.com/doi/abs/10.1080/17477778.2018.1473909">Journal of Simulation</a>.
+    
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/asyl-hawa/">Asyl Hawa</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1710.03561">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2017:
+    <a href="/posts/modelling-deadlock-in-open-restricted-queueing-networks/">Modelling deadlock in open restricted queueing networks</a>.
+    
+    <a href="http://www.sciencedirect.com/science/article/pii/S0377221717309529">European Journal of Operational Research</a>.
+    
+    
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2017:
+    <a href="/posts/predicting-adolescent-social-networks-to-stop-smoking-in-secondary-schools/">Predicting Adolescent Social Networks to Stop Smoking in Secondary Schools</a>.
+    
+    <a href="http://www.sciencedirect.com/science/article/pii/S0377221717306665?via%3Dihub">European Journal of Operational Research</a>.
+    
+    
+    
+    <a href="/collaborators/angelico-fetta/">Angelico Fetta</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2017:
+    <a href="/posts/reinforcement-learning-produces-dominant-strategies-for-the-iterated-prisoners-dilemma/">Reinforcement Learning Produces Dominant Strategies for the Iterated Prisoner's Dilemma</a>.
+    
+    <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0188046">PLOS One</a>.
+    
+    
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/martin-jones/">Martin Jones</a>,
+    
+    <a href="/collaborators/georgios-koutsovoulos/">Georgios Koutsovoulos</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/owen-campbell/">Owen Campbell</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1707.06307">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/ambulance-allocations-for-maximising-survival-within-a-heterogeneous-population-using-a-heterogeneous-fleet/">Ambulance Allocations for Maximising Survival within a Heterogeneous Population using a Heterogeneous Fleet</a>.
+    Submitted to the journal of the operational research society.
+    
+    
+    <a href="/collaborators/leanne-smith/">Leanne Smith</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/an-open-framework-for-the-reproducible-study-of-the-iterated-prisoner’s-dilemma/">An Open Framework for the Reproducible Study of the Iterated Prisoner’s Dilemma</a>.
+    
+    <a href="http://openresearchsoftware.metajnl.com/article/10.5334/jors.125/">Journal of open research software</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/owen-campbell/">Owen Campbell</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/karol-langner/">Karol Langner</a>,
+    
+    <a href="/collaborators/james-campbell/">James Campbell</a>,
+    
+    <a href="/collaborators/thomas-campbell/">Thomas Campbell</a>,
+    
+    <a href="/collaborators/alex-carney/">Alex Carney</a>,
+    
+    <a href="/collaborators/martin-chorley/">Martin Chorley</a>,
+    
+    <a href="/collaborators/cameron-davidson-pilon/">Cameron Davidson Pilon</a>,
+    
+    <a href="/collaborators/kristian-glass/">Kristian Glass</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>,
+    
+    <a href="/collaborators/tomáš-ehrlich/">tomáš-ehrlich</a>,
+    
+    <a href="/collaborators/martin-jones/">Martin Jones</a>,
+    
+    <a href="/collaborators/georgios-koutsovoulos/">Georgios Koutsovoulos</a>,
+    
+    <a href="/collaborators/holly-tibble/">Holly Tibble</a>,
+    
+    <a href="/collaborators/jochen-müller/">jochen-müller</a>,
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/piotr-petunov/">Piotr Petunov</a>,
+    
+    <a href="/collaborators/paul-slavin/">Paul Slavin</a>,
+    
+    <a href="/collaborators/timothy-standen/">Timothy Standen</a>,
+    
+    <a href="/collaborators/luis-visintini/">Luis Visintini</a>,
+    
+    <a href="/collaborators/karl-molden/">Karl Molden.</a>.
+    
+    
+    
+    <strong><a href="https://arxiv.org/abs/1604.00896">Preprint.</a></strong>
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/editorial-health-systems-esi-xxxi-or-applied-to-health-in-a-modern-world/">Editorial: Health Systems ESI XXXI — OR applied to Health in a Modern World.</a>.
+    
+    <a href="https://link.springer.com/article/10.1057/s41306-016-0012-5">Operations Research for Health Care, 5, 3.</a>.
+    
+    
+    
+    <a href="/collaborators/roberto-aringhieri/">Roberto Aringhieri</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/honora-smith/">Honora Smith</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/editorial-operations-research-for-health-care-esi-xxxi-or-applied-to-health-in-a-modern-world/">Editorial: Operations Research for Health Care ESI XXXI — OR applied to Health in a Modern World.</a>.
+    
+    <a href="http://doi.org/10.1016/j.orhc.2016.01.002">Operations Research for Health Care, 8, 22–23.</a>.
+    
+    
+    
+    <a href="/collaborators/roberto-aringhieri/">Roberto Aringhieri</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/honora-smith/">Honora Smith</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/measuring-the-price-of-anarchy-in-critical-care-unit-interactions/">Measuring the Price of Anarchy in Critical Care Unit Interactions</a>.
+    
+    <a href="http://www.readcube.com/articles/10.1057/s41274-016-0100-8?author_access_token=JAsSHKTcTl3NH3k5s1oiMVxOt48VBPO10Uv7D6sAgHtkoDjTsoR3OW9x7fmxHicGmSJj_WULIi-5FaAMov8cp-zDTP1PJoVIArpmmPDcS9szSXf4MFhLgmkgDfNf-Es-tfeeFIWjcAd9ghBNqM6Ekw%3D%3D">The journal of the operational research society</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/izabela-komenda/">Izabela Komenda</a>,
+    
+    <a href="/collaborators/jeff-griffiths/">Jeff Griffiths</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2016:
+    <a href="/posts/time-dependent-stochastic-methods-for-managing-and-scheduling-emergency-medical-services/">Time-dependent stochastic methods for managing and scheduling Emergency Medical Services</a>.
+    
+    <a href="http://www.sciencedirect.com/science/article/pii/S2211692314200518">Operations Research for Health Care</a>.
+    
+    
+    
+    <a href="/collaborators/julie-vile/">Julie Vile</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2015:
+    <a href="/posts/compliance-with-national-guidelines-for-stroke-in-radiology/">Compliance with National Guidelines for Stroke in Radiology.</a>.
+    
+    <a href="http://www.sciencedirect.com/science/article/pii/S2211692314200191">Operations Research for Health Care.</a>.
+    
+    
+    
+    <a href="/collaborators/izabela-komenda/">Izabela Komenda</a>,
+    
+    <a href="/collaborators/hannah-williams/">Hannah Williams</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2015:
+    <a href="/posts/containment-of-socially-optimal-policies-in-multiple-facility-markovian-queueing-systems/">Containment of socially optimal policies in multiple-facility Markovian queueing systems.</a>.
+    
+    <a href="http://link.springer.com/article/10.1057/jors.2015.98">Journal of the Operational Research Society.</a>.
+    
+    
+    
+    <a href="/collaborators/rob-shone/">Rob Shone</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/john-minty/">John Minty</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2015:
+    <a href="/posts/modelling-of-psoriasis-patient-flows-for-the-reconfiguration-of-secondary-care-services-and-treatments/">Modelling of psoriasis patient flows for the reconfiguration of secondary care services and treatments</a>.
+    Health Systems..
+    
+    
+    <a href="/collaborators/kayne-putman/">Kayne Putman</a>,
+    
+    <a href="/collaborators/alex-anstey/">Alex Anstey</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2015:
+    <a href="/posts/playing-games-a-case-study-in-active-learning-applied-to-game-theory/">Playing games: a case study in active learning applied to Game Theory.</a>.
+    
+    <a href="https://journals.gre.ac.uk/index.php/msor/article/view/254">Connections</a>.
+    
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2015:
+    <a href="/posts/rostering-staff-at-a-mathematics-support-service-using-a-finite-source-queueing-model/">Rostering staff at a mathematics support service using a finite-source queueing model</a>.
+    IMA Journal of Management Mathematics. 27 (2).
+    
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/julie-vile/">Julie Vile</a>,
+    
+    <a href="/collaborators/rob-wilson/">Rob Wilson</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2014:
+    <a href="/posts/mathematical-modelling-of-patient-flows-to-predict-critical-care-capacity-required-following-the-merger-of-two-district-general-hospitals-into-one/">Mathematical modelling of patient flows to predict critical care capacity required following the merger of two district general hospitals into one.</a>.
+    Anaesthesia. 70 (1).
+    
+    
+    <a href="/collaborators/james-williams/">James Williams</a>,
+    
+    <a href="/collaborators/steve-dumont/">Steve Dumont</a>,
+    
+    <a href="/collaborators/jack-parry-jones/">Jack Parry Jones</a>,
+    
+    <a href="/collaborators/izabela-komenda/">Izabela Komenda</a>,
+    
+    <a href="/collaborators/jeff-griffiths/">Jeff Griffiths</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2014:
+    <a href="/posts/operational-research-ambassadors-in-schools/">Operational research ambassadors in schools</a>.
+    Proceedings of the HEA STEM, Edinburgh 2014.
+    
+    
+    <a href="/collaborators/noel-ann-bradshaw/">Noel Ann Bradshaw</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/louise-orpin/">Louise Orpin</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2014:
+    <a href="/posts/tweeting-the-terror-modelling-the-social-media-reaction-to-the-woolwich-terrorist-attack/">Tweeting the Terror: Modelling the Social Media Reaction to the Woolwich Terrorist Attack</a>.
+    Social Network Analysis and Mining.
+    
+    
+    <a href="/collaborators/peter-burnap/">Peter Burnap</a>,
+    
+    <a href="/collaborators/matthew-williams/">Matthew Williams</a>,
+    
+    <a href="/collaborators/luke-sloan/">Luke Sloan</a>,
+    
+    <a href="/collaborators/omer-rana/">Omer Rana</a>,
+    
+    <a href="/collaborators/will-housley/">Will Housley</a>,
+    
+    <a href="/collaborators/adam-edwards/">Adam Edwards</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/rob-procter/">Rob Procter</a>,
+    
+    <a href="/collaborators/alex-voss/">Alex Voss</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2013:
+    <a href="/posts/comparisons-between-observable-and-unobservable-m-m-1-queues-with-respect-to-optimal-customer-behavior/">Comparisons between observable and unobservable M/M/1 queues with respect to optimal customer behavior</a>.
+    European Journal of Operational Research.
+    
+    
+    <a href="/collaborators/rob-shone/">Rob Shone</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2013:
+    <a href="/posts/selfish-routing-in-public-services/">Selfish routing in public services.</a>.
+    European Journal of Operational Research. 230 (1) 122-132.
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2013:
+    <a href="/posts/using-singular-spectrum-analysis-to-obtain-staffing-level-requirements-in-healthcare/">Using Singular Spectrum Analysis to Obtain Staffing Level Requirements in Healthcare.</a>.
+    Journal of the Operational Research Society.
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2012:
+    <a href="/posts/ambulance-allocation-for-maximal-survival-with-heterogeneous-outcome-measures/">Ambulance Allocation for Maximal Survival with Heterogeneous Outcome Measures</a>.
+    OMEGA - The International Journal of Management Science. 40 (6) 918--926.
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/leanne-smith/">Leanne Smith</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2012:
+    <a href="/posts/discrete-conditional-phase-type-models-utilising-classification-trees-application-to-modelling-health-service-capacities/">Discrete Conditional Phase-Type Models Utilising Classification Trees: Application to Modelling Health Service Capacities.</a>.
+    European Journal of Operational Research. 219 (3) 522--530.
+    
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/adele-marshall/">Adele Marshall</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2012:
+    <a href="/posts/how-efficient-can-an-emergency-unit-be?-a-perfect-world-model/">How Efficient can an Emergency Unit be? A Perfect World Model.</a>.
+    Emergency Medicine Journal..
+    
+    
+    <a href="/collaborators/kesh-baboolal/">Kesh Baboolal</a>,
+    
+    <a href="/collaborators/jeff-griffiths/">Jeff Griffiths</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/andrew-nelson/">Andrew Nelson</a>,
+    
+    <a href="/collaborators/cheryl-voake/">Cheryl Voake</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2012:
+    <a href="/posts/modelling-emergency-medical-services-with-phase-type-distributions/">Modelling Emergency Medical Services with Phase Type Distributions.</a>.
+    Health Systems. 1 53-68.
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2012:
+    <a href="/posts/simulating-bed-capacity-evaluating-the-impact-of-healthcare-service-transfers/">Simulating Bed Capacity: Evaluating the Impact of Healthcare Service Transfers</a>.
+    IEEE UKSim 14th International Conference on Computer Modelling and Simulation.
+    
+    
+    <a href="/collaborators/robert-bares/">Robert Bares</a>,
+    
+    <a href="/collaborators/jeff-griffiths/">Jeff Griffiths</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/kesh-baboolal/">Kesh Baboolal</a>,
+    
+    <a href="/collaborators/andrew-nelson/">Andrew Nelson</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/bed-management-in-a-critical-care-unit/">Bed Management in a Critical Care Unit.</a>.
+    IMA Journal of Management Mathematics..
+    
+    
+    <a href="/collaborators/jeff-griffiths/">Jeff Griffiths</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/izabela-komenda/">Izabela Komenda</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/cost-effective-workforce-planning-optimising-the-dental-team-skill-mix-for-england/">Cost-Effective Workforce Planning: Optimising the Dental Team Skill-Mix for England.</a>.
+    Journal of Enterprise Information Management.
+    
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/e-kleinman/">E Kleinman</a>,
+    
+    <a href="/collaborators/jenny-gallagher/">Jenny Gallagher</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/forecasting-welsh-ambulance-demand-using-singular-spectrum-analysis/">Forecasting Welsh Ambulance Demand using Singular Spectrum Analysis</a>.
+    In Journal of the Operational Research Society.
+    
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/modelling-patient-choice-in-healthcare-systems-development-and-application-of-a-discrete-event-simulation-with-agent-based-functionality/">Modelling Patient Choice in Healthcare Systems: Development and Application of a Discrete Event Simulation with Agent-Based Functionality.</a>.
+    Journal of Simulation..
+    
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/iain-reynolds/">Iain Reynolds</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/on-the-peter-principle-an-agent-based-investigation-into-the-consequential-effects-of-social-networks-and-behavioural-factors/">On the Peter Principle: An Agent Based Investigation into the Consequential Effects of Social Networks and Behavioural Factors.</a>.
+    Physica A: Statistical Mechanics and its Applications..
+    
+    
+    <a href="/collaborators/angelico-fetta/">Angelico Fetta</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/israel-vieira/">Israel Vieira</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2011:
+    <a href="/posts/operational-research-informing-national-health-policy/">Operational Research Informing National Health Policy</a>.
+    Cardiff University. ISBN: 978-0-9569158-0-1.
+    
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/israel-vieira/">Israel Vieira</a>,
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2010:
+    <a href="/posts/forecasting-welsh-ambulance-demand-using-singular-spectrum-analysis-orahs/">Forecasting Welsh Ambulance Demand using Singular Spectrum Analysis</a>.
+    In Proceedings of the XXXVI International ORAHS Conference.
+    
+    
+    <a href="/collaborators/janet-williams/">Janet Williams</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+  <li>
+    2008:
+    <a href="/posts/higher-spin-alternating-sign-matrices/">Higher Spin Alternating Sign Matrices</a>.
+    Electronic Journal of Combinatorics.~14(1): R83, 38pp.
+    
+    
+    <a href="/collaborators/roger-behrend/">Roger Behrend</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+    
+    
+  </li>
+  
+</ul>
+
+
+
+
+
+  </div>
+</body>
+</html>

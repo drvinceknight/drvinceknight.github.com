@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rob Shone - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>
+  Rob Shone
+</h2>
+
+
+
+
+<p>
+  &#x1F9D1;&#x200D;&#x1F393;
+  I worked with Rob Shone as a
+  
+  PhD, BSc student.
+  (2011)
+</p>
+
+
+
+<h3>3 Publications</h3>
+<ol reversed>
+  
+  <li><a href="/posts/a-conservative-index-heuristic-for-routing-problems-with-multiple-heterogeneous-service-facilities/">A conservative index heuristic for routing problems with multiple heterogeneous service facilities</a></li>
+  
+  <li><a href="/posts/comparisons-between-observable-and-unobservable-m-m-1-queues-with-respect-to-optimal-customer-behavior/">Comparisons between observable and unobservable M/M/1 queues with respect to optimal customer behavior</a></li>
+  
+  <li><a href="/posts/containment-of-socially-optimal-policies-in-multiple-facility-markovian-queueing-systems/">Containment of socially optimal policies in multiple-facility Markovian queueing systems.</a></li>
+  
+</ol>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
