@@ -608,7 +608,7 @@ def main(
 
     env = make_html_env()
 
-    src_files = sorted(src_path.glob("*.md")) + sorted(src_path.glob("*.ipynb"))
+    src_files = sorted(src_path.glob("**/*.md")) + sorted(src_path.glob("**/*.ipynb"))
     posts = [read_notebook(p) if p.suffix == ".ipynb" else read_post(p) for p in src_files]
 
     students = sorted(
