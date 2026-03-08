@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vincent Knight - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>
+  Vincent Knight
+</h2>
+
+
+
+
+
+
+<h3>63 Publications</h3>
+<ol reversed>
+  
+  <li><a href="/posts/2025-10-21-rrr/">Reviving, reproducing, and revisiting Axelrod's second tournament</a></li>
+  
+  <li><a href="/posts/a-bibliometric-study-of-research-topics-collaboration-and-centrality-in-the-iterated-prisoners-dilemma/">A bibliometric study of research topics, collaboration and centrality in the Iterated Prisoner's Dilemma</a></li>
+  
+  <li><a href="/posts/a-close-up-on-ambulance-service-estimation-in-indonesia-using-monte-carlo-simulation/">A Close-Up on Ambulance Service Estimation in Indonesia Using Monte Carlo Simulation</a></li>
+  
+  <li><a href="/posts/a-conservative-index-heuristic-for-routing-problems-with-multiple-heterogeneous-service-facilities/">A conservative index heuristic for routing problems with multiple heterogeneous service facilities</a></li>
+  
+  <li><a href="/posts/a-game-theoretic-model-of-the-behavioural-gaming-that-takes-place-at-the-ems-ed-interface/">A game theoretic model of the behavioural gaming that takes place at the EMS - ED interface</a></li>
+  
+  <li><a href="/posts/a-novel-initialisation-based-on-hospital-resident-assignment-for-the-k-modes-algorithm/">A novel initialisation based on hospital-resident assignment for the k-modes algorithm</a></li>
+  
+  <li><a href="/posts/ambulance-allocation-for-maximal-survival-with-heterogeneous-outcome-measures/">Ambulance Allocation for Maximal Survival with Heterogeneous Outcome Measures</a></li>
+  
+  <li><a href="/posts/ambulance-allocations-for-maximising-survival-within-a-heterogeneous-population-using-a-heterogeneous-fleet/">Ambulance Allocations for Maximising Survival within a Heterogeneous Population using a Heterogeneous Fleet</a></li>
+  
+  <li><a href="/posts/an-evolutionary-game-theoretic-model-for-devaluing-rhinos/">An Evolutionary Game Theoretic Model of Rhino Horn Devaluation</a></li>
+  
+  <li><a href="/posts/an-open-framework-for-the-reproducible-study-of-the-iterated-prisoner’s-dilemma/">An Open Framework for the Reproducible Study of the Iterated Prisoner’s Dilemma</a></li>
+  
+  <li><a href="/posts/applied-mathematics-with-open-source-software/">Applied Mathematics With Open-Source Software</a></li>
+  
+  <li><a href="/posts/bed-management-in-a-critical-care-unit/">Bed Management in a Critical Care Unit.</a></li>
+  
+  <li><a href="/posts/ciw-an-open-source-discrete-event-simulation-library/">Ciw: An open source discrete event simulation library</a></li>
+  
+  <li><a href="/posts/comparisons-between-observable-and-unobservable-m-m-1-queues-with-respect-to-optimal-customer-behavior/">Comparisons between observable and unobservable M/M/1 queues with respect to optimal customer behavior</a></li>
+  
+  <li><a href="/posts/compliance-with-national-guidelines-for-stroke-in-radiology/">Compliance with National Guidelines for Stroke in Radiology.</a></li>
+  
+  <li><a href="/posts/containment-of-socially-optimal-policies-in-multiple-facility-markovian-queueing-systems/">Containment of socially optimal policies in multiple-facility Markovian queueing systems.</a></li>
+  
+  <li><a href="/posts/cost-effective-workforce-planning-optimising-the-dental-team-skill-mix-for-england/">Cost-Effective Workforce Planning: Optimising the Dental Team Skill-Mix for England.</a></li>
+  
+  <li><a href="/posts/determining-patient-outcomes-from-patient-letters-a-comparison-of-text-analysis-approaches/">Determining patient outcomes from patient letters: A comparison of text analysis approaches</a></li>
+  
+  <li><a href="/posts/discrete-conditional-phase-type-models-utilising-classification-trees-application-to-modelling-health-service-capacities/">Discrete Conditional Phase-Type Models Utilising Classification Trees: Application to Modelling Health Service Capacities.</a></li>
+  
+  <li><a href="/posts/editorial-health-systems-esi-xxxi-or-applied-to-health-in-a-modern-world/">Editorial: Health Systems ESI XXXI — OR applied to Health in a Modern World.</a></li>
+  
+  <li><a href="/posts/editorial-operations-research-for-health-care-esi-xxxi-or-applied-to-health-in-a-modern-world/">Editorial: Operations Research for Health Care ESI XXXI — OR applied to Health in a Modern World.</a></li>
+  
+  <li><a href="/posts/emergency-service-utilization-in-jakarta-indonesia-a-cross-sectional-study-of-patients-attending-hospital-emergency-departments/">Emergency services utilization in Jakarta (Indonesia): a cross-sectional study of patients attending hospital emergency departments</a></li>
+  
+  <li><a href="/posts/evolution-reinforces-cooperation-with-the-emergence-of-self-recognition-mechanisms/">Evolution Reinforces Cooperation with the Emergence of Self-Recognition Mechanisms: an empirical study of the Moran process for the iterated Prisoner's dilemma </a></li>
+  
+  <li><a href="/posts/evolutionary-dataset-optimisation-learning-algorithm-quality-through-evolution/">Evolutionary Dataset Optimisation: Learning algorithm quality through evolution</a></li>
+  
+  <li><a href="/posts/extortionist-trade-policies-in-a-multipolar-world/">Extortionist Trade Policies in a Multipolar World: The Rationale Behind the US Trade Policy Under Donald Trump</a></li>
+  
+  <li><a href="/posts/forecasting-welsh-ambulance-demand-using-singular-spectrum-analysis-orahs/">Forecasting Welsh Ambulance Demand using Singular Spectrum Analysis</a></li>
+  
+  <li><a href="/posts/forecasting-welsh-ambulance-demand-using-singular-spectrum-analysis/">Forecasting Welsh Ambulance Demand using Singular Spectrum Analysis</a></li>
+  
+  <li><a href="/posts/game-theory-and-python-an-educational-tutorial-to-game-theory-and-repeated-games-using-python/">Game Theory and Python: An educational tutorial to game theory and repeated games using Python</a></li>
+  
+  <li><a href="/posts/game-theory/">Game Theory: Theory, software, and research: game theory for the real world.</a></li>
+  
+  <li><a href="/posts/higher-spin-alternating-sign-matrices/">Higher Spin Alternating Sign Matrices</a></li>
+  
+  <li><a href="/posts/how-efficient-can-an-emergency-unit-be?-a-perfect-world-model/">How Efficient can an Emergency Unit be? A Perfect World Model.</a></li>
+  
+  <li><a href="/posts/matching-a-python-library-for-solving-matching-games/">Matching: A Python library for solving matching games</a></li>
+  
+  <li><a href="/posts/mathematical-modelling-of-patient-flows-to-predict-critical-care-capacity-required-following-the-merger-of-two-district-general-hospitals-into-one/">Mathematical modelling of patient flows to predict critical care capacity required following the merger of two district general hospitals into one.</a></li>
+  
+  <li><a href="/posts/measuring-the-price-of-anarchy-in-critical-care-unit-interactions/">Measuring the Price of Anarchy in Critical Care Unit Interactions</a></li>
+  
+  <li><a href="/posts/memory-depth-of-finite-state-machine-strategies-for-the-iterated-prisoners-dilemma/">Memory depth of finite state machine strategies for the iterated prisoner's dilemma</a></li>
+  
+  <li><a href="/posts/modelling-changes-in=healthcare-demand-through-geographic-data-extrapolation/">Modelling changes in healthcare demand through geographic data extrapolation.</a></li>
+  
+  <li><a href="/posts/modelling-deadlock-in-open-restricted-queueing-networks/">Modelling deadlock in open restricted queueing networks</a></li>
+  
+  <li><a href="/posts/modelling-emergency-medical-services-with-phase-type-distributions/">Modelling Emergency Medical Services with Phase Type Distributions.</a></li>
+  
+  <li><a href="/posts/modelling-of-psoriasis-patient-flows-for-the-reconfiguration-of-secondary-care-services-and-treatments/">Modelling of psoriasis patient flows for the reconfiguration of secondary care services and treatments</a></li>
+  
+  <li><a href="/posts/modelling-patient-choice-in-healthcare-systems-development-and-application-of-a-discrete-event-simulation-with-agent-based-functionality/">Modelling Patient Choice in Healthcare Systems: Development and Application of a Discrete Event Simulation with Agent-Based Functionality.</a></li>
+  
+  <li><a href="/posts/modelling-spatio-temporal-progression-of-cyberattacks-in-data-networks/">Modelling Spatio-Temporal Progression of Cyberattacks in Data Networks</a></li>
+  
+  <li><a href="/posts/nashpy-a-python-library-for-the-computation-of-nash-equilibria/">Nashpy: a Python library for the computation of Nash equilibria</a></li>
+  
+  <li><a href="/posts/on-the-optimisation-of-heterogeneous-ambulance-fleet-allocations/">On the Optimisation of Heterogeneous Ambulance Fleet Allocations</a></li>
+  
+  <li><a href="/posts/on-the-peter-principle-an-agent-based-investigation-into-the-consequential-effects-of-social-networks-and-behavioural-factors/">On the Peter Principle: An Agent Based Investigation into the Consequential Effects of Social Networks and Behavioural Factors.</a></li>
+  
+  <li><a href="/posts/operational-research-ambassadors-in-schools/">Operational research ambassadors in schools</a></li>
+  
+  <li><a href="/posts/operational-research-informing-national-health-policy/">Operational Research Informing National Health Policy</a></li>
+  
+  <li><a href="/posts/optimising-heterogeneous-ambulance-fleet-allocations-in-jakarta/">Optimising Heterogeneous Ambulance Fleet Allocations in Jakarta</a></li>
+  
+  <li><a href="/posts/playing-games-a-case-study-in-active-learning-applied-to-game-theory/">Playing games: a case study in active learning applied to Game Theory.</a></li>
+  
+  <li><a href="/posts/predicting-adolescent-social-networks-to-stop-smoking-in-secondary-schools/">Predicting Adolescent Social Networks to Stop Smoking in Secondary Schools</a></li>
+  
+  <li><a href="/posts/properties-of-winning-iterated-prisoners-dilemma-strategies/">Properties of Winning Iterated Prisoner’s Dilemma Strategies</a></li>
+  
+  <li><a href="/posts/python-for-mathematics/">Python for Mathematics</a></li>
+  
+  <li><a href="/posts/queues-under-stochastic-priority-switching/">Queues Under Stochastic Priority Switching</a></li>
+  
+  <li><a href="/posts/recognising-and-evaluating-the-effectiveness-of-extortion-in-the-iterated-prisoners-dilemma/">Recognising and evaluating the effectiveness of extortion in the Iterated Prisoner's Dilemma</a></li>
+  
+  <li><a href="/posts/reinforcement-learning-produces-dominant-strategies-for-the-iterated-prisoners-dilemma/">Reinforcement Learning Produces Dominant Strategies for the Iterated Prisoner's Dilemma</a></li>
+  
+  <li><a href="/posts/rostering-staff-at-a-mathematics-support-service-using-a-finite-source-queueing-model/">Rostering staff at a mathematics support service using a finite-source queueing model</a></li>
+  
+  <li><a href="/posts/segmentation-analysis-and-the-recovery-of-queuing-parameters-via-the-wasserstein-distance-a-study-of-administrative-data-for-patients-with-chronic-obstructive-pulmonary-disease/">Optimizing healthcare queues: a case study on chronic respiratory illness</a></li>
+  
+  <li><a href="/posts/selfish-routing-in-public-services/">Selfish routing in public services.</a></li>
+  
+  <li><a href="/posts/simulating-bed-capacity-evaluating-the-impact-of-healthcare-service-transfers/">Simulating Bed Capacity: Evaluating the Impact of Healthcare Service Transfers</a></li>
+  
+  <li><a href="/posts/time-dependent-stochastic-methods-for-managing-and-scheduling-emergency-medical-services/">Time-dependent stochastic methods for managing and scheduling Emergency Medical Services</a></li>
+  
+  <li><a href="/posts/transforming-emergency-and-urgent-care-services-with-mathematical-modelling/">Transforming emergency and urgent care services with mathematical modelling</a></li>
+  
+  <li><a href="/posts/tweeting-the-terror-modelling-the-social-media-reaction-to-the-woolwich-terrorist-attack/">Tweeting the Terror: Modelling the Social Media Reaction to the Woolwich Terrorist Attack</a></li>
+  
+  <li><a href="/posts/using-a-theory-of-mind-to-find-best-responses-to-memory-one-strategies/">Using a theory of mind to find best responses to memory-one strategies</a></li>
+  
+  <li><a href="/posts/using-singular-spectrum-analysis-to-obtain-staffing-level-requirements-in-healthcare/">Using Singular Spectrum Analysis to Obtain Staffing Level Requirements in Healthcare.</a></li>
+  
+</ol>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

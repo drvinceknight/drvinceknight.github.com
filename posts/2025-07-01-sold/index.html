@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sold: A Python library for the study of Acutions - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Sold: A Python library for the study of Acutions</h2>
+<p><small>2025-07-01</small></p>
+
+
+
+<p>I have been playing around with auction theory, I put <code>sold</code> together which lets you simulate auctions:</p>
+<p><a href="https://github.com/drvinceknight/sold">https://github.com/drvinceknight/sold</a></p>
+<p>Here is some code to simulate <a href="https://en.wikipedia.org/wiki/Vickrey_auction">a second pay auction</a> where
+1 of the bidders shades their bid (optimal behaviour in a first pay auction) and the other bids their true value.</p>
+<pre><code class="language-python">import scipy.stats
+import numpy as np
+import matplotlib.pyplot as plt
+
+import sold.allocate
+import sold.bid
+import sold.pay
+
+N = 2
+repetitions = 50_000
+shade_steps = 9
+shades = np.linspace(0, 1, shade_steps)
+valuation_distributions = [scipy.stats.uniform for _ in range(N)]
+utility = np.zeros(shape=(N, repetitions, shade_steps))
+
+for i, shade in enumerate(shades):
+
+    bidding_functions = [sold.bid.create_shaded_bid_map(shade), sold.bid.true_value]
+
+    for seed in range(repetitions):
+        allocation, payments, valuations = sold.auction(
+            valuation_distributions=valuation_distributions,
+            bidding_functions=bidding_functions,
+            allocation_rule=sold.allocate.first_price,
+            payment_rule=sold.pay.second_price,
+            seed=seed,
+        )
+        utility[:, seed, i] = allocation * valuations - payments
+
+</code></pre>
+<p>The true value is known to be weakly dominant in a second pay auction) which is kind of what is confirmed by this plot:</p>
+<pre><code class="language-python">plt.figure()
+plt.violinplot(
+    utility[0],
+    showmeans=False,
+    showmedians=False,
+    showextrema=False,
+    side=&quot;low&quot;,
+)
+plt.violinplot(
+    utility[1],
+    showmeans=False,
+    showmedians=False,
+    showextrema=False,
+    side=&quot;high&quot;,
+)
+
+plt.scatter(range(1, shade_steps + 1), np.mean(utility[0], axis=0), label=r&quot;Mean utility: bid$=\sigma v$&quot;)
+plt.scatter(range(1, shade_steps + 1), np.mean(utility[1], axis=0), label=r&quot;Mean utility: bid$=v$&quot;)
+
+
+plt.xlabel(r&quot;Shade value $\sigma$&quot;)
+plt.xticks(range(1, shade_steps + 1), shades, rotation=90)
+plt.ylabel(&quot;Expected Utility&quot;)
+plt.legend()
+plt.show()
+</code></pre>
+<p><img alt="" src="/assets/static/2025-07-01-sold/main.png" /></p>
+<p>If anyone wants to play around with it you can <code>python -m pip install sold</code> or even better you can look through the code base
+(I have no idea if this is something I plan to return to or just leave it as is).</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

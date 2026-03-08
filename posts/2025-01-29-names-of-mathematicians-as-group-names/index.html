@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Names of Mathematicians as group names - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Names of Mathematicians as group names</h2>
+<p><small>2025-01-19</small></p>
+
+
+
+<p>I use group work for assessment in both my modules.
+For the second year I'm using blackboard's group system to facilitate the
+creation of the groups. It allows you to create names for the groups, and this
+year I decided to try and do something different than "Group 1", "Group 2",
+"Group 3".</p>
+<p>I used names of Mathematicians that are perhaps as not well known as most.</p>
+<p>Here's the list:</p>
+<ol>
+<li>Hypatia (350–415 CE, Egypt) – First known female mathematician, contributed to geometry and algebra.</li>
+<li>Brahmagupta (598–668 CE, India) – Early work on zero and negative numbers.</li>
+<li>Muhammad ibn Musa al-Khwarizmi (c. 780–850 CE, Persia) – Father of algebra; introduced algorithms.</li>
+<li>Madhava of Sangamagrama (c. 1340–1425, India) – Founder of the Kerala School; early work on calculus.</li>
+<li>Omar Khayyam (1048–1131 CE, Persia) – Solutions to cubic equations and a poet.</li>
+<li>Thābit ibn Qurra (826–901 CE, Iraq) – Contributed to number theory and geometry.</li>
+<li>Liu Hui (c. 225–295 CE, China) – Contributions to geometry and approximation of π.</li>
+<li>Al-Samawal al-Maghribi (c. 1130–1180 CE, Morocco) – Work on algebra and polynomials.</li>
+<li>Maria Gaetana Agnesi (1718–1799, Italy) – Wrote one of the first comprehensive calculus textbooks.</li>
+<li>Émilie du Châtelet (1706–1749, France) – Advanced Newton’s work and translated his "Principia."</li>
+<li>Benjamin Banneker (1731–1806, USA) – African-American mathematician, astronomer, and surveyor.</li>
+<li>Sophie Germain (1776–1831, France) – Work on elasticity theory and Fermat's Last Theorem.</li>
+<li>Carl Friedrich Gauss (1777–1855, Germany) – Wide contributions, including number theory and statistics.</li>
+<li>José Mariano Mociño (1757–1820, Mexico) – Contributions to botany and mathematics.</li>
+<li>Sacrobosco (13th century, England) – Work on spherical geometry.</li>
+<li>Ada Lovelace (1815–1852, UK) – First computer programmer; work on algorithms for the Analytical Engine.</li>
+<li>Mary Somerville (1780–1872, UK) – Popularized Laplace's work and wrote on astronomy and mathematics.</li>
+<li>Sofia Kovalevskaya (1850–1891, Russia) – First woman to earn a PhD in mathematics; work on partial differential equations.</li>
+<li>J.J. Sylvester (1814–1897, UK) – Work on matrix theory and algebra.</li>
+<li>Charles Loring Brace (1826–1890, USA) – Advocated for algebraic research in education.</li>
+<li>Florence Nightingale (1820–1910, UK) – Pioneer of statistical graphics in public health.</li>
+<li>Évariste Galois (1811–1832, France) – Laid the groundwork for group theory.</li>
+<li>Emmy Noether (1882–1935, Germany) – Groundbreaking work in abstract algebra and physics.</li>
+<li>Mary Cartwright (1900–1998, UK) – Work on chaos theory and differential equations.</li>
+<li>Marjorie Lee Browne (1914–1979, USA) – African-American mathematician; advanced mathematics education.</li>
+<li>Julia Robinson (1919–1985, USA) – Work on Hilbert’s 10th problem.</li>
+<li>Euphemia Haynes (1890–1980, USA) – First African-American woman to earn a PhD in math.</li>
+<li>Olga Taussky-Todd (1906–1995, Austria) – Matrix theory and algebra.</li>
+<li>David Blackwell (1919–2010, USA) – African-American statistician; contributions to game theory.</li>
+<li>Katherine Johnson (1918–2020, USA) – NASA mathematician; essential calculations for spaceflight.</li>
+<li>Abdulalim A. Shabazz (1927–2014, USA) – Advocated for mathematics education in African-American communities.</li>
+<li>Elbert Frank Cox (1895–1969, USA) – First African-American to earn a PhD in mathematics.</li>
+<li>S. S. Pillai (1901–1950, India) – Contributions to number theory.</li>
+<li>Chike Obi (1921–2008, Nigeria) – Pioneer in modern Nigerian mathematics.</li>
+<li>C. R. Rao (1920–2023, India) – Contributions to statistics and information theory.</li>
+<li>Ingrid Daubechies (b. 1954, Belgium) – Wavelets and image compression.</li>
+<li>Maryam Mirzakhani (1977–2017, Iran) – First woman to win the Fields Medal.</li>
+<li>Ruth Gonzalez (b. 20th century, USA) – First Latina to earn a PhD in math.</li>
+<li>Fan Chung (b. 1949, Taiwan/USA) – Graph theory and combinatorics.</li>
+<li>Nalini Joshi (b. 1959, Australia) – Work on nonlinear differential equations.</li>
+<li>Terence Tao (b. 1975, Australia/USA) – "The Mozart of Math"; work in many fields of mathematics.</li>
+<li>Ken Ono (b. 1968, Japan/USA) – Number theory and Ramanujan’s work.</li>
+<li>Jonathan Farley (b. 1970, USA) – Lattice theory and social justice in math.</li>
+<li>Mangala Narlikar (b. 1948, India) – Work in astronomy and math.</li>
+<li>Ramanujan (1887–1920, India) – Self-taught genius; contributions to number theory.</li>
+<li>George Polya (1887–1985, Hungary) – Mathematical problem-solving techniques.</li>
+<li>Alice T. Schafer (1915–2009, USA) – Advocate for women in mathematics.</li>
+<li>Shakuntala Devi (1929–2013, India) – Mental calculation prodigy.</li>
+<li>Alena Buyx (21st century, Germany) – Applied ethics and mathematical modeling.</li>
+<li>Ali Nesin (b. 1956, Turkey) – Founder of math villages to teach young talent.</li>
+<li>John Mighton (b. 1957, Canada) – Advocate for math accessibility.</li>
+<li>Alan Turing (1912–1954, UK) – Foundations of computer science and cryptography.</li>
+<li>Sophie Morel (b. 1979, France) – Young leader in arithmetic geometry.</li>
+<li>Bertrand Russell (1872–1970, UK) – Foundations of logic and set theory.</li>
+<li>Henri Poincaré (1854–1912, France) – Dynamical systems and topology.</li>
+<li>Zaha Hadid (1950–2016, Iraq/UK) – Architecture with heavy mathematical influence.</li>
+<li>Norbert Wiener (1894–1964, USA) – Founder of cybernetics.</li>
+<li>Grace Hopper (1906–1992, USA) – Pioneer of computer programming.</li>
+<li>Evelyn Boyd Granville (1924–2023, USA) – African-American trailblazer in computer science.</li>
+<li>Takakazu Seki (1642–1708, Japan) – Developed Japanese calculus (wasan).</li>
+<li>Ivo Babuška (b. 1926, Czechia) – Numerical methods and engineering.</li>
+<li>Persi Diaconis (b. 1945, USA) – Mathematics of randomness.</li>
+<li>Melanie Wood (b. 1981, USA) – Work on arithmetic statistics.</li>
+<li>Cathy O’Neil (b. 1972, USA) – Author of Weapons of Math Destruction.</li>
+</ol>
+<p>When using blackboard, you can upload the list of names to create the groups
+directly. Here is one version of the formatted names that works:</p>
+<pre><code>&quot;Group Code&quot;,&quot;Title&quot;,&quot;Description&quot;,&quot;Group Set&quot;,&quot;Self Enroll&quot;
+Brahmagupta,Brahmagupta,,Group Work,Y
+Hypatia,Hypatia,,Group Work,Y
+Muhammad ibn Musa al-Khwarizmi, Muhammad ibn Musa al-Khwarizmi, , New_gc_Group_gc_Set_gc_27, Y
+Madhava of Sangamagrama, Madhava of Sangamagrama, ,Group Work,Y
+Omar Khayyam, Omar Khayyam, ,Group Work,Y
+Thābit ibn Qurra, Thābit ibn Qurra, ,Group Work,Y
+Liu Hui, Liu Hui, ,Group Work,Y
+Al-Samawal al-Maghribi, Al-Samawal al-Maghribi, ,Group Work,Y
+Maria Gaetana Agnesi, Maria Gaetana Agnesi, ,Group Work,Y
+Émilie du Châtelet, Émilie du Châtelet, ,Group Work,Y
+Benjamin Banneker, Benjamin Banneker, ,Group Work,Y
+Sophie Germain, Sophie Germain, ,Group Work,Y
+José Mariano Mociño, José Mariano Mociño, ,Group Work,Y
+Sacrobosco, Sacrobosco, ,Group Work,Y
+Ada Lovelace, Ada Lovelace, ,Group Work,Y
+Mary Somerville, Mary Somerville, ,Group Work,Y
+Sofia Kovalevskaya, Sofia Kovalevskaya, ,Group Work,Y
+J.J. Sylvester, J.J. Sylvester, ,Group Work,Y
+Charles Loring Brace, Charles Loring Brace, ,Group Work,Y
+Florence Nightingale, Florence Nightingale, ,Group Work,Y
+Évariste Galois, Évariste Galois, ,Group Work,Y
+Emmy Noether, Emmy Noether, ,Group Work,Y
+Mary Cartwright, Mary Cartwright, ,Group Work,Y
+Marjorie Lee Browne, Marjorie Lee Browne, ,Group Work,Y
+Julia Robinson, Julia Robinson, ,Group Work,Y
+Euphemia Haynes, Euphemia Haynes, ,Group Work,Y
+Olga Taussky-Todd, Olga Taussky-Todd, ,Group Work,Y
+David Blackwell, David Blackwell, ,Group Work,Y
+Katherine Johnson, Katherine Johnson, ,Group Work,Y
+Abdulalim A. Shabazz, Abdulalim A. Shabazz, ,Group Work,Y
+Elbert Frank Cox, Elbert Frank Cox, ,Group Work,Y
+S. S. Pillai, S. S. Pillai, ,Group Work,Y
+Chike Obi, Chike Obi, ,Group Work,Y
+C. R. Rao, C. R. Rao, ,Group Work,Y
+Ingrid Daubechies, Ingrid Daubechies, ,Group Work,Y
+Maryam Mirzakhani, Maryam Mirzakhani, ,Group Work,Y
+Ruth Gonzalez, Ruth Gonzalez, ,Group Work,Y
+Fan Chung, Fan Chung, ,Group Work,Y
+Nalini Joshi, Nalini Joshi, ,Group Work,Y
+Terence Tao, Terence Tao, ,Group Work,Y
+Ken Ono, Ken Ono, ,Group Work,Y
+Jonathan Farley, Jonathan Farley, ,Group Work,Y
+Mangala Narlikar, Mangala Narlikar, ,Group Work,Y
+Ramanujan, Ramanujan, ,Group Work,Y
+George Polya, George Polya, ,Group Work,Y
+Alice T. Schafer, Alice T. Schafer, ,Group Work,Y
+Shakuntala Devi, Shakuntala Devi, ,Group Work,Y
+Alena Buyx, Alena Buyx, ,Group Work,Y
+Ali Nesin, Ali Nesin, ,Group Work,Y
+John Mighton, John Mighton, ,Group Work,Y
+Alan Turing, Alan Turing, ,Group Work,Y
+Sophie Morel, Sophie Morel, ,Group Work,Y
+Bertrand Russell, Bertrand Russell, ,Group Work,Y
+Henri Poincaré, Henri Poincaré, ,Group Work,Y
+Zaha Hadid, Zaha Hadid, ,Group Work,Y
+Norbert Wiener, Norbert Wiener, ,Group Work,Y
+Grace Hopper, Grace Hopper, ,Group Work,Y
+Evelyn Boyd Granville, Evelyn Boyd Granville, ,Group Work,Y
+Takakazu Seki, Takakazu Seki, ,Group Work,Y
+Ivo Babuška, Ivo Babuška, ,Group Work,Y
+Persi Diaconis, Persi Diaconis, ,Group Work,Y
+Melanie Wood, Melanie Wood, ,Group Work,Y
+Cathy O’Neil, Cathy O’Neil, ,Group Work,Y
+</code></pre>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

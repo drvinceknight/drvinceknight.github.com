@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visiting lectureship at the University of Namibia and PyCon NA 2024 - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Visiting lectureship at the University of Namibia and PyCon NA 2024</h2>
+<p><small>2024-10-18</small></p>
+
+
+
+<h2 id="renewed-partnership-between-the-university-namibia-and-the-school-of-mathematics">Renewed Partnership between the University Namibia and the School of Mathematics</h2>
+<p>As part of the Cardiff University's partnership with the University of Namibia,
+the school of Mathematics
+worked with the Department of Science at the University of Namibia (UNAM) from 2015 to deliver two projects with lasting impact:</p>
+<ul>
+<li>A summer transition school to help students adapt from School Mathematics to
+  University Mathematics. This is particularly important for students at the
+  University of Namibia as all students (not just those studying mathematics) are
+  expected to achieve a base level of mathematical competency.</li>
+<li>A national Python conference. PyCon Namibia has grown in to a thriving
+  community of Python programmers in Namibia but has also had lasting impact
+  throughout Africa and the world. There are now annual continental Python
+  conferences. This was part of the work that lead to one of Cardiff University's impact case studies: https://www.cardiff.ac.uk/mathematics/research/impact/growing-open-and-sustainable-software-communities-across-africa</li>
+</ul>
+<p>Following the COVID-19 pandemic this partnership has garnered renewed momentum.
+The department of Science at UNAM and in particular the School of Mathematics
+intends to offer more applied mathematics subjects to its syllabus.</p>
+<p>I
+was offered a visiting lectureship at the University of Namibia to teach an undergraduate
+course in Game Theory.</p>
+<p>The topic of Game Theory was chosen as it is an example of a Mathematical
+subject which has a direct value to a number of other departments at UNAM:</p>
+<ul>
+<li>the School of Military Sciences;</li>
+<li>the Business school (a number of mathematical game
+  theorists have gone on to win Nobel prizes in Economics);</li>
+<li>Political Sciences;</li>
+<li>Biological Sciences.</li>
+</ul>
+<blockquote>
+<p>"The Department of Mathematics at UNAM introduces a module on game theory in its current offering to impart the much needed
+competencies and skills in applications of game theory in study of conflict resolutions, pray predator relations, cooperation among
+humans, or anything else classified as “an intelligent, rational, decision-maker”.
+In addition to teaching the module to our undergraduate students,
+Dr. Knight presented as series of seminar presentations which were attended by a diverse audience.
+The department is grateful to Dr. Knight for his invaluable contribution to the department and University at large.
+For future collaborations, the Department wishes to expand on this initiative by developing specific short course
+programs focusing on the application of game theory concepts to diverse areas of which Dr. Knight will be the
+primary convener"</p>
+</blockquote>
+<p>Samuel Nuugulu, Head of Mathematics Department</p>
+<h3 id="details-of-the-visiting-lectureship">Details of the visiting lectureship</h3>
+<p>The goal of this visiting lectureship was to build the foundations for graduate
+students at UNAM to learn and eventually teach the subject of Game Theory.</p>
+<p>As such, Dr. Knight delivered a final year course on the mathematical
+fundamentals of Game Theory. This was delivered through 4 hours of weekly
+contact time for the 4 weeks of his time at UNAM. Following this, I continued to
+meet with my students virtually as they worked on their personal research
+projects which will use Game Theory to explore:</p>
+<ul>
+<li>Using Evolutionary Game Theory to understand emergence of Social Conventions.</li>
+<li>Using Moran Processes to model invasive species.</li>
+<li>Using Fictitious Play to identify the best response dynamics in Military Situations.</li>
+</ul>
+<h3 id="pycon-na-2024-the-9th-national-python-conference-in-namibia">PyCon NA 2024: the 9th National Python Conference in Namibia</h3>
+<p>This visiting lectureship gave me (a former trustee of the UK Python
+association) the opportunity to assist with the organisation of the national Python Conference.</p>
+<p>A particularity of PyCon NA is the emphasis on involving Namibian school
+children.</p>
+<p>You can read a report and see photos from the conference here: <a href="https://na.pycon.org/2024/">https://na.pycon.org/2024/</a>.</p>
+<p><img alt="Participants playing Rock Paper Scissors" src="https://na.pycon.org/media/filer_public_thumbnails/filer_public/f8/25/f82544d5-5ea2-4859-abc3-f28da148a62c/2024_game_theory.jpeg__1170x658_q85_crop_subject_location-1851%2C1201_subsampling-2_upscale.jpg" /></p>
+<p>Some highlights include:</p>
+<ul>
+<li>More than 110 attendees from over 15 countries within Africa and beyond;</li>
+<li>Half of the attendees and a third of the speakers were women;</li>
+<li>Direct partnership with schools and universities from Namibia;</li>
+<li>Financial assistance and sponsorship from a number of organisation and
+  commercial companies.</li>
+</ul>
+<p>During this Dr Knight delivered a workshop on Python for Mathematics for local
+School children, mapping the Namibia School curriculum to programming techniques
+and also gave a talk on Game Theory which involved the Aina winning the Rock
+Paper Scissors tournament.</p>
+<h3 id="a-series-of-public-lectures-on-game-theory">A series of Public lectures on Game Theory</h3>
+<p>With a goal to broaden the community's understanding of the value Mathematics
+can have as a subject to the wider set of sciences on offer at UNAM, Dr. Knight
+gave a series of public lectures.</p>
+<p><img alt="Seminar flyer" src="https://cdn.fosstodon.org/media_attachments/files/112/088/419/748/582/874/small/8635413d19006be0.png" /></p>
+<p>The Seminar series was in four 1 hour parts:</p>
+<ol>
+<li>Emergent Behavior in Complex Environments: Equilibrium Behavior of Rational Agents</li>
+<li>Emergent Behavior in Complex Environments: Evolutionary Game Theory</li>
+<li>Emergent Behavior in Complex Environments: Cooperation</li>
+<li>Emergent Behavior in Complex Environments: Matching Games, Routing Games and Cooperative Games.</li>
+</ol>
+<p>This was attended by students and members of faculty from a variety of
+departments.</p>
+<h3 id="future-plans">Future Plans</h3>
+<p>The work is not done here. I looks forward to working closely with UNAMs
+department of Science and School of Mathematics to better understand the
+potential for and best possible action plan to ensure:</p>
+<ol>
+<li>a sustainable first course in Mathematics that has immediate value to other
+   schools at UNAM;</li>
+<li>a graduate programme allowing for a community of expertise in applying
+   Mathematics to real world problems.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>This visiting lectureship program represents a significant milestone in the international
+partnership between the Cardiff University and UNAM.</p>
+<ul>
+<li>PyCon NA continues to grow and with it does the local open source software
+  community. Plans are already underway for the 10th National conference with a
+  goal to reach even more school children.</li>
+<li>Game theory has been established as a topic available to all students at UNAM.
+  The School of Mathematics at UNAM and I are going to work together to
+  put together a plan of action for ensuring even more of value is added to the
+  University wide curriculum.</li>
+</ul>
+<p>On a personal level, I learnt a lot from my students at UNAM and am
+planning on making some modifications to the way I teaches Game Theory at
+Cardiff as a result of discussions with students here.</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

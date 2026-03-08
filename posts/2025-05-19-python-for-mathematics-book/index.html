@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python for Mathematics Book - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Python for Mathematics Book</h2>
+<p><small>2025-05-19</small></p>
+
+
+
+<p>Over the weekend, I received my author copies of <em>Python for Mathematics</em>.</p>
+<p>As I posted over on <a href="https://fosstodon.org/@vinceknight">Mastodon</a>:</p>
+<blockquote>
+<p>I'm quite proud of this book. It’s the result of learning from the Python community and from years of working with first-year mathematics students.</p>
+<p>The publisher was great and worked with me to ensure there’s an online version of the book, which you can find (in its current form) here: <a href="https://vknight.org/pfm/cover.html">https://vknight.org/pfm/cover.html</a>.<br />
+That version still needs a bit of updating — getting the print version ready took priority — but I’ll be sorting that out soon.</p>
+</blockquote>
+<p>In the opening chapter (which isn’t yet updated online), I talk about how this book takes a different route than most programming texts. It essentially flips the usual order in which topics are introduced:</p>
+<p>A traditional structure might look more like this:</p>
+<ol>
+<li><a href="https://vknight.org/pfm/tools-for-mathematics/01-using-notebooks/introduction/main.html">Using Notebooks</a></li>
+<li>Variables – covered in <a href="https://vknight.org/pfm/building-tools/01-variables-conditionals-loops/introduction/main.html">Chapter 10</a></li>
+<li>Conditionals – also in <a href="https://vknight.org/pfm/building-tools/01-variables-conditionals-loops/introduction/main.html">Chapter 10</a></li>
+<li>Loops – again, <a href="https://vknight.org/pfm/building-tools/01-variables-conditionals-loops/introduction/main.html">Chapter 10</a></li>
+<li>Functions – covered in <a href="https://vknight.org/pfm/building-tools/02-functions-and-data-structures/introduction/main.html">Chapter 11</a></li>
+<li>Data structures – also in <a href="https://vknight.org/pfm/building-tools/02-functions-and-data-structures/introduction/main.html">Chapter 11</a></li>
+<li>Recursion – <a href="https://vknight.org/pfm/tools-for-mathematics/07-sequences/introduction/main.html">Chapter 7</a></li>
+<li>Objects – <a href="https://vknight.org/pfm/building-tools/03-objects/introduction/main.html">Chapter 12</a></li>
+<li>SymPy – drawing on content from <a href="https://vknight.org/pfm/tools-for-mathematics/02-algebra/introduction/main.html">Chapters 2–4</a> and <a href="https://vknight.org/pfm/tools-for-mathematics/09-differential-equations/introduction/main.html">9</a></li>
+<li>Combinatorics – <a href="https://vknight.org/pfm/tools-for-mathematics/05-combinations-permutations/introduction/main.html">Chapter 5</a></li>
+<li>Probability – <a href="https://vknight.org/pfm/tools-for-mathematics/06-probability/introduction/main.html">Chapter 6</a></li>
+<li>Statistics – <a href="https://vknight.org/pfm/tools-for-mathematics/08-statistics/introduction/main.html">Chapter 8</a></li>
+<li>Command line – <a href="https://vknight.org/pfm/building-tools/04-editor-and-cli/introduction/main.html">Chapter 13</a></li>
+<li>Modularisation – <a href="https://vknight.org/pfm/building-tools/05-modularisation/introduction/main.html">Chapter 14</a></li>
+<li>Documentation – <a href="https://vknight.org/pfm/building-tools/06-documentation/introduction/main.html">Chapter 15</a></li>
+<li>Testing – <a href="https://vknight.org/pfm/building-tools/07-testing/introduction/main.html">Chapter 16</a></li>
+</ol>
+<p>Instead, the book takes this different path on purpose:</p>
+<blockquote>
+<p>“The choice to <em>flip</em> this structure and start with real use cases (and not code recipes) is deliberate.<br />
+The tools covered in Chapters 2 to 9 can be used with little to no programming knowledge — they mostly require just some maths.”</p>
+<p>“After that, the programming basics in Chapters 10 to 12 help build on that experience,<br />
+and the topics in Chapters 13 to 16 give a taste of how modern research software is built.”</p>
+</blockquote>
+<p>This structure reflects how my own approach to teaching programming has evolved. Rather than starting with the basics and asking students to believe that these abstract pieces will come together <em>eventually</em>, I try to start by showing what’s already possible — right now — using powerful, existing tools.</p>
+<p>Another way to frame it might be: I’m not flipping the structure at all. I’m just starting with the bit that’s often missing.</p>
+<p>And one more point about this book:</p>
+<blockquote>
+<p><strong>I don’t think universities should (ethically) be teaching commercial software —<br />
+I’ll write up more thoughts on that at some point.</strong></p>
+</blockquote>
+<p>But really, we don’t have to — at least not in my field (others may vary).<br />
+The tools in this book are freely available, easy to use, and just as powerful.<br />
+I don’t even go into some of the other incredible tools out there like <a href="https://www.sagemath.org">SageMath</a>,<br />
+or domain-specific libraries like <a href="https://ciw.readthedocs.io">Ciw for queuing processes</a>.</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reviving, reproducing, and revisiting Axelrod's second tournament - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Reviving, reproducing, and revisiting Axelrod's second tournament</h2>
+<p><small>2025-10-21</small></p>
+
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/owen-campbell/">Owen Campbell</a>,
+    
+    <a href="/collaborators/marc-harper/">Marc Harper</a>,
+    
+    <a href="/collaborators/tj-gaffney/">Tj Gaffney</a>,
+    
+    <a href="/collaborators/nikoleta-glynatsi/">Nikoleta Glynatsi</a>.
+    
+  </li>
+  
+  <li>Date: 2025</li>
+  
+  
+  <li><a href="https://arxiv.org/abs/2510.15438">Preprint.</a></li>
+  
+</ul>
+
+
+<p>Collaborators and I have just put a new preprint up on the arXiv: <a href="https://arxiv.org/abs/2510.15438">"Reviving,
+Reproducing and Revisiting Axelrod's second tournament"</a>.
+I'm really proud of this paper.</p>
+<h2 id="background">Background</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Prisoner's_dilemma">Prisoner’s Dilemma</a> is a
+classic model of <strong>direct reciprocity</strong>—how cooperation can emerge between
+individuals who repeatedly interact.</p>
+<p>In each interaction, both players face a simple choice: act <strong>selfishly</strong> for an
+immediate gain, or <strong>selflessly</strong> for a shared long-term benefit. If both act
+selflessly, they each do better overall, but the temptation to act selfishly
+remains strong.</p>
+<p>When interactions repeat, cooperation becomes possible through direct
+reciprocity:</p>
+<blockquote>
+<p>I’ll cooperate with you if you’ve cooperated with me before.</p>
+</blockquote>
+<p>A recent <a href="https://www.youtube.com/watch?v=mScpHTIi-kM">Veritasium</a> video gives a
+great overview of this topic and includes an interview with
+<a href="https://en.wikipedia.org/wiki/Robert_Axelrod_(political_scientist)">Robert Axelrod</a>.
+Axelrod, a political scientist, ran two computer tournaments in the 1980s to
+study the evolution of cooperation. He’s also the namesake of the
+<a href="https://axelrod.readthedocs.io"><code>axelrod</code></a> Python library, which I help
+maintain.</p>
+<p>The key finding from these tournaments was that the strategy <strong>Tit for Tat</strong>
+performed best and, more importantly, revealed the traits that make for strong
+performance:</p>
+<ul>
+<li>Be nice (don’t defect first)</li>
+<li>Be provocable (retaliate when necessary)</li>
+<li>Be forgiving (return to cooperation after conflict)</li>
+<li>Be non-envious (don’t aim to outperform others)</li>
+<li>Be simple (easy to understand)</li>
+</ul>
+<p>This work has been hugely influential. Axelrod’s book
+<a href="https://scholar.google.com/scholar?cluster=3156625084735254351">The Evolution of Cooperation (1984)</a>
+has been cited tens of thousands of times across political science, biology, and
+economics.</p>
+<h2 id="reviving-the-work">Reviving the work</h2>
+<p>When I started the <a href="https://axelrod.readthedocs.io"><code>axelrod</code></a> Python library in
+2015, I exchanged emails with Robert Axelrod to ask whether any of the original
+source code from his tournaments still existed:</p>
+<blockquote>
+<p>"I don't have the first round. But the second round is on-line.<br />
+Best of success with your library."</p>
+</blockquote>
+<p>A version of the original Fortran code—annotated in 1993—can indeed be found
+<a href="https://websites.umich.edu/~axe/research/Software/CC/CC2/TourExec1.1.f.html">here</a>.</p>
+<p>This is where <a href="https://github.com/meatballs/">Owen Campbell</a>, another maintainer
+of the <a href="https://axelrod.readthedocs.io"><code>axelrod</code></a> library, comes in. He worked
+to <strong>revive</strong> the original Fortran code so that it could run within the modern
+Python framework.</p>
+<h2 id="reproducing-the-work">Reproducing the work</h2>
+<p>Using this, we were able to <strong>attempt</strong> to reproduce the original results—and,
+in doing so, <strong>fail</strong> to perfectly replicate them. Owen gave a great talk about
+this at PyCon UK, titled
+<a href="https://www.youtube.com/watch?v=OSFCvv2wpOU"><em>God Is Real (Unless Declared an Integer)</em></a>.</p>
+<p>I say <strong>fail</strong> because one particular strategy performed unexpectedly poorly.
+However, we did reproduce the <strong>main conclusions</strong>: <strong>Tit for Tat</strong> again
+performed best, and the same core principles of cooperation emerged.</p>
+<p>This apparent failure is, in fact, interesting—it highlights broader issues
+around the <strong>reproducibility of computational research</strong>. As a Fellow of the
+<a href="https://www.software.ac.uk">Software Sustainability Institute</a>, this is a topic
+close to my heart and central to this work.</p>
+<p>A key output of our preprint is a fully <strong>reproducible and reusable</strong> package:
+the original Fortran code, wrapped and documented so that anyone can rerun the
+experiments and verify the results for themselves.</p>
+<h2 id="revisiting-the-work">Revisiting the Work</h2>
+<p>Amidst all this work on Axelrod’s second tournament, development of the<br />
+<a href="https://axelrod.readthedocs.io"><code>axelrod</code></a> Python library has continued to grow and mature:</p>
+<ul>
+<li>Used in more than <a href="https://github.com/Axelrod-Python/Axelrod/blob/dev/citations.md">40 pieces of research</a></li>
+<li>Over 785 stars, 279 forks, and 76 contributors on <a href="https://github.com/Axelrod-Python/Axelrod">GitHub</a></li>
+</ul>
+<p>I genuinely believe this library stands as an example of good scientific practice—<br />
+specifically because it is <strong>open</strong>. Contributions and expertise have come from a<br />
+remarkably broad community, including students. One such contributor, Julie Rymer,<br />
+shared the following message after working on the library as part of her studies:</p>
+<blockquote>
+<p>“And I really wanted to thank you all. I discovered your project because<br />
+of a course where we needed to participate in an open source project,<br />
+and I had the occasion to compare the welcome me and my coworkers<br />
+received here compared to other people from my class who worked on<br />
+different projects. And I’ve got to say you are awesome on that part<br />
+and on the help you provide to newbies. I like your project so I’ll try to<br />
+continue to contribute now and then!”</p>
+</blockquote>
+<p>This diversity of contributors has become one of the project’s greatest strengths.<br />
+There are now more than <strong>250 distinct strategies</strong> implemented in the library:
+some trained <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0188046">using reinforcement learning techniques described in the literature</a>,<br />
+others inspired by creative theoretical ideas.</p>
+<p>Together, this rich ecosystem allows us, in our preprint, to address a significant question:</p>
+<p><strong>How generalisable were the conclusions of Robert Axelrod?</strong></p>
+<p>We ran a large tournament including every available strategy: by far the largest<br />
+Iterated Prisoner’s Dilemma tournament ever conducted.</p>
+<p>Unsurprisingly, <em>Tit For Tat</em> did not win. In fact, the highest performer from<br />
+Axelrod’s second tournament ranked only <strong>16th</strong> in our results. Almost all of<br />
+the top fifteen strategies were sophisticated ones trained using reinforcement<br />
+learning techniques, having learned to behave in contextually beneficial ways<br />
+(<a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0188046">described in this paper</a>).</p>
+<p>Our tournament also reinforces findings from more<br />
+<a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012644&amp;?utm_id=plos111&amp;utm_source=internal&amp;utm_medium=email&amp;utm_campaign=author">recent research</a>,<br />
+which highlights the following properties as key to effective collaboration:</p>
+<ul>
+<li>Be a little envious.</li>
+<li>Be <em>nice</em> in non-noisy environments or when games are long (if known).</li>
+<li>Reciprocate both cooperation and defection appropriately: be provocable in short<br />
+  matches and generous in noisy settings.</li>
+<li>It is acceptable to be clever.</li>
+<li>Adapt to the environment; adjust to the mean tournament cooperation level.</li>
+</ul>
+<p>We also experimented with modified versions of Axelrod’s original tournament,<br />
+introducing one, two, three, or four new entrants. This produced perhaps our most<br />
+significant finding: <em>Tit For Tat</em> continued to win a large proportion of these<br />
+tournaments.</p>
+<p><strong>This does not mean that Tit For Tat was strong: in fact quite the opposite.</strong><br />
+The environment of Axelrod’s second tournament was <em>highly specific</em> and<br />
+particularly well-suited to <em>Tit For Tat</em>.</p>
+<p><strong>Generalising from that tournament is a mistake.</strong></p>
+<p>Axelrod’s tournament was an attempt to approximate an unimaginably vast space of<br />
+strategies on the order of <span class="arithmatex">\(2^{10^{120}}\)</span> (a <em>gazillion</em>). Even the<br />
+tournament we conducted here can only ever approximate that immense landscape of<br />
+possible behaviours.</p>
+<p>I believe this is an important piece of work:</p>
+<ul>
+<li>We have reproduced (almost!) an influential study that shaped an entire field,<br />
+  with applications to war, politics, trade, environmental cooperation to name a
+  few.</li>
+<li>We extend the work by considering specific new contexts.</li>
+<li>We show that the conclusions of that work were generalised perhaps too freely.</li>
+<li>And we have done so in a <strong>reproducible, sustainable, and open</strong> manner.</li>
+</ul>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
