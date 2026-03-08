@@ -141,6 +141,99 @@ def stacked_bar_chart_svg(
     return f'<svg viewBox="0 0 {W} {H}" style="width:100%;opacity:0.9">' + "".join(parts) + "</svg>"
 
 
+def line_chart_svg(
+    data: list[tuple[int, float]],
+    colour: str = "var(--teal)",
+    ylabel: str = "",
+) -> str:
+    """Inline SVG area/line chart with axes.
+
+    *data* is a list of (year, value) pairs sorted by year.
+    """
+    if not data:
+        return ""
+
+    W, H = 560, 180
+    pad_l, pad_r, pad_b, pad_t = 48, 15, 35, 20
+    plot_w = W - pad_l - pad_r
+    plot_h = H - pad_t - pad_b
+
+    years = [y for y, _ in data]
+    vals = [v for _, v in data]
+    max_val = max(vals) or 1
+    n = len(data)
+
+    def sx(i: int) -> float:
+        return pad_l + (i / (n - 1) * plot_w if n > 1 else plot_w / 2)
+
+    def sy(v: float) -> float:
+        return pad_t + (1 - v / max_val) * plot_h
+
+    points = [(sx(i), sy(v)) for i, v in enumerate(vals)]
+    area_pts = (
+        f"{points[0][0]:.1f},{H - pad_b} "
+        + " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+        + f" {points[-1][0]:.1f},{H - pad_b}"
+    )
+    line_pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+
+    parts: list[str] = [f'<svg viewBox="0 0 {W} {H}" style="width:100%;opacity:0.9">']
+
+    # Y-axis ticks at 0, mid, max
+    n_ticks = 4
+    for i in range(n_ticks + 1):
+        v = max_val * i / n_ticks
+        y = sy(v)
+        label = f"{v:.1f}"
+        parts.append(
+            f'<line x1="{pad_l - 4}" y1="{y:.1f}" x2="{pad_l}" y2="{y:.1f}"'
+            f' stroke="currentColor" opacity="0.4" stroke-width="1"/>'
+        )
+        parts.append(
+            f'<line x1="{pad_l}" y1="{y:.1f}" x2="{pad_l + plot_w}" y2="{y:.1f}"'
+            f' stroke="currentColor" opacity="0.08" stroke-width="1"/>'
+        )
+        parts.append(
+            f'<text x="{pad_l - 7}" y="{y + 4:.1f}" text-anchor="end"'
+            f' font-size="10" fill="currentColor">{label}</text>'
+        )
+
+    # Axes
+    parts.append(
+        f'<line x1="{pad_l}" y1="{pad_t}" x2="{pad_l}" y2="{H - pad_b}"'
+        f' stroke="currentColor" opacity="0.4" stroke-width="1"/>'
+    )
+    parts.append(
+        f'<line x1="{pad_l}" y1="{H - pad_b}" x2="{pad_l + plot_w}" y2="{H - pad_b}"'
+        f' stroke="currentColor" opacity="0.4" stroke-width="1"/>'
+    )
+
+    # Y-axis label
+    if ylabel:
+        parts.append(
+            f'<text x="12" y="{H / 2:.1f}" text-anchor="middle" font-size="10"'
+            f' fill="currentColor" transform="rotate(-90 12 {H / 2:.1f})">{ylabel}</text>'
+        )
+
+    # Area + line
+    parts.append(f'<polygon points="{area_pts}" fill="{colour}" opacity="0.15"/>')
+    parts.append(
+        f'<polyline points="{line_pts}" fill="none" stroke="{colour}"'
+        f' stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
+    )
+
+    # X-axis year labels
+    step = max(1, n // 10)
+    for i in range(0, n, step):
+        parts.append(
+            f'<text x="{sx(i):.1f}" y="{H - pad_b + 14}" text-anchor="middle"'
+            f' font-size="11" fill="currentColor">{years[i]}</text>'
+        )
+
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 def bar_chart_svg(
     data: list[tuple[str, int]],
     colour: str = "var(--accent)",
@@ -330,9 +423,18 @@ def build_publication_stats(posts: list[Post]) -> dict[str, Any]:
 
     n = len(all_pubs)
     years = sorted(year_counts)
+
+    all_years = list(range(years[0], years[-1] + 1)) if years else []
+    total = 0
+    cumulative = []
+    for i, y in enumerate(all_years):
+        total += year_counts.get(y, 0)
+        cumulative.append((y, total / (i + 1)))
+
     return {
         "n_publications": n,
         "pub_by_year_svg": bar_chart_svg([(str(y), c) for y, c in sorted(year_counts.items())]),
+        "pub_rate_svg": line_chart_svg(cumulative, ylabel="cumulative avg papers / year"),
         "avg_coauthors_per_paper": round(total_coauthors / n, 1) if n else 0.0,
         "years_publishing": (years[-1] - years[0] + 1) if len(years) >= 2 else (1 if years else 0),
     }
