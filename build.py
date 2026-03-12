@@ -710,7 +710,9 @@ def main(
 
     env = make_html_env()
 
-    src_files = sorted(src_path.glob("**/*.md")) + sorted(src_path.glob("**/*.ipynb"))
+    src_files = sorted(src_path.glob("**/*.md")) + sorted(
+        p for p in src_path.glob("**/*.ipynb") if ".ipynb_checkpoints" not in p.parts
+    )
     posts = [read_notebook(p) if p.suffix == ".ipynb" else read_post(p) for p in src_files]
 
     students = sorted(
