@@ -32,3 +32,9 @@ publishconf.py
 tasks.py
 output/
 site/
+
+*ipynb_checkpoints*
+
+# Specific to blog posts
+src/_stet_store.csv
+

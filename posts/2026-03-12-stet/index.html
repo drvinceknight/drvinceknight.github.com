@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stet - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Stet</h2>
+<p><small>2026-03-12</small></p>
+
+
+
+<p>In my research I often write scripts that generate data over some large set of
+parameters. I have written a python library <a href="https://vknight.org/stet/"><code>stet</code></a>
+which makes one particular aspect of this (stopping and starting again) a bit easier.</p>
+<p>Often when running a script I might need to stop it to change the parameter
+range or it might even crash for some other reason. For each research project I
+will often write a bit of specific code to be able to read the data I have
+generated and then start from that point. My PhD student was faced with this
+exact task and I thought I could solve it once and for all.</p>
+<p>The python library <code>stet</code> (from the latin "let it stand") provides a simple
+decorator which does not affect your running code but writes a store of the
+parameters for which it has been run.</p>
+<div class="nb-cell"><pre class="nb-input"><code>import numpy as np
+import stet
+import time
+import pandas as pd</code></pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>@stet.once
+def calculation(alpha, beta):
+    time.sleep(1)</code></pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>%%time
+import itertools
+
+parameter_space = list(itertools.product(np.linspace(0, 1, 2), repeat=2))
+
+for alpha, beta in parameter_space:
+    calculation(alpha, beta)</code></pre><pre class="nb-output">CPU times: user 20.5 ms, sys: 6.95 ms, total: 27.4 ms
+Wall time: 4.05 s
+</pre></div>
+<p>Running again <code>stet</code> knows to skip the values that have been run once:</p>
+<div class="nb-cell"><pre class="nb-input"><code>%%time
+import itertools
+
+for alpha, beta in parameter_space:
+    calculation(alpha, beta)</code></pre><pre class="nb-output">[stet] Skipping calculation(alpha=np.float64(0.0), beta=np.float64(0.0))
+[stet] Skipping calculation(alpha=np.float64(0.0), beta=np.float64(1.0))
+[stet] Skipping calculation(alpha=np.float64(1.0), beta=np.float64(0.0))
+[stet] Skipping calculation(alpha=np.float64(1.0), beta=np.float64(1.0))
+CPU times: user 4.66 ms, sys: 2.51 ms, total: 7.18 ms
+Wall time: 5.67 ms
+</pre></div>
+<p>If we rest the store it will in fact clear the underlying file.</p>
+<div class="nb-cell"><pre class="nb-input"><code>stet.reset()</code></pre><pre class="nb-output">[stet] Store cleared: _stet_store.csv
+</pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>%%time
+import itertools
+
+for alpha, beta in parameter_space:
+    calculation(alpha, beta)</code></pre><pre class="nb-output">CPU times: user 11.7 ms, sys: 4.9 ms, total: 16.6 ms
+Wall time: 4.03 s
+</pre></div>
+<p><code>stet</code> creates a readable file (it accepts <a href="https://vknight.org/stet/how-to/choose-a-backend/">other formats</a> that are probably better suited to large experiments).</p>
+<div class="nb-cell"><pre class="nb-input"><code>df = pd.read_csv(&quot;_stet_store.csv&quot;)
+df</code></pre><div class="nb-output nb-html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>alpha</th>
+      <th>beta</th>
+      <th>_stet_timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>2026-03-12T11:48:59.428485+00:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2026-03-12T11:49:00.437368+00:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>2026-03-12T11:49:01.444970+00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>2026-03-12T11:49:02.453405+00:00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p>For long experiments you can in fact use <code>stet</code> to check the status of an experiment:</p>
+<div class="nb-cell"><pre class="nb-input"><code>stet.status()</code></pre><pre class="nb-output">[stet] Store: _stet_store.csv
+[stet] 4 completed experiments recorded
+[stet] Last run: 2026-03-12T11:49:02.453405+00:00
+[stet] Key columns: alpha, beta
+</pre></div>
+<p>You can read the docs for the library <a href="https://vknight.org/stet/">here</a> and it is <a href="https://pypi.org/project/stet/">pip installable</a>.</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
