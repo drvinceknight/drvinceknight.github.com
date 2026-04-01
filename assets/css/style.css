@@ -363,7 +363,7 @@ tr:last-child td {
 }
 
 /* ---- Images in posts ------------------------------------------ */
-.container img {
+.container img:not(.avatar) {
   margin: 1.5rem auto;
   border: 1px solid var(--border);
 }
