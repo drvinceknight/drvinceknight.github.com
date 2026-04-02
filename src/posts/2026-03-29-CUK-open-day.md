@@ -57,8 +57,7 @@ dented.
 
 ---
 
-With laptop safely recovered, I rushed to the school to meet Talgat (the vice
-provost for Academic affairs at Cardiff University Kazakhstan). We had
+With laptop safely recovered, I rushed to the school to meet Talgat. We had
 very little time to coordinate, but we gave a genuinely good two-person talk,
 bouncing off each other in a way that felt like we'd worked together before. It
 was fun.
@@ -79,7 +78,8 @@ made the list alongside ambition and intelligence.
 ![School mural at Ziyatker Mektebi mixing English and Kazakh values](/assets/static/2026-03-29-CUK-open-day/school-mural.jpeg)
 
 Talgat kindly dropped me back at the hotel afterwards. I did some work (my PhD
-student [Harry](https://github.com/HarryFosterCU) has some interesting things coming soon!) and eventually crashed.
+student [Harry](https://vknight.org/collaborators/harry-foster/) has some interesting things
+coming soon!) and eventually crashed.
 
 It's good that I did, because the next morning started early. We headed to the
 [Digital Forum Kazakhstan](https://digitalqazaqstan.kz/en/), a large national
@@ -98,7 +98,7 @@ students, then I had a late flight up to Astana.
 
 The next morning I was up early, enjoyed the gym's treadmill for a run, and had a
 small breakfast (I have a dietary requirement that makes eating in Kazakhstan
-somewhat challenging, though the CUK team do an make huge efforts to make sure I
+somewhat challenging, though the CUK team do make huge efforts to make sure I
 am fed!).
 
 We headed to the open day. I gave a couple of talks to prospective students, but
