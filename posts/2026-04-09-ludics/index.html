@@ -94,7 +94,7 @@ Markov chain transition matrix is assembled.</p>
         |
         v
   evolutionary dynamic  &lt;-- Moran / Fermi / introspection /
-        |                    aspiration / introspective imitation
+        |                    aspiration
         v
   transition matrix
        / \
@@ -122,8 +122,8 @@ transition_matrix = ludics.generate_transition_matrix(
 
 ludics.approximate_absorption_matrix(transition_matrix)
 </code></pre>
-<p>The library supports five dynamics in total (Moran, Fermi imitation,
-introspection, aspiration, and introspective imitation), covers both absorbing
+<p>The library supports four dynamics in total (Moran, Fermi imitation,
+introspection, and aspiration, covers both absorbing
 and ergodic chains, and can work symbolically via SymPy as well as numerically,
 which is useful when you want exact closed-form expressions for fixation
 probabilities.</p>
