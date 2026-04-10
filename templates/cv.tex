@@ -28,7 +28,7 @@
 Cardiff University, School of Mathematics, Senghennydd Road, Cardiff, CF24 4AG\\
 \href{https://vknight.org}{vknight.org} \quad
 \href{https://github.com/drvinceknight}{github.com/drvinceknight} \quad
-\href{https://twitter.com/drvinceknight}{@drvinceknight}
+\href{https://fosstodon.org/@vinceknight}{@vinceknight@fosstodon.org}
 
 \bigskip
 
@@ -126,16 +126,24 @@ Cardiff University, School of Mathematics, Senghennydd Road, Cardiff, CF24 4AG\\
 \section{Research Students}
 %% ----------------------------------------------------------------
 
-\begin{etaremune}
+(% set ns = namespace(phd=0, mmath=0, msc=0, bsc=0, placement=0) %)
 (% for student in students %)
-\item
-  (( student.title | latex_escape ))
-  (% set degrees = student.tags | reject("equalto", "student") | list %)
-  (% if degrees %)(((( degrees | join(", ") | latex_escape ))))(% endif %)
-  \hfill (( student.year ))\\
-  (% if student.content_html | striptags %)(( student.content_html | striptags | trim | latex_escape ))(% endif %)
+  (% for tag in student.tags %)
+    (% if tag in ["PhD", "phd"] %)(% set ns.phd = ns.phd + 1 %)(% endif %)
+    (% if tag in ["MMath", "mmath"] %)(% set ns.mmath = ns.mmath + 1 %)(% endif %)
+    (% if tag in ["MSc", "msc"] %)(% set ns.msc = ns.msc + 1 %)(% endif %)
+    (% if tag in ["BSc", "bsc", "bsc."] %)(% set ns.bsc = ns.bsc + 1 %)(% endif %)
+    (% if tag in ["summer", "google summer of code", "nuffield research placement"] %)(% set ns.placement = ns.placement + 1 %)(% endif %)
+  (% endfor %)
 (% endfor %)
-\end{etaremune}
+
+\begin{itemize}
+(% if ns.phd > 0 %)\item (( ns.phd )) PhD student(% if ns.phd > 1 %)s(% endif %)(% endif %)
+(% if ns.mmath > 0 %)\item (( ns.mmath )) MMath student(% if ns.mmath > 1 %)s(% endif %)(% endif %)
+(% if ns.msc > 0 %)\item (( ns.msc )) MSc student(% if ns.msc > 1 %)s(% endif %)(% endif %)
+(% if ns.bsc > 0 %)\item (( ns.bsc )) BSc student(% if ns.bsc > 1 %)s(% endif %)(% endif %)
+(% if ns.placement > 0 %)\item (( ns.placement )) short placement student(% if ns.placement > 1 %)s(% endif %)(% endif %)
+\end{itemize}
 
 %% ----------------------------------------------------------------
 \section{Roles and Service}

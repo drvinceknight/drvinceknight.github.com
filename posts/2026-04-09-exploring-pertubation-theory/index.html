@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exploring Perturbation Theory for Markov Chains - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Exploring Perturbation Theory for Markov Chains</h2>
+<p><small>2026-04-09</small></p>
+
+
+
+<h1 id="exploring-perturbation-theory-for-markov-chains">Exploring Perturbation Theory for Markov Chains</h1>
+<p>This post illustrates the Markov chain perturbation framework due to Schweitzer [1] and Meyer [2], using a pair of 4-state Markov chains. This is mainly so that I can write down my understanding of perturbation theory so that <a href="https://hefos.github.io">Harry</a> and I can use it for one of our research projects.</p>
+<p>This is all based on the following:</p>
+<p><strong>References:</strong></p>
+<p>[1] P. J. Schweitzer, "Perturbation theory and finite Markov chains," <em>J. Appl. Probab.</em> <strong>5</strong> (1968), 401--413.</p>
+<p>[2] C. D. Meyer, "The role of the group generalized inverse in the theory of finite Markov chains," <em>SIAM Rev.</em> <strong>17</strong> (1975), 443--464.</p>
+<p>First some Python libraries:</p>
+<div class="nb-cell"><pre class="nb-input"><code>import numpy as np
+import matplotlib.pyplot as plt
+np.set_printoptions(precision=6, suppress=True)</code></pre></div>
+<h2 id="two-ergodic-markov-chains">Two ergodic Markov chains</h2>
+<p>A base chain <span class="arithmatex">\(T\)</span> on <span class="arithmatex">\(S = \{0, 1, 2, 3\}\)</span> and a perturbed chain <span class="arithmatex">\(\tilde{T} = T + E\)</span>. The perturbation <span class="arithmatex">\(E\)</span> has zero row sums so that <span class="arithmatex">\(\tilde{T}\)</span> remains stochastic. <span class="arithmatex">\(E\)</span> is how different <span class="arithmatex">\(\tilde T\)</span> is from <span class="arithmatex">\(T\)</span>.</p>
+<div class="nb-cell"><pre class="nb-input"><code>T = np.array([
+    [0.5, 0.3, 0.1, 0.1],
+    [0.2, 0.4, 0.3, 0.1],
+    [0.1, 0.2, 0.5, 0.2],
+    [0.3, 0.1, 0.1, 0.5],
+])
+
+print(&quot;Row sums of T:&quot;, T.sum(axis=1))
+print()
+print(&quot;T =&quot;)
+print(T)</code></pre><pre class="nb-output">Row sums of T: [1. 1. 1. 1.]
+
+T =
+[[0.5 0.3 0.1 0.1]
+ [0.2 0.4 0.3 0.1]
+ [0.1 0.2 0.5 0.2]
+ [0.3 0.1 0.1 0.5]]
+</pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>E = np.array([
+    [ 0.00,  0.05, -0.03, -0.02],
+    [-0.05,  0.08, -0.02, -0.01],
+    [ 0.03, -0.06,  0.05, -0.02],
+    [-0.02,  0.03, -0.04,  0.03],
+])
+
+print(&quot;Row sums of E:&quot;, E.sum(axis=1))
+
+T_tilde = T + E
+print(&quot;All entries of T~ &gt;= 0:&quot;, np.all(T_tilde &gt;= 0))
+print()
+print(&quot;T~ =&quot;)
+print(T_tilde)</code></pre><pre class="nb-output">Row sums of E: [ 0. -0.  0. -0.]
+All entries of T~ &gt;= 0: True
+
+T~ =
+[[0.5  0.35 0.07 0.08]
+ [0.15 0.48 0.28 0.09]
+ [0.13 0.14 0.55 0.18]
+ [0.28 0.13 0.06 0.53]]
+</pre></div>
+<p>The stationary distribution <span class="arithmatex">\(\pi\)</span> satisfies <span class="arithmatex">\(\pi T = \pi\)</span>, <span class="arithmatex">\(\pi \mathbf{1} = 1\)</span>. It is the normalised left eigenvector of <span class="arithmatex">\(T\)</span> for eigenvalue <span class="arithmatex">\(1\)</span>.</p>
+<div class="nb-cell"><pre class="nb-input"><code>def stationary_distribution(M):
+    eigenvalues, eigenvectors = np.linalg.eig(M.T)
+    idx = np.argmin(np.abs(eigenvalues - 1.0))
+    pi = eigenvectors[:, idx].real
+    return pi / pi.sum()
+
+pi = stationary_distribution(T)
+pi_tilde = stationary_distribution(T_tilde)
+
+print(&quot;pi     =&quot;, pi)
+print(&quot;pi~    =&quot;, pi_tilde)
+print(&quot;pi~ - pi =&quot;, pi_tilde - pi)
+print()
+print(&quot;Check: pi @ T  =&quot;, pi @ T)
+print(&quot;Check: pi~ @ T~ =&quot;, pi_tilde @ T_tilde)</code></pre><pre class="nb-output">pi     = [0.279412 0.258824 0.252941 0.208824]
+pi~    = [0.262317 0.292615 0.249017 0.196051]
+pi~ - pi = [-0.017094  0.033792 -0.003924 -0.012773]
+
+Check: pi @ T  = [0.279412 0.258824 0.252941 0.208824]
+Check: pi~ @ T~ = [0.262317 0.292615 0.249017 0.196051]
+</pre></div>
+<h2 id="some-important-quantities">Some important quantities.</h2>
+<p>These three matrices go back to Meyer [2].</p>
+<p><strong>Ergodic projector.</strong> <span class="arithmatex">\(\Pi = \mathbf{1}\pi\)</span> has every row equal to <span class="arithmatex">\(\pi\)</span>. It is idempotent (<span class="arithmatex">\(\Pi^2 = \Pi\)</span>) and is the <span class="arithmatex">\(t \to \infty\)</span> limit of <span class="arithmatex">\(T^t\)</span>.</p>
+<p><strong>Fundamental matrix.</strong> <span class="arithmatex">\(I - T\)</span> is singular (<span class="arithmatex">\(\pi(I-T) = 0\)</span>). Adding <span class="arithmatex">\(\Pi\)</span> replaces the zero eigenvalue with <span class="arithmatex">\(1\)</span>, giving the invertible matrix <span class="arithmatex">\(Z = (I - T + \Pi)^{-1}\)</span>.</p>
+<p><strong>Group inverse.</strong> <span class="arithmatex">\(A^\# = Z - \Pi\)</span> satisfies <span class="arithmatex">\(A^\#\mathbf{1} = 0\)</span>, <span class="arithmatex">\(\pi A^\# = 0\)</span>, and the resolvent identity <span class="arithmatex">\((I-T)A^\# = I - \Pi\)</span>.</p>
+<div class="nb-cell"><pre class="nb-input"><code>I = np.eye(4)
+ones = np.ones((4, 1))
+Pi = ones @ pi.reshape(1, -1)
+
+print(&quot;Pi =&quot;)
+print(Pi)
+print()
+print(&quot;Idempotent: Pi^2 = Pi?&quot;, np.allclose(Pi @ Pi, Pi))</code></pre><pre class="nb-output">Pi =
+[[0.279412 0.258824 0.252941 0.208824]
+ [0.279412 0.258824 0.252941 0.208824]
+ [0.279412 0.258824 0.252941 0.208824]
+ [0.279412 0.258824 0.252941 0.208824]]
+
+Idempotent: Pi^2 = Pi? True
+</pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>print(&quot;det(I - T) =&quot;, np.linalg.det(I - T), &quot; (singular)&quot;)
+print(&quot;rank(I - T) =&quot;, np.linalg.matrix_rank(I - T))
+print()
+
+Z = np.linalg.inv(I - T + Pi)
+print(&quot;Z =&quot;)
+print(Z)</code></pre><pre class="nb-output">det(I - T) = 6.605826996519675e-19  (singular)
+rank(I - T) = 3
+
+Z =
+[[ 1.314879  0.117993 -0.215571 -0.217301]
+ [-0.155709  1.176817  0.13737  -0.158478]
+ [-0.302768 -0.117301  1.372664  0.047405]
+ [ 0.138408 -0.234948 -0.333218  1.429758]]
+</pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>A_sharp = Z - Pi
+
+print(&quot;A# =&quot;)
+print(A_sharp)
+print()
+print(&quot;A# @ 1 =&quot;, A_sharp @ np.ones(4))
+print(&quot;pi @ A# =&quot;, pi @ A_sharp)
+print()
+print(&quot;Resolvent identity (I-T)A# = I - Pi?&quot;,
+      np.allclose((I - T) @ A_sharp, I - Pi))</code></pre><pre class="nb-output">A# =
+[[ 1.035467 -0.14083  -0.468512 -0.426125]
+ [-0.435121  0.917993 -0.115571 -0.367301]
+ [-0.58218  -0.376125  1.119723 -0.161419]
+ [-0.141003 -0.493772 -0.586159  1.220934]]
+
+A# @ 1 = [-0.  0.  0.  0.]
+pi @ A# = [ 0. -0.  0. -0.]
+
+Resolvent identity (I-T)A# = I - Pi? True
+</pre></div>
+<h2 id="the-exact-perturbation-identity-schweitzer-1-meyer-2">The exact perturbation identity (Schweitzer [1]; Meyer [2])</h2>
+<p>For ergodic <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(\tilde{T} = T + E\)</span> with stationary distributions <span class="arithmatex">\(\pi\)</span> and <span class="arithmatex">\(\tilde{\pi}\)</span>:</p>
+<div class="arithmatex">\[\tilde{\pi} - \pi = \tilde{\pi} \, E \, A^\#\]</div>
+<p>This is exact — no remainder term. The proof (three lines):</p>
+<ol>
+<li><span class="arithmatex">\(\tilde{\pi}(T+E) = \tilde{\pi}\)</span> gives <span class="arithmatex">\(\tilde{\pi}(I-T) = \tilde{\pi}E\)</span></li>
+<li>Multiply by <span class="arithmatex">\(A^\#\)</span>: <span class="arithmatex">\(\tilde{\pi}(I - \Pi) = \tilde{\pi}EA^\#\)</span> using the resolvent identity</li>
+<li><span class="arithmatex">\(\tilde{\pi}\Pi = \pi\)</span> since <span class="arithmatex">\(\tilde{\pi}\mathbf{1} = 1\)</span></li>
+</ol>
+<p>This leads to a first-order <em>approximation</em> <span class="arithmatex">\(\tilde{\pi} - \pi \approx \pi E A^\#\)</span> (replacing <span class="arithmatex">\(\tilde{\pi}\)</span> with <span class="arithmatex">\(\pi\)</span>).</p>
+<div class="nb-cell"><pre class="nb-input"><code>LHS = pi_tilde - pi
+RHS = pi_tilde @ E @ A_sharp
+
+print(&quot;pi~ - pi  =&quot;, LHS)
+print(&quot;pi~ E A#  =&quot;, RHS)
+print(&quot;Match:&quot;, np.allclose(LHS, RHS))</code></pre><pre class="nb-output">pi~ - pi  = [-0.017094  0.033792 -0.003924 -0.012773]
+pi~ E A#  = [-0.017094  0.033792 -0.003924 -0.012773]
+Match: True
+</pre></div>
+<div class="nb-cell"><pre class="nb-input"><code>RHS_approx = pi @ E @ A_sharp
+
+print(&quot;Exact (pi~ - pi):&quot;, LHS)
+print(&quot;Approx (pi E A#):&quot;, RHS_approx)
+print(&quot;Error:           &quot;, LHS - RHS_approx)
+print()
+print(f&quot;||error|| / ||exact|| = {np.abs(LHS - RHS_approx).sum() / np.abs(LHS).sum():.4f}&quot;)</code></pre><pre class="nb-output">Exact (pi~ - pi): [-0.017094  0.033792 -0.003924 -0.012773]
+Approx (pi E A#): [-0.014702  0.03192  -0.004801 -0.012418]
+Error:            [-0.002393  0.001871  0.000877 -0.000355]
+
+||error|| / ||exact|| = 0.0813
+</pre></div>
+<p>Some code to confirm the steps of the proof:</p>
+<div class="nb-cell"><pre class="nb-input"><code>print(&quot;Step 1: pi~(I-T) = pi~E?&quot;,
+      np.allclose(pi_tilde @ (I - T), pi_tilde @ E))
+print(&quot;Step 2: pi~(I-Pi) = pi~EA#?&quot;,
+      np.allclose(pi_tilde @ (I - Pi), pi_tilde @ E @ A_sharp))
+print(&quot;Step 3: pi~Pi = pi?&quot;,
+      np.allclose(pi_tilde @ Pi, pi))</code></pre><pre class="nb-output">Step 1: pi~(I-T) = pi~E? True
+Step 2: pi~(I-Pi) = pi~EA#? True
+Step 3: pi~Pi = pi? True
+</pre></div>
+<h2 id="getting-a-relationship-on-some-observable-quantity">Getting a relationship on some observable quantity</h2>
+<p>Give <span class="arithmatex">\(s\)</span>, if we want to find <span class="arithmatex">\(\tilde \pi s\)</span>.</p>
+<div class="arithmatex">\[
+\tilde{\pi} \cdot s = \pi \cdot s + \tilde{\pi} \, E \, A^\# s.
+\]</div>
+<p>The first order approximation gives:</p>
+<div class="arithmatex">\[
+\tilde{\pi} \cdot s \;\approx\; \pi \cdot s + \pi \,E\, A^\# s.
+\]</div>
+<div class="nb-cell"><pre class="nb-input"><code>s = np.array([0.0, 0.3, 0.7, 1.0])
+
+value = pi_tilde @ s
+print(&quot;Exact value of observable:&quot;, value)
+actual_change = (pi_tilde - pi) @ s
+print(&quot;Exact value of change of observable:&quot;, actual_change)
+approximate_value = (pi @ s + pi @ E @ A_sharp @ s)
+print(&quot;Approximate value of observable:&quot;, value)
+approximate_change = approximate_value - pi @ s
+print(&quot;Approximate value of change of observable:&quot;, actual_change)
+</code></pre><pre class="nb-output">Exact value of observable: 0.4581469351563172
+Exact value of change of observable: -0.0053824766083887705
+Approximate value of observable: 0.4581469351563172
+Approximate value of change of observable: -0.0053824766083887705
+</pre></div>
+<p>Using that expression of the pertubated observation might just be what <a href="https://hefos.github.io">Harry</a> and I need for our current project.</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
