@@ -2,7 +2,7 @@ Vincent Knight is a Chair at Cardiff University's School of Mathematics. His res
 
 Vincent has authored 60 peer-reviewed articles and 3 books, including "Python for Mathematics", published by Taylor and Francis. He has supervised 42 research students at BSc, MSc, MMath, and PhD level.
 
-He is an active contributor to the open-source scientific software community, maintaining projects including Axelrod, CoopGt, dwys, Nashpy, nbchkr, Sold, Stet. He is a Fellow of the Sustainable Software Institute and a topic editor for the Journal of Open Source Software.
+He is an active contributor to the open-source scientific software community, maintaining projects including Axelrod, CoopGt, dwys, Nashpy, nbchkr, Ludics, Sold, Stet. He is a Fellow of the Sustainable Software Institute and a topic editor for the Journal of Open Source Software.
 
 Website: https://vknight.org
 GitHub: https://github.com/drvinceknight
