@@ -39,7 +39,7 @@ bottle](/assets/static/2026-04-23-goa-agents-conference/placing_the_bottle.jpeg)
 showcasing some of the teaching being done at the Business School: this involved
 a judging of AI prompts.
 
-![War cry](/assets/static/2026-04-23-goa-agents-conference/judging_panel.jpeg)
+![Juding prompts](/assets/static/2026-04-23-goa-agents-conference/judging_prompts.jpeg)
 
 It is always somewhat amusing, how far we have to go from Cardiff to find out
 what great work our colleagues do. Or even to meet them! In one particular case
