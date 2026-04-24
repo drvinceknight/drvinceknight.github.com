@@ -8,15 +8,16 @@ title: Visiting India for the Cardiff Agents Conference
 
 I am writing this on my way back home after spending a wonderful 3 days at the
 Cardiff University Agent Conference. The purpose of this conference is to build
-relationships with the various agents that help students in India apply to
+relationships with the various councillors that help Indian students apply to
 University.
 
 I was asked to attend and show the newest masters programme we are offering at
 the School of Mathematics:
 [Artificial Intelligence and Statistical Analytics
 (MSc)](https://www.cardiff.ac.uk/study/postgraduate/taught/courses/course/artificial-intelligence-and-statistical-analytics-msc).
+This was a great opportunity to speak and engage with the 70 councillors
 
-This was my first trip to India so I was delighted at the opportunity.
+This was my first trip to India so I was delighted by the opportunity.
 
 Upon arrival I made sure to keep my bribentives safe for the session I was
 running the next day.
@@ -58,6 +59,8 @@ to understand how game theory can be used to model emergence of cooperation
 through direct reciprocity. This lead to me talking about our new MSc. The
 councillors were fantastic sports and made the session fun:
 
+![](/assets/static/2026-04-23-goa-agents-conference/speaking.jpeg)
+![](/assets/static/2026-04-23-goa-agents-conference/watching.jpeg)
 ![](/assets/static/2026-04-23-goa-agents-conference/defection_0.jpeg)
 ![](/assets/static/2026-04-23-goa-agents-conference/defection_1.jpeg)
 ![](/assets/static/2026-04-23-goa-agents-conference/defection_2.jpeg)
@@ -80,7 +83,7 @@ incredibly
 thought provoking too (the case he had them argue is apparently a classic one
 that set a precedent of [necessity not being a defence against murder](https://en.wikipedia.org/wiki/R_v_Dudley_and_Stephens).).
 
-This was a brilliant event and a privileged to be part of. Meeting all the
+This was a brilliant event and a privilege to be a part of. Meeting all the
 councillors and learning from them as to what we can do better for Indian
 students was my highlight. I feel like I also made a lot of friends.
 
