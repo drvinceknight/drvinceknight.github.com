@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visiting India for the Cardiff Agents Conference - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Visiting India for the Cardiff Agents Conference</h2>
+<p><small>2026-04-24</small></p>
+
+
+
+<p>I am writing this on my way back home after spending a wonderful 3 days at the
+Cardiff University Agent Conference. The purpose of this conference is to build
+relationships with the various agents that help students in India apply to
+University.</p>
+<p>I was asked to attend and show the newest masters programme we are offering at
+the School of Mathematics:
+<a href="https://www.cardiff.ac.uk/study/postgraduate/taught/courses/course/artificial-intelligence-and-statistical-analytics-msc">Artificial Intelligence and Statistical Analytics
+(MSc)</a>.</p>
+<p>This was my first trip to India so I was delighted at the opportunity.</p>
+<p>Upon arrival I made sure to keep my bribentives safe for the session I was
+running the next day.</p>
+<p><img alt="bribentives" src="/assets/static/2026-04-23-goa-agents-conference/bribentives_in_safe.jpeg" /></p>
+<p>Our international office team had planned a great programme. On the first day we
+had a number of team building exercises which were a bunch of fun and a nice way
+to get to know each other. Here is a photo of the team I was in:</p>
+<p><img alt="Team 5" src="/assets/static/2026-04-23-goa-agents-conference/team_5.jpeg" /></p>
+<p>Here are a couple of the examples of the team building exercises:</p>
+<p><img alt="War cry" src="/assets/static/2026-04-23-goa-agents-conference/war_cry.jpeg" />
+<img alt="Placing a
+bottle" src="/assets/static/2026-04-23-goa-agents-conference/placing_the_bottle.jpeg" /></p>
+<p><a href="https://profiles.cardiff.ac.uk/staff/goltsosa">Thanos</a> ran a great session
+showcasing some of the teaching being done at the Business School: this involved
+a judging of AI prompts.</p>
+<p><img alt="War cry" src="/assets/static/2026-04-23-goa-agents-conference/judging_panel.jpeg" /></p>
+<p>It is always somewhat amusing, how far we have to go from Cardiff to find out
+what great work our colleagues do. Or even to meet them! In one particular case
+to meet them again, I was sat on the judging panel with
+<a href="https://profiles.cardiff.ac.uk/staff/rosiere">Eleri</a>: we had met about
+15 years ago doing our Postgraduate Teaching Certificate and not seen each other
+since. It was a real pleasure to hang out again.</p>
+<p>In the evening we had a beach party.</p>
+<p><img alt="Beach party" src="/assets/static/2026-04-23-goa-agents-conference/beach_party.jpeg" /></p>
+<p>On the second day I ran my game theory workshop where I walk students through a
+replication of <a href="https://vknight.org/posts/2025-10-21-rrr/">Axelrod's tournament</a>
+to understand how game theory can be used to model emergence of cooperation
+through direct reciprocity. This lead to me talking about our new MSc. The
+councillors were fantastic sports and made the session fun:</p>
+<p><img alt="" src="/assets/static/2026-04-23-goa-agents-conference/defection_0.jpeg" />
+<img alt="" src="/assets/static/2026-04-23-goa-agents-conference/defection_1.jpeg" />
+<img alt="" src="/assets/static/2026-04-23-goa-agents-conference/defection_2.jpeg" />
+<img alt="" src="/assets/static/2026-04-23-goa-agents-conference/defection_3.jpeg" /></p>
+<p>The full set of results is here, this was a particularly uncooperative
+environment which is actually all part of the fun:</p>
+<p><img alt="" src="/assets/static/2026-04-23-goa-agents-conference/the_results_of_the_game.jpeg" /></p>
+<p>In the afternoon <a href="https://profiles.cardiff.ac.uk/staff/lewisr74">Reece</a> ran an
+absolutely brilliant session where he asked students to argue a legal case. He
+was the judge and here is my genuine reaction the first time he spoke quite
+sternly (in judge mode) to one of the "barristers".</p>
+<p><img alt="" src="/assets/static/2026-04-23-goa-agents-conference/reaction_to_judge_mode.jpeg" /></p>
+<p>It was brilliant and
+incredibly
+thought provoking too (the case he had them argue is apparently a classic one
+that set a precedent of <a href="https://en.wikipedia.org/wiki/R_v_Dudley_and_Stephens">necessity not being a defence against murder</a>.).</p>
+<p>This was a brilliant event and a privileged to be part of. Meeting all the
+councillors and learning from them as to what we can do better for Indian
+students was my highlight. I feel like I also made a lot of friends.</p>
+<p><img alt="" src="/assets/static/2026-04-23-goa-agents-conference/group_photo.jpeg" /></p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
