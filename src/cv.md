@@ -1,6 +1,6 @@
 ---
 tags:
-- page
+  - page
 title: Curriculum Vitae
 ---
 
@@ -16,6 +16,7 @@ title: Curriculum Vitae
 
 ## Awards
 
+- 2026: The Vice-Chancellor's Award for Outstanding Contribution to the University
 - 2025: Nominated for Cardiff University Enriching Student Life Awards: Most Impactful and Outstanding Use of Assessment as Learning
 - 2025: Nominated for Cardiff University Enriching Student Life Awards: Most Outstanding Learning Experience
 - 2025: Nominated for Cardiff University Enriching Student Life Awards: Personal Tutor of the Year
@@ -94,6 +95,3 @@ title: Curriculum Vitae
 - 2011: ESRC and Welsh Government: Maximising the Use of Existing Administrative data Sets for Wales trough computer Simulation Modelling and Simulation (Welsh Government Fellowship), £155,523
 - 2010: LANCS (EPSRC): Post-Doctoral Training Scheme Grant: Choice and Healthcare Investigation Project, £2,500
 - 2010: Cardiff University CUROP Award: Patient Choice: A Discrete Event Simulation, £2,500
-
-
-
