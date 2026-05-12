@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Vote-Left Equilibrium: A Deterministic Coordination Strategy for the Faithful in The Traitors - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>The Vote-Left Equilibrium: A Deterministic Coordination Strategy for the Faithful in The Traitors</h2>
+<p><small>2026-05-12</small></p>
+
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+  </li>
+  
+  <li>Date: 2026</li>
+  
+  
+  <li><a href="https://arxiv.org/abs/2605.10233">Preprint.</a></li>
+  
+</ul>
+
+
+<p>I have always loved playing Werewolf! I was a late comer to the TV show
+equivalent the <a href="https://www.bbc.co.uk/showsandtours/take-part/the-traitors">Traitors</a> but having watched all the season
+of the British version I have now posted a preprint of a Game Theoretic analysis
+of the game.</p>
+<p>You can read it <a href="https://arxiv.org/abs/2605.10233">here</a>.</p>
+<p>The basic idea is the following: everyone voting randomly is mathematically
+optimal since none of the faithful have any real information. The problem with
+this is that the Traitors can collude (which is in fact their optimal strategy)
+with how they vote and "hide" in the
+randomness. The best response by the faithful is for them to all vote in a
+cyclic order (for example everyone agrees to vote for the person to their left,
+leading to a random banishment).
+If they do this, this puts the traitors in a difficult position:</p>
+<ol>
+<li>If they deviate then they are immediately outing themselves.</li>
+<li>If they comply then they have to hope that they do not getting banished
+   randomly.</li>
+</ol>
+<p>Some of the big takeaways of this are the Faithful can improve their probability
+of winning quite substantially.</p>
+<p>As well as this preprint, I also released the software I used for numeric
+results <a href="https://vknight.org/backstab/">here</a>.</p>
+<p>Of course, whether or not anyone would have success proposing this strategy is
+another open question.</p>
+<p>I'm looking forward to giving a talk on this paper at
+[The Welsh Mathematics Colloquium in Gregynog]https://gregynogwmc.github.io)
+next week.</p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
