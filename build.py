@@ -278,6 +278,48 @@ def bar_chart_svg(
     )
 
 
+def hbar_chart_svg(
+    data: list[tuple[str, int]],
+    colour: str = "var(--teal)",
+    max_items: int = 25,
+) -> str:
+    """Inline SVG horizontal bar chart for keyword frequencies."""
+    if not data:
+        return ""
+
+    data = sorted(data, key=lambda x: -x[1])[:max_items]
+    n = len(data)
+
+    label_w = 190
+    bar_area_w = 320
+    item_h = 22
+    pad_l, pad_r, pad_t, pad_b = 8, 40, 8, 8
+
+    W = pad_l + label_w + bar_area_w + pad_r
+    H = pad_t + n * item_h + pad_b
+    max_val = max(v for _, v in data) or 1
+
+    parts: list[str] = [f'<svg viewBox="0 0 {W} {H}" style="width:100%;opacity:0.9">']
+    for i, (label, val) in enumerate(data):
+        cy = pad_t + i * item_h + item_h / 2
+        bar_w = (val / max_val) * bar_area_w * 0.92
+        bar_x = pad_l + label_w
+        parts.append(
+            f'<text x="{pad_l + label_w - 6}" y="{cy + 4:.1f}" '
+            f'text-anchor="end" font-size="11" fill="currentColor">{label}</text>'
+        )
+        parts.append(
+            f'<rect x="{bar_x}" y="{cy - 7:.1f}" width="{bar_w:.1f}" height="13" '
+            f'fill="{colour}" rx="2" opacity="0.75"/>'
+        )
+        parts.append(
+            f'<text x="{bar_x + bar_w + 5:.1f}" y="{cy + 4:.1f}" '
+            f'font-size="10" fill="currentColor" opacity="0.65">{val}</text>'
+        )
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 def load_photos(
     photos_path: pathlib.Path = pathlib.Path("./assets/photos/"),
 ) -> list[dict[str, str]]:
@@ -408,6 +450,18 @@ def parse_cv_sections(
         sections[current_section] = current_items
 
     return sections
+
+
+def build_keyword_stats(posts: list[Post]) -> dict[str, Any]:
+    """Aggregate keyword frequencies across all articles and books."""
+    all_pubs = [p for p in posts if any(t in p.get("tags", []) for t in ("article", "book"))]
+    counts: collections.Counter[str] = collections.Counter()
+    for pub in all_pubs:
+        for kw in pub.get("keywords", []):
+            counts[str(kw).strip()] += 1
+    if not counts:
+        return {"keyword_svg": ""}
+    return {"keyword_svg": hbar_chart_svg(counts.most_common(25))}
 
 
 def build_publication_stats(posts: list[Post]) -> dict[str, Any]:
@@ -723,6 +777,7 @@ def main(
 
     student_stats = build_student_stats(posts)
     pub_stats = build_publication_stats(posts)
+    keyword_stats = build_keyword_stats(posts)
     photos = load_photos()
     latest_photo_url = photos[0]["url"] if photos else "/assets/vince-knight-lo.png"
 
@@ -802,6 +857,7 @@ def main(
             root=ROOT,
             description=DESCRIPTION,
             latest_photo_url=latest_photo_url,
+            **keyword_stats,
         )
     )
 

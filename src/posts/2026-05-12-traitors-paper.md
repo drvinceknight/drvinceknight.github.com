@@ -41,5 +41,17 @@ Of course, whether or not anyone would have success proposing this strategy is
 another open question.
 
 I'm looking forward to giving a talk on this paper at
-[The Welsh Mathematics Colloquium in Gregynog]https://gregynogwmc.github.io)
+[The Welsh Mathematics Colloquium in Gregynog](https://gregynogwmc.github.io)
 next week.
+
+```bibtex
+@misc{knight2026vote,
+  title         = {The Vote-Left Equilibrium: A Deterministic Coordination
+                   Strategy for the Faithful in {The Traitors}},
+  author        = {Knight, Vincent A.},
+  year          = {2026},
+  eprint        = {2605.10233},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2605.10233},
+}
+```
