@@ -87,6 +87,11 @@
   {% if post.blog_post %}
   <li><a href="/posts/{{ post.blog_post }}/">Blog post.</a></li>
   {% endif %}
+  {% if post.keywords %}
+  <li>Keywords:
+    {% for kw in post.keywords %}<span class="kw-tag">{{ kw }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+  </li>
+  {% endif %}
 </ul>
 
 {{ post.content_html }}

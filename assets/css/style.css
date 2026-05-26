@@ -494,6 +494,19 @@ tr:last-child td {
   margin-top: 0.4rem;
 }
 
+/* ---- Keyword tags --------------------------------------------- */
+.kw-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  white-space: nowrap;
+  margin: 0.1rem 0.1rem;
+  line-height: 1.5;
+}
+
 /* ---- Responsive ----------------------------------------------- */
 @media (max-width: 600px) {
   :root { --max-w: 100%; }
