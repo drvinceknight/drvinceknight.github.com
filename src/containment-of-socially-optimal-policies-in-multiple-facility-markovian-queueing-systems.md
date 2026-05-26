@@ -5,11 +5,30 @@ authors:
 - Paul Harper
 - Janet Williams
 - John Minty
-details: Journal of the Operational Research Society.
+details: Journal of the Operational Research Society
 direct_url: http://link.springer.com/article/10.1057/jors.2015.98
+keywords:
+- queueing theory
+- Markov chains
+- game theory
+- optimisation
 published_date: 2015
 tags:
 - article
 title: Containment of socially optimal policies in multiple-facility Markovian queueing
-  systems.
+  systems
 ---
+**Abstract:** We consider a Markovian queueing system with N heterogeneous service facilities, each of which has multiple servers available, linear holding costs, a fixed value of service and a first-come-first-serve queue discipline. Customers arriving in the system can be either rejected or sent to one of the N facilities. Two different types of control policies are considered, which we refer to as 'selfishly optimal' and 'socially optimal'. We prove the equivalence of two different Markov Decision Process formulations, and then show that classical M/M/1 queue results from the early literature on behavioural queueing theory can be generalized to multiple dimensions in an elegant way. In particular, the state space of the continuous-time Markov process induced by a socially optimal policy is contained within that of the selfishly optimal policy. We also show that this result holds when customers are divided into an arbitrary number of heterogeneous classes, provided that the service rates remain non-discriminatory.
+
+```bibtex
+@article{shone2015containment,
+  title   = {Containment of socially optimal policies in multiple-facility
+             {M}arkovian queueing systems},
+  author  = {Shone, Rob and Knight, Vincent A. and Harper, Paul R. and
+             Williams, Janet E. and Minty, John},
+  journal = {Journal of the Operational Research Society},
+  year    = {2015},
+  doi     = {10.1057/jors.2015.98},
+  url     = {http://link.springer.com/article/10.1057/jors.2015.98},
+}
+```
