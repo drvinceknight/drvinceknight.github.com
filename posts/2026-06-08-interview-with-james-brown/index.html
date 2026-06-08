@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interview with James Brown from Non-Zero Sum James - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Interview with James Brown from Non-Zero Sum James</h2>
+<p><small>2026-06-08</small></p>
+
+
+
+<p>There is an incredible website that I recommend to students call <a href="https://nonzerosum.games">"Non Zero Sum
+Games"</a>. James Brown does an incredible job writing
+great posts that are beautifully illustrated on topics of win-win situations.
+The episodes are usually short delightful and insightful.</p>
+<p>I had the privilege of being his first guest interview. You can listen to an
+episode <a href="https://pod.link/1810797958/episode/YTQ0MTE4NGItMDA3Zi00NDAyLWJkMjgtZGYyODcyYTFmNzA2">here</a>.</p>
+<p>We talked about a number of things including:</p>
+<ul>
+<li><a href="https://axelrod.readthedocs.io/en/stable/">the work on the axelrod project</a>
+  (with the upcoming paper on the <a href="https://arxiv.org/abs/2510.15438">second tournament</a>)</li>
+<li>work with <a href="https://www.uva.nl/en/profile/k/r/s.krapohl/s.krapohl.html">Sebastian Krapohl</a>
+  on bilateral trade and with <a href="https://hefos.github.io">Harry</a> on modelling climate agreements</li>
+</ul>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
