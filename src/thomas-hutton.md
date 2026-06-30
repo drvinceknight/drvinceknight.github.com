@@ -2,7 +2,7 @@
 tags:
 - student
 - Summer
-title: Thomas Watson
+title: Thomas Hutton
 year: 2024
 ---
 
