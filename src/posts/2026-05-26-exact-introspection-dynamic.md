@@ -12,6 +12,7 @@ authors:
   - Sebastian Krapohl
 keywords:
   - game theory
+  - evolutionary game theory
   - extortion
   - population dynamic
   - direct reciprocity

@@ -811,8 +811,10 @@ def main(
     software_list = [p for p in posts if "software" in p.get("tags", [])]
     publications = sorted(
         [p for p in posts if any(t in p.get("tags", []) for t in ("article", "book"))],
-        key=lambda p: str(p.get("published_date", "")),
-        reverse=True,
+        key=lambda p: (
+            -int(str(p.get("published_date", 0)) or 0),
+            str(p.get("title", "")).lower(),
+        ),
     )
 
     # Map author name → slug for those with a dedicated /collaborators/ page
