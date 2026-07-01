@@ -3,7 +3,7 @@ authors:
 - Malik Shahzad Kaleem Awan
 - Vincent Knight
 - Omer Rana
-- Pete Burnap
+- Peter Burnap
 details: IEEE BCCA-CERC Workshop 2025
 keywords:
 - stochastic modelling
