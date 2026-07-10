@@ -8,6 +8,7 @@ keywords:
 - mathematics
 - education
 - open source software
+cover_image: /assets/python-for-mathematics-cover.png
 published_date: 2025
 tags:
 - book

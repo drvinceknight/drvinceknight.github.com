@@ -363,7 +363,7 @@ tr:last-child td {
 }
 
 /* ---- Images in posts ------------------------------------------ */
-.container img:not(.avatar) {
+.container img:not(.avatar):not(.book-cover) {
   margin: 1.5rem auto;
   border: 1px solid var(--border);
 }
@@ -505,6 +505,31 @@ tr:last-child td {
   white-space: nowrap;
   margin: 0.1rem 0.1rem;
   line-height: 1.5;
+}
+
+/* ---- Book covers ---------------------------------------------- */
+.book-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.book-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.book-cover {
+  height: 50px;
+  width: auto;
+  max-width: none;
+  display: block;
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  border: none;
 }
 
 /* ---- Responsive ----------------------------------------------- */
