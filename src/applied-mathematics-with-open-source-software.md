@@ -9,6 +9,7 @@ keywords:
 - mathematics
 - Python
 - education
+cover_image: /assets/applied-mathematics-cover.png
 published_date: 2022
 tags:
 - book

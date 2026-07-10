@@ -11,6 +11,7 @@ keywords:
 - open source software
 - Python
 - education
+cover_image: /assets/game-theory-cover.png
 published_date: 2026
 tags:
 - post
