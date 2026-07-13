@@ -33,7 +33,7 @@ The most exciting thing about this release is that James Brown
 throughout, including the cover. He has written about the collaboration
 [on his site](https://nonzerosum.games/vincentknight.html).
 
-![](https://vknight.org/gtb/build/cover-54b5d25a2c5cb95c6e5031ed46ac0de1.png)
+![](https://vknight.org/assets/game-theory-cover.png)
 
 
 ```bibtex
