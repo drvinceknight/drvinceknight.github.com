@@ -15,6 +15,7 @@ keywords:
 - stochastic modelling
 preprint_direct_url: https://arxiv.org/abs/2008.04295
 published_date: 2025
+cover_image: /assets/thumbnails/wasserstein-copd.png
 tags:
 - article
 title: 'Optimizing healthcare queues: a case study on chronic respiratory illness'

@@ -1,6 +1,7 @@
 ---
 comments: true
 date: 2026-05-12
+cover_image: /assets/thumbnails/traitors-paper.png
 tags:
   - post
   - article

@@ -13,6 +13,7 @@ keywords:
 - data science
 preprint_direct_url: https://arxiv.org/abs/1907.13508
 published_date: 2020
+cover_image: /assets/thumbnails/evolutionary-dataset.png
 tags:
 - article
 title: 'Evolutionary Dataset Optimisation: Learning algorithm quality through evolution'

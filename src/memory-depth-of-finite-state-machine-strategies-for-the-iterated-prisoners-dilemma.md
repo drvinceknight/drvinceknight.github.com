@@ -11,6 +11,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1912.04493
 published_date: 2019
+cover_image: /assets/thumbnails/memory-depth.png
 tags:
 - article
 title: Memory depth of finite state machine strategies for the iterated prisoner's

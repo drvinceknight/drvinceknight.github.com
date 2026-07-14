@@ -13,6 +13,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1911.06128
 published_date: 2021
+cover_image: /assets/thumbnails/bibliometric-ipd.png
 tags:
 - article
 title: A bibliometric study of research topics, collaboration and centrality in the

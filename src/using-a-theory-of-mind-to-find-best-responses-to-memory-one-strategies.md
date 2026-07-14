@@ -13,6 +13,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1911.12112
 published_date: 2020
+cover_image: /assets/thumbnails/theory-of-mind.png
 tags:
 - article
 title: Using a theory of mind to find best responses to memory-one strategies

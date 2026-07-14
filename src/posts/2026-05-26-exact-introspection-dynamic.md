@@ -1,6 +1,7 @@
 ---
 comments: true
 date: 2026-05-26
+cover_image: /assets/thumbnails/introspection-dynamics.png
 tags:
   - post
   - article

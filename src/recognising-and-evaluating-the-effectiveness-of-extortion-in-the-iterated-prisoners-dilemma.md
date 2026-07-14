@@ -15,6 +15,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1904.00973
 published_date: 2024
+cover_image: /assets/thumbnails/extortion-ipd.png
 tags:
 - article
 title: Recognising and evaluating the effectiveness of extortion in the Iterated Prisoner's

@@ -70,7 +70,11 @@
   {% for pub in book_list %}
   <li class="book-item">
     {% if pub.cover_image %}
-    <a href="/posts/{{ pub.slug }}/">
+    <a href="{{ pub.cover_image }}"
+       class="cover-thumb-link"
+       data-cover-src="{{ pub.cover_image }}"
+       data-cover-alt="{{ pub.title }}"
+       onclick="openCoverDialog(event,this)">
       <img src="{{ pub.cover_image }}" alt="{{ pub.title }}" class="book-cover">
     </a>
     {% endif %}
@@ -93,9 +97,19 @@
 
 {% if article_list %}
 <h3>{{ article_list | length }} Articles</h3>
-<ul>
+<ul class="article-list">
   {% for pub in article_list %}
-  <li>
+  <li class="article-item">
+    {% if pub.cover_image %}
+    <a href="/posts/{{ pub.slug }}/"
+       class="cover-thumb-link"
+       data-cover-src="{{ pub.cover_image }}"
+       data-cover-alt="{{ pub.title }}"
+       onclick="openCoverDialog(event,this)">
+      <img src="{{ pub.cover_image }}" alt="{{ pub.title }}" class="article-cover">
+    </a>
+    {% endif %}
+    <span>
     {{ pub.published_date }}:
     <a href="/posts/{{ pub.slug }}/">{{ pub.title }}</a>.
     {% if pub.direct_url %}
@@ -109,6 +123,7 @@
     {% if pub.preprint_direct_url %}
     <strong><a href="{{ pub.preprint_direct_url }}">Preprint.</a></strong>
     {% endif %}
+    </span>
   </li>
   {% endfor %}
 </ul>
@@ -121,5 +136,20 @@
 <h2>Research themes</h2>
 {{ keyword_svg }}
 {% endif %}
+
+<dialog id="cover-dialog" onclick="this.close()">
+  <img id="cover-dialog-img" src="" alt="">
+</dialog>
+
+<script>
+function openCoverDialog(event, link) {
+  event.preventDefault();
+  var dialog = document.getElementById('cover-dialog');
+  var img = document.getElementById('cover-dialog-img');
+  img.src = link.dataset.coverSrc;
+  img.alt = link.dataset.coverAlt;
+  dialog.showModal();
+}
+</script>
 
 {% endblock %}
