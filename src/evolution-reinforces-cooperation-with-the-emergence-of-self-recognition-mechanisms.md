@@ -15,6 +15,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1707.06920
 published_date: 2018
+cover_image: /assets/thumbnails/self-recognition.png
 tags:
 - article
 title: 'Evolution Reinforces Cooperation with the Emergence of Self-Recognition Mechanisms:

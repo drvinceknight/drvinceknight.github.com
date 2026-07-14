@@ -12,6 +12,7 @@ keywords:
 - hospital-resident assignment
 preprint_direct_url: https://arxiv.org/abs/2002.02701
 published_date: 2023
+cover_image: /assets/thumbnails/k-modes.png
 tags:
 - article
 title: A novel initialisation based on hospital-resident assignment for the k-modes

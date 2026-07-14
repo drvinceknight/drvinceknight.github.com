@@ -11,6 +11,7 @@ keywords:
 - polytopes
 preprint_direct_url: https://arxiv.org/abs/0708.2522
 published_date: 2008
+cover_image: /assets/thumbnails/higher-spin.png
 tags:
 - article
 title: Higher Spin Alternating Sign Matrices

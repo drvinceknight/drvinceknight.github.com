@@ -14,6 +14,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/2001.05911
 published_date: 2024
+cover_image: /assets/thumbnails/properties-winning.png
 tags:
 - article
 title: Properties of Winning Iterated Prisoner’s Dilemma Strategies

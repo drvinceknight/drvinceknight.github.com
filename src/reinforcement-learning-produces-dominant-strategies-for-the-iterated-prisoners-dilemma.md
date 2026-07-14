@@ -17,6 +17,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1707.06307
 published_date: 2017
+cover_image: /assets/thumbnails/reinforcement-learning-ipd.png
 tags:
 - article
 title: Reinforcement Learning Produces Dominant Strategies for the Iterated Prisoner's

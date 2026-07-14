@@ -13,6 +13,7 @@ keywords:
 - poaching
 preprint_direct_url: https://arxiv.org/abs/1712.07640
 published_date: 2017
+cover_image: /assets/thumbnails/rhinos.png
 tags:
 - article
 title: An Evolutionary Game Theoretic Model of Rhino Horn Devaluation

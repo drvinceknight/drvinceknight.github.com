@@ -14,6 +14,7 @@ keywords:
 - reproducibility
 preprint_direct_url: https://arxiv.org/abs/1710.03561
 published_date: 2017
+cover_image: /assets/thumbnails/ciw.png
 tags:
 - article
 title: 'Ciw: An open source discrete event simulation library'

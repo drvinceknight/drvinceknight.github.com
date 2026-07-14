@@ -33,6 +33,7 @@ keywords:
 - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/1604.00896
 published_date: 2016
+cover_image: /assets/thumbnails/axelrod-framework.png
 tags:
 - article
 title: An Open Framework for the Reproducible Study of the Iterated Prisoner’s Dilemma
