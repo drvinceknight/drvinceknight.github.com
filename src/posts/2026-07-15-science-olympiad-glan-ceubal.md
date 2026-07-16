@@ -7,7 +7,7 @@ title: Science Olympiad at Ysgol Glan Ceubal
 ---
 
 Yesterday [Zoe](https://profiles.cardiff.ac.uk/staff/prytherchzc) and I went to our kids' primary school 
-[Ysgol Gymraeg Glan Ceubal](https://www.glanceubal.cymru/) 
+[Ysgol Gymraeg Glan Ceubal](https://www.ysgolglanceubal.cymru) 
 primary school in Cardiff, to assist with hosting 
 a Science Olympiad Elementary School Tournament for
 years 4, 5 and 6.  
