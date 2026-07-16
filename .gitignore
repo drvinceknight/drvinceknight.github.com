@@ -11,12 +11,17 @@ _site/
 .jekyll-metadata
 env/
 
-# LaTeX build artefacts (the .tex source files in assets/cv/ are kept)
-assets/*.aux
-assets/*.fdb_latexmk
-assets/*.fls
-assets/*.log
-assets/*.pdf
+# LaTeX build artefacts (the .tex source files are kept; PDFs/logs are generated)
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xdv
+assets/cv/*.pdf
+
+# Cover PDF used to extract applied-mathematics cover image
+9780367348687_cover_review.pdf
 
 # Original unprocessed photo (renamed copy lives in assets/photos/)
 assets/54799818142_33c5dc0de8_o.jpeg

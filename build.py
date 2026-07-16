@@ -610,7 +610,7 @@ def network_svg(G: nx.Graph, label_top: int = 10) -> str:
             f"</circle>"
         )
 
-    for node in top_nodes:
+    for node in sorted(top_nodes):
         cx, cy = scale(*pos[node])
         deg = degrees[node]
         r = 3 + 7 * deg / max_deg
