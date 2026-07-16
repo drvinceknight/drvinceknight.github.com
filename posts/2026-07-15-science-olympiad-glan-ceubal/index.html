@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Science Olympiad at Ysgol Glan Ceubal - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Science Olympiad at Ysgol Glan Ceubal</h2>
+<p><small>2026-07-15</small></p>
+
+
+
+<p>Yesterday <a href="https://profiles.cardiff.ac.uk/staff/prytherchzc">Zoe</a> and I went to our kids' primary school 
+<a href="https://www.glanceubal.cymru/">Ysgol Gymraeg Glan Ceubal</a> 
+primary school in Cardiff, to assist with hosting 
+a Science Olympiad Elementary School Tournament for
+years 4, 5 and 6.  </p>
+<p><img alt="The entrance to Ysgol Gymraeg Glan Ceubal" src="/assets/static/2026-07-15-science-olympiad-glan-ceubal/school-sign.jpeg" /></p>
+<p><img alt="Painted murals of Welsh rivers Conwy, Taf and Teifi which represent the houses of the school" src="/assets/static/2026-07-15-science-olympiad-glan-ceubal/river-murals.jpeg" /></p>
+<p>The event I was given responsibility to run was a boat building competition.
+Each team was given the same set of materials,
+a fixed amount of time, and a single objective: build a boat that could hold as
+much weight as possible without sinking.</p>
+<p><img alt="The materials provided for the boat-building challenge" src="/assets/static/2026-07-15-science-olympiad-glan-ceubal/boat-materials.jpeg" /></p>
+<p>My job was to run the weigh-in: placing weights into each boat one at a time
+and recording how much it held before water came over the sides. 
+The finished boats were genuinely inventive. Some teams went for wide flat
+designs to spread the load, others folded the foil into deep hulls. A few
+included structural straws along the rim. </p>
+<p><img alt="The finished boats from each team" src="/assets/static/2026-07-15-science-olympiad-glan-ceubal/completed-boats.jpeg" /></p>
+<p>The children were focused and competitive in the best possible way. Nobody was
+waiting to be told what to do; they just got on with it.</p>
+<p>The event was organised brilliantly by the school and Science Olympiad UK, and
+it was one of those outreach activities that is genuinely easy to say yes to.</p>
+<p>My kids were not participating but it was lovely to see them during lunch :) (I
+was there still adding up scores). Zoe had to leave to get to work so couldn't
+be in the photo:</p>
+<p><img alt="With my kids at Ysgol Glan Ceubal Science Olympiad" src="/assets/static/2026-07-15-science-olympiad-glan-ceubal/with-kids.jpeg" /></p>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
