@@ -2,7 +2,7 @@
 authors:
 - Nikoleta Glynatsi
 - Vincent Knight
-details: Accepted for publication in Scientific Reports
+details: Scientific Reports, 10, 17287
 direct_url: https://www.nature.com/articles/s41598-020-74181-y
 keywords:
 - iterated prisoner's dilemma
