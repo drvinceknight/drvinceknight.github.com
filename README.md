@@ -15,7 +15,24 @@ A `tags` field determines how each file is rendered:
 | `course`       | `posts/{slug}/index.html`           | Teaching course           |
 | `collaborator` | `collaborators/{slug}/index.html`   | Research collaborator     |
 | `student`      | `collaborators/{slug}/index.html`   | Research student          |
+| `grant`        | `grants/{slug}/index.html`          | Grant application         |
 | `page`         | `{slug}/index.html`                 | Static page (e.g. CV)     |
+
+## Grants
+
+Each grant application gets one file in `src/`, whatever its outcome. The
+frontmatter fields are `funder`, `scheme`, `amount`, `year`, `role`, `status`,
+`submitted_date`, `outcome_date`, `authors`, and `public`. The `status` field
+takes one of `drafting`, `submitted`, `awarded`, `unsuccessful`, or
+`withdrawn`.
+
+Grants are private by default: a file is only rendered to the site when it sets
+`public: true`, so an application can be tracked here while a decision is
+pending and published later. The `order` field fixes the position within a year
+on the CV, counting from zero.
+
+The Funding section of the CV is generated from the grants with
+`status: awarded`, so it should not be maintained by hand in `src/cv.md`.
 
 ## Setup
 

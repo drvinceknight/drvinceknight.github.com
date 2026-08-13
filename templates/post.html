@@ -127,6 +127,35 @@
 {{ post.content_html }}
 
 {# ------------------------------------------------------------------ #}
+{# Grant                                                               #}
+{# ------------------------------------------------------------------ #}
+{% elif "grant" in tags %}
+
+<h2>{{ post.title }}</h2>
+
+<ul>
+  <li>Funder: {{ post.funder }}{% if post.scheme %} ({{ post.scheme }}){% endif %}</li>
+  {% if post.amount %}<li>Amount: £{{ "{:,}".format(post.amount) }}</li>{% endif %}
+  {% if post.role %}<li>Role: {{ post.role }}</li>{% endif %}
+  <li>Status: {{ post.status }}{% if post.outcome_date %} ({{ post.outcome_date }}){% endif %}</li>
+  {% if post.submitted_date %}<li>Submitted: {{ post.submitted_date }}</li>{% endif %}
+  {% if post.authors %}
+  <li>With:
+    {% for author in post.authors %}
+    <a href="/collaborators/{{ author | slugify }}/">{{ author }}</a>{% if not loop.last %},{% else %}.{% endif %}
+    {% endfor %}
+  </li>
+  {% endif %}
+  {% if post.keywords %}
+  <li>Keywords:
+    {% for kw in post.keywords %}<span class="kw-tag">{{ kw }}</span>{% if not loop.last %}, {% endif %}{% endfor %}
+  </li>
+  {% endif %}
+</ul>
+
+{{ post.content_html }}
+
+{# ------------------------------------------------------------------ #}
 {# Collaborator or student                                             #}
 {# ------------------------------------------------------------------ #}
 {% elif "collaborator" in tags or "student" in tags %}
@@ -196,6 +225,30 @@
 <p><small><a href="/#publications">{{ n_publications }} publication{% if n_publications != 1 %}s{% endif %}</a></small></p>
 {{ pub_by_year_svg }}
 {{ pub_rate_svg }}
+{% endif %}
+
+{% if grants %}
+<h2>Grants</h2>
+<p><small>
+  A record of the grant applications I have made, whether or not they were
+  successful.
+  {% if total_awarded %}
+  Awarded funding totals £{{ "{:,}".format(total_awarded) }}.
+  {% endif %}
+</small></p>
+<ul>
+  {% for grant in grants %}
+  <li>
+    <a href="/grants/{{ grant.slug }}/">{{ grant.title }}</a>
+    <span class="kw-tag">{{ grant.status }}</span>
+    <br>
+    <small>
+      {{ grant.funder }}{% if grant.scheme %} ({{ grant.scheme }}){% endif %}{% if grant.amount %}, £{{ "{:,}".format(grant.amount) }}{% endif %}
+      &mdash; {{ grant.year }}
+    </small>
+  </li>
+  {% endfor %}
+</ul>
 {% endif %}
 
 {% if students %}

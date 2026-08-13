@@ -679,6 +679,35 @@ def write_post(post: Post, output_dir: pathlib.Path, env: jinja2.Environment) ->
     (post_dir / "index.html").write_text(page)
 
 
+def is_public(post: Post) -> bool:
+    """Whether a grant is rendered to the site. Grants are private by default."""
+    return bool(post.get("public", False))
+
+
+def sorted_grants(posts: list[Post]) -> list[Post]:
+    """Grants, most recent first, then by their position within the year."""
+    grants = [p for p in posts if "grant" in p.get("tags", [])]
+    return sorted(grants, key=lambda p: (-int(p.get("year", 0) or 0), int(p.get("order", 0) or 0)))
+
+
+def funding_lines(posts: list[Post]) -> list[str]:
+    """CV funding bullets, generated from the awarded grants."""
+    return [
+        f"{p['year']}: {p['funder']}: {p['title']}, £{int(p['amount']):,}"
+        for p in sorted_grants(posts)
+        if p.get("status") == "awarded"
+    ]
+
+
+def write_grant(post: Post, grants_dir: pathlib.Path, env: jinja2.Environment) -> None:
+    grant_dir = grants_dir / post["slug"]
+    grant_dir.mkdir(exist_ok=True, parents=True)
+    page = env.get_template("post.html").render(
+        post=post, publications=[], root=ROOT, blog_title=BLOG_TITLE
+    )
+    (grant_dir / "index.html").write_text(page)
+
+
 def write_collaborator(
     post: Post,
     collaborators_dir: pathlib.Path,
@@ -739,7 +768,7 @@ def build_cv(posts: list[Post]) -> None:
         "qualifications": cv_sections.get("qualifications", []),
         "examiner": cv_sections.get("examiner", []),
         "roles": cv_sections.get("roles", []),
-        "funding": cv_sections.get("funding", []),
+        "funding": funding_lines(posts),
         "research_interests": RESEARCH_INTERESTS,
         "articles": by_date("article"),
         "books": books,
@@ -761,6 +790,8 @@ def main(
     output_dir.mkdir(exist_ok=True)
     collaborators_dir = output_dir.parent / "collaborators"
     collaborators_dir.mkdir(exist_ok=True)
+    grants_dir = output_dir.parent / "grants"
+    grants_dir.mkdir(exist_ok=True)
 
     env = make_html_env()
 
@@ -781,6 +812,11 @@ def main(
     photos = load_photos()
     latest_photo_url = photos[0]["url"] if photos else "/assets/vince-knight-lo.png"
 
+    public_grants = [p for p in sorted_grants(posts) if is_public(p)]
+    total_awarded_grants = sum(
+        int(p.get("amount", 0) or 0) for p in public_grants if p.get("status") == "awarded"
+    )
+
     for post in posts:
         tags = post.get("tags", [])
         if "page" in tags:
@@ -793,12 +829,17 @@ def main(
                 root=ROOT,
                 blog_title=BLOG_TITLE,
                 photos=photos,
+                grants=public_grants,
+                total_awarded=total_awarded_grants,
                 **student_stats,
                 **pub_stats,
             )
             (page_dir / "index.html").write_text(page)
         elif "collaborator" in tags or "student" in tags:
             write_collaborator(post, collaborators_dir, posts, env)
+        elif "grant" in tags:
+            if is_public(post):
+                write_grant(post, grants_dir, env)
         else:
             write_post(post, output_dir, env)
 
