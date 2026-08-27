@@ -18,6 +18,8 @@ keywords:
   - population dynamic
   - direct reciprocity
 preprint_direct_url: https://arxiv.org/abs/2605.23513
+details: Dynamic Games and Applications
+direct_url: https://link.springer.com/article/10.1007/s13235-026-00715-0
 ---
 
 Edited on 2026-06-02: One of the co-authors of a previous paper got in touch
@@ -37,13 +39,11 @@ probability of cooperation in very large and very different populations to be
 computed easily ($O(N)$).
 
 ```bibtex
-@misc{foster2026exactcooperationformulaintrospection,
-      title={Introspection Dynamics with Mutation in Additive Games},
-      author={Harry Foster and Vincent A. Knight and Sebastian Krapohl},
-      year={2026},
-      eprint={2605.23513},
-      archivePrefix={arXiv},
-      primaryClass={cs.GT},
-      url={https://arxiv.org/abs/2605.23513},
+@article{foster2026introspection,
+  title   = {Introspection Dynamics with Mutation in Additive Games},
+  author  = {Foster, Harry and Knight, Vincent A. and Krapohl, Sebastian},
+  journal = {Dynamic Games and Applications},
+  year    = {2026},
+  doi     = {10.1007/s13235-026-00715-0},
 }
 ```
