@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A queueing theoretic approach to set staffing levels in time-dependent dual-class service systems - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>A queueing theoretic approach to set staffing levels in time-dependent dual-class service systems</h2>
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/julie-vile/">Julie Vile</a>,
+    
+    <a href="/collaborators/jon-gillard/">Jon Gillard</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+  </li>
+  
+  <li>Date: 2016</li>
+  
+  <li>Details:
+    <a href="https://doi.org/10.1111/deci.12236">Decision Sciences, 48(4), pp. 766--794</a>
+    
+  </li>
+  
+  
+  
+  
+  <li>Keywords:
+    <span class="kw-tag">queueing theory</span>, <span class="kw-tag">staffing</span>, <span class="kw-tag">healthcare</span>, <span class="kw-tag">Markov chains</span>, <span class="kw-tag">emergency medical services</span>
+  </li>
+  
+</ul>
+
+<p><strong>Abstract:</strong> This article addresses the optimal staffing problem for a
+non-preemptive priority queue with two customer classes and a time-dependent
+arrival rate. The problem is related to several important service settings
+such as call centres and emergency departments, where customers are grouped
+into two classes of 'high priority' and 'low priority', and services are
+typically evaluated according to the proportion of customers responded to
+within targeted response times. To date, only approximation methods have been
+explored to generate staffing requirements for time-dependent dual-class
+services, but we propose a tractable numerical approach to evaluate system
+behaviour and generate safe minimum staffing levels using mixed
+discrete-continuous time Markov chains (MDCTMCs). Our approach is delicate in
+that it accounts for the behaviour of the system under a number of different
+rules that may be imposed on staff if they are busy when due to leave, and
+involves explicitly calculating delay distributions for the two customer
+classes. We embed our methodology in a proposed extension of the Euler
+method, which we call Euler Pri, that can cope with two customer classes, and
+use it to recommend staffing levels for the Welsh Ambulance Service Trust
+(WAST).</p>
+<pre><code class="language-bibtex">@article{vile2016queueing,
+  title   = {A queueing theoretic approach to set staffing levels in
+             time-dependent dual-class service systems},
+  author  = {Vile, Julie L. and Gillard, Jonathan W. and Harper, Paul R. and
+             Knight, Vincent A.},
+  journal = {Decision Sciences},
+  volume  = {48},
+  number  = {4},
+  pages   = {766--794},
+  year    = {2016},
+  doi     = {10.1111/deci.12236},
+  url     = {https://doi.org/10.1111/deci.12236},
+}
+</code></pre>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

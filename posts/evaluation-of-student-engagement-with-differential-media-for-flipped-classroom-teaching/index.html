@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evaluation of student engagement with differential media for Flipped Classroom teaching - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Evaluation of student engagement with differential media for Flipped Classroom teaching</h2>
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/zoë-prytherch/">Zoë Prytherch</a>,
+    
+    <a href="/collaborators/harry-davies/">Harry Davies</a>,
+    
+    <a href="/collaborators/kate-gilliver/">Kate Gilliver</a>,
+    
+    <a href="/collaborators/susan-bartlett/">Susan Bartlett</a>,
+    
+    <a href="/collaborators/helen-phillips/">Helen Phillips</a>,
+    
+    <a href="/collaborators/angharad-naylor/">Angharad Naylor</a>,
+    
+    <a href="/collaborators/sion-coulman/">Sion Coulman</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/sharon-magill/">Sharon Magill</a>,
+    
+    <a href="/collaborators/stephen-rutherford/">Stephen Rutherford</a>.
+    
+  </li>
+  
+  <li>Date: 2018</li>
+  
+  <li>Details:
+    <a href="https://www.learntechlib.org/p/184428/">Proceedings of EdMedia, World Conference on Educational Media and Technology, pp. 1923--1928</a>
+    
+  </li>
+  
+  
+  
+  
+  <li>Keywords:
+    <span class="kw-tag">flipped classroom</span>, <span class="kw-tag">education</span>, <span class="kw-tag">pedagogy</span>
+  </li>
+  
+</ul>
+
+<p><strong>Abstract:</strong> Flipped learning, where the teaching content is delivered prior
+to the contact session, is an effective pedagogy. Most commonly, video is
+used for flipped approaches, although many other media are also effective,
+such as written, audio or electronic resources. The ideal medium used for
+information delivery is likely to vary depending on the needs and learning
+approaches of each individual learner. Is there, therefore, a medium which is
+ideal for most students, or would flipped learning best be delivered using a
+suite of multimedia sources for the core information? This project
+investigates the preferences shown by undergraduate students for different
+media in a series of flipped pedagogic settings, and whether there are any
+correlations between media preferences and student personality types and
+study approaches. Initial findings suggest that students engage readily with
+flipped learning pedagogies, although it is rare for students to engage with
+teaching materials well in advance of the class session. Early findings
+suggest that students show a preference for video as a medium of delivery for
+taught content.</p>
+<pre><code class="language-bibtex">@inproceedings{prytherch2018evaluation,
+  title     = {Evaluation of student engagement with differential media for
+               {F}lipped {C}lassroom teaching},
+  author    = {Prytherch, Zo{\&quot;e} and Davies, Harry and Gilliver, Kate and
+               Bartlett, Susan and Phillips, Helen R. and Naylor, Angharad and
+               Coulman, Sion A. and Knight, Vincent A. and Magill, Sharon E.
+               and Rutherford, Stephen M.},
+  booktitle = {Proceedings of {EdMedia}: World Conference on Educational
+               Media and Technology},
+  pages     = {1923--1928},
+  year      = {2018},
+  url       = {https://www.learntechlib.org/p/184428/},
+}
+</code></pre>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>
