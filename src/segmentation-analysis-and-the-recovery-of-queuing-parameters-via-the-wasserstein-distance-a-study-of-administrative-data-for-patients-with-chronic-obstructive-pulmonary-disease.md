@@ -4,7 +4,7 @@ authors:
 - Vincent Knight
 - Jon Gillard
 - Kendal Smith
-details: IMA Journal of Management Mathematics
+details: IMA Journal of Management Mathematics, 36(2), pp. 255--274
 direct_url: https://academic.oup.com/imaman/article/36/2/255/7950739
 keywords:
 - queueing theory
@@ -18,7 +18,7 @@ published_date: 2025
 cover_image: /assets/thumbnails/wasserstein-copd.png
 tags:
 - article
-title: 'Optimizing healthcare queues: a case study on chronic respiratory illness'
+title: 'Optimising healthcare queues: a case study on chronic respiratory illness'
 ---
 
 **Abstract:** This work uses a data-driven approach to analyse how the resource requirements of
@@ -42,16 +42,16 @@ presenting with COPD is to enact external policies which directly improve the ov
 health of the COPD population before they arrive at the hospital.
 
 ```bibtex
-@article{wilde2025optimizing,
-  title   = {Optimizing healthcare queues: a case study on chronic
+@article{wilde2025optimising,
+  title   = {Optimising healthcare queues: a case study on chronic
              respiratory illness},
   author  = {Wilde, Henry and Knight, Vincent A. and Gillard, Jonathan
              and Smith, Kendal},
   journal = {IMA Journal of Management Mathematics},
   volume  = {36},
   number  = {2},
-  pages   = {255--278},
+  pages   = {255--274},
   year    = {2025},
-  doi     = {10.1093/imaman/dpae013},
+  doi     = {10.1093/imaman/dpaf002},
 }
 ```
