@@ -7,7 +7,7 @@ authors:
 - Syaribah Noor Brice
 - Leanne Smith
 - Daniel Gartner
-details: IMA Journal of Management Mathematics
+details: IMA Journal of Management Mathematics, 36(4), pp. 691--726
 direct_url: https://academic.oup.com/imaman/article/36/4/691/8190187
 keywords:
 - Jakarta
@@ -32,9 +32,9 @@ title: On the Optimisation of Heterogeneous Ambulance Fleet Allocations
   journal = {{IMA} Journal of Management Mathematics},
   volume  = {36},
   number  = {4},
-  pages   = {691},
+  pages   = {691--726},
   year    = {2025},
-  doi     = {10.1093/imaman/dpae027},
+  doi     = {10.1093/imaman/dpaf027},
   url     = {https://academic.oup.com/imaman/article/36/4/691/8190187},
 }
 ```

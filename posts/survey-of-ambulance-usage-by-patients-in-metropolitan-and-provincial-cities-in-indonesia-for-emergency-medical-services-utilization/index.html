@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survey of ambulance usage by patients in metropolitan and provincial cities in Indonesia for Emergency Medical Services utilization - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Survey of ambulance usage by patients in metropolitan and provincial cities in Indonesia for Emergency Medical Services utilization</h2>
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/syaribah-noor-brice/">Syaribah Noor Brice</a>,
+    
+    <a href="/collaborators/paul-harper/">Paul Harper</a>,
+    
+    <a href="/collaborators/raden-suhartono/">Raden Suhartono</a>,
+    
+    <a href="/collaborators/asti-puspita-rini/">Asti Puspita Rini</a>,
+    
+    <a href="/collaborators/aryono-djuned-pusponegoro/">Aryono Djuned Pusponegoro</a>,
+    
+    <a href="/collaborators/geraint-palmer/">Geraint Palmer</a>,
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>,
+    
+    <a href="/collaborators/mark-tuson/">Mark Tuson</a>,
+    
+    <a href="/collaborators/jennifer-lloyd/">Jennifer Lloyd</a>,
+    
+    <a href="/collaborators/jonathan-turnbull-ross/">Jonathan Turnbull-Ross</a>,
+    
+    <a href="/collaborators/daniel-gartner/">Daniel Gartner</a>.
+    
+  </li>
+  
+  <li>Date: 2025</li>
+  
+  <li>Details:
+    <a href="https://doi.org/10.1108/IJES-02-2024-0010">International Journal of Emergency Services, 15(1), pp. 70--88</a>
+    
+  </li>
+  
+  
+  
+  
+  <li>Keywords:
+    <span class="kw-tag">Indonesia</span>, <span class="kw-tag">ambulance</span>, <span class="kw-tag">emergency medical services</span>, <span class="kw-tag">healthcare access</span>, <span class="kw-tag">survey</span>
+  </li>
+  
+</ul>
+
+<p><strong>Abstract:</strong> Emergency Medical Services in Indonesia continue to face
+challenges, and system operation and resource availability vary from region to
+region, which may influence the access and utilisation of the services. This
+study aims to describe the utilisation of EMS in metropolitan and provincial
+cities in Indonesia. We used a cross-sectional survey design involving
+patients who attended four general hospitals across the metropolitan city of
+Jakarta and one hospital in the provincial city of Jayapura in Papua. The
+questionnaires covered patients' demographic and medical profiles, reasons
+for choosing the transportation mode, and time related to the emergency
+event. All patients who attended the hospital emergency departments had equal
+opportunity to be included, and nurses working at the hospitals administered
+the questionnaires based on the answers given by the patients. Chi-square and
+Kruskal-Wallis tests were used to compare the data. A total of 1{,}521
+patients gave verbal consent to participate, drawn from the metropolitan
+(82.1%) and provincial cities (17.9%). Only 10.9% of patients in metropolitan
+Jakarta and 2.6% in provincial city Jayapura came to the hospital emergency
+departments in an ambulance, and a high proportion of patients did not know
+how to contact an ambulance (71.7% in metropolitan and 73% in provincial
+cities, respectively). The survey, conducted without aggregated EMS data,
+highlights the need for improved regional and national data collection in
+Indonesia to enable in-depth analyses of ambulance and hospital service
+utilisation. The study, covering patient demographics, transport modes and
+emergency timestamps, is the first to compare metropolitan and provincial
+contexts. Studies on ambulance utilisation in Indonesia are scarce, and this
+study serves as an update to a previous study of metropolitan Jakarta and, as
+far as we are aware, is the first to survey the utilisation of emergency
+medical services in the provincial city of Jayapura at this level.</p>
+<pre><code class="language-bibtex">@article{brice2025survey,
+  title   = {Survey of ambulance usage by patients in metropolitan and
+             provincial cities in {I}ndonesia for {E}mergency {M}edical
+             {S}ervices utilization},
+  author  = {Brice, Syaribah Noor and Harper, Paul and Suhartono, Raden and
+             Rini, Asti Puspita and Pusponegoro, Aryono Djuned and
+             Palmer, Geraint and Knight, Vincent A. and Tuson, Mark and
+             Lloyd, Jennifer and Turnbull-Ross, Jonathan and Gartner, Daniel},
+  journal = {International Journal of Emergency Services},
+  volume  = {15},
+  number  = {1},
+  pages   = {70--88},
+  year    = {2025},
+  doi     = {10.1108/IJES-02-2024-0010},
+  url     = {https://doi.org/10.1108/IJES-02-2024-0010},
+}
+</code></pre>
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ authors:
 - Michalis Panayides
 - Vincent Knight
 - Elizabeth Williams
-details: Journal of the Operational Research Society
+details: Journal of the Operational Research Society, 77(5), pp. 1225--1243
 direct_url: https://www.tandfonline.com/doi/full/10.1080/01605682.2025.2525939
 keywords:
 - queueing theory
@@ -32,6 +32,9 @@ is given for a better understanding of the system.
   author  = {Palmer, Geraint and Panayides, Michalis and Knight, Vincent A. and
              Williams, Elizabeth},
   journal = {Journal of the Operational Research Society},
+  volume  = {77},
+  number  = {5},
+  pages   = {1225--1243},
   year    = {2025},
   doi     = {10.1080/01605682.2025.2525939},
   url     = {https://www.tandfonline.com/doi/full/10.1080/01605682.2025.2525939},
