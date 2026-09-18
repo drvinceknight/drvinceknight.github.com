@@ -910,6 +910,10 @@ def main(
         )
     )
 
+    (output_dir.parent / "404.html").write_text(
+        env.get_template("404.html").render(blog_title=BLOG_TITLE, root=ROOT)
+    )
+
     build_cv(posts)
 
 

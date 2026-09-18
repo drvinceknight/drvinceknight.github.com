@@ -43,3 +43,5 @@ site/
 # Specific to blog posts
 src/_stet_store.csv
 
+
+lit/
