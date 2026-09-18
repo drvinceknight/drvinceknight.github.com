@@ -1,24 +1,203 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 · Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+<style>
+  .four-oh-four { text-align: center; }
+  .four-oh-four h1 {
+    font-family: var(--mono);
+    font-size: clamp(4rem, 18vw, 9rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    margin-bottom: 0.2em;
+  }
+  .four-oh-four .lede { font-size: 1.15rem; margin-bottom: 0.6em; }
+  .four-oh-four .quiet { color: var(--text-muted); }
+
+  .payoffs {
+    border-collapse: collapse;
+    margin: 1.8em auto;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+  }
+  .payoffs th, .payoffs td {
+    border: 1px solid var(--border);
+    padding: 0.55em 0.9em;
     text-align: center;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+  .payoffs th { color: var(--text-muted); font-weight: 500; }
+  .payoffs td.mine { color: var(--green); }
+  .payoffs td.theirs { color: var(--red); }
+  .payoffs tr.lit td { background: var(--accent-dim); }
+
+  .moves { display: flex; gap: 0.8em; justify-content: center; flex-wrap: wrap; }
+  .moves button {
+    font: 500 1rem/1 var(--font);
+    padding: 0.7em 1.3em;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
   }
+  .moves button:hover { border-color: var(--accent); background: var(--surface-2); }
+  .moves button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .verdict { min-height: 5.5em; margin-top: 1.4em; }
+  .verdict p { margin-bottom: 0.5em; }
+  .score {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  .score b { color: var(--text); font-weight: 500; }
 </style>
 
-<div class="container">
+<div class="four-oh-four">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p class="lede">You asked for a page I never wrote.</p>
+  <p class="quiet">
+    Call that a defection. This page plays Tit&nbsp;for&nbsp;Tat, so it
+    defected back, and here we both are with nothing.
+  </p>
+
+  <table class="payoffs">
+    <thead>
+      <tr>
+        <th></th>
+        <th>page cooperates</th>
+        <th>page defects</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="row-c">
+        <th>you cooperate</th>
+        <td><span class="mine">3</span>, <span class="theirs">3</span></td>
+        <td><span class="mine">0</span>, <span class="theirs">5</span></td>
+      </tr>
+      <tr id="row-d" class="lit">
+        <th>you defect</th>
+        <td><span class="mine">5</span>, <span class="theirs">0</span></td>
+        <td><span class="mine">1</span>, <span class="theirs">1</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="moves">
+    <button id="play-c" type="button">Cooperate</button>
+    <button id="play-d" type="button">Defect again</button>
+  </div>
+
+  <div class="verdict" aria-live="polite">
+    <p id="says">Your move.</p>
+    <p class="score">
+      after <b id="rounds">1</b> round: you <b id="mine">1</b>, page <b id="theirs">1</b>
+    </p>
+  </div>
+
+  <p class="quiet" style="margin-top: 2em;">
+    Nothing here? Try the <a href="/">home page</a> or the
+    <a href="/posts/">posts</a>.
+  </p>
 </div>
+
+<script>
+  (function () {
+    // Tit for Tat: nice on the first move, then whatever you just did. The
+    // request for a missing page counts as round one, and it was a defection.
+    var rounds = 1, mine = 1, theirs = 1, lastYou = 'D';
+    var says = document.getElementById('says');
+    var cooperated = [
+      'Forgiving. The page cooperates back, the way Tit for Tat always does.',
+      'Still cooperating. This is the part of the tournament where nice strategies quietly win.',
+      'Mutual cooperation again. Three each is the best either of us can do together.',
+    ];
+    var defected = [
+      'The page defects back. One point each, and the page you wanted still does not exist.',
+      'Provoked again. Tit for Tat has a long memory and a short temper.',
+      'Two defectors, going nowhere. Somebody has to be nice first.',
+    ];
+
+    function play(you) {
+      var page = lastYou;                       // Tit for Tat copies your last move
+      var together = you + page;
+      var pays = { CC: [3, 3], CD: [0, 5], DC: [5, 0], DD: [1, 1] }[together];
+      mine += pays[0];
+      theirs += pays[1];
+      rounds += 1;
+      lastYou = you;
+      var lines = page === 'C' ? cooperated : defected;
+      says.textContent = lines[Math.min(rounds - 2, lines.length - 1)];
+      document.getElementById('rounds').textContent = rounds;
+      document.getElementById('mine').textContent = mine;
+      document.getElementById('theirs').textContent = theirs;
+      document.getElementById('row-c').classList.toggle('lit', you === 'C');
+      document.getElementById('row-d').classList.toggle('lit', you === 'D');
+    }
+
+    document.getElementById('play-c').addEventListener('click', function () { play('C'); });
+    document.getElementById('play-d').addEventListener('click', function () { play('D'); });
+  })();
+</script>
+
+  </div>
+</body>
+</html>
