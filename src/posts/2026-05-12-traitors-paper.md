@@ -19,6 +19,16 @@ of the game.
 
 You can read it [here](https://arxiv.org/abs/2605.10233).
 
+I have also recorded a [short video](https://youtu.be/EmhdzzlN5Ps) that walks
+through the main ideas of the paper:
+
+<iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border: 0;"
+  src="https://www.youtube-nocookie.com/embed/EmhdzzlN5Ps"
+  title="The Vote-Left Equilibrium"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+
 The basic idea is the following: everyone voting randomly is mathematically
 optimal since none of the faithful have any real information. The problem with
 this is that the Traitors can collude (which is in fact their optimal strategy)
