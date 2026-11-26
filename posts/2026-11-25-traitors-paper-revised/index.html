@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vote-Left: A Deterministic Coordination Strategy for the Faithful in The Traitors - Vincent Knight</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath:  [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vincent Knight</a>
+    <nav>
+      <ul>
+        <li><a href="/posts/">Posts</a></li>
+        <li><a href="/cv/">CV</a></li>
+        <li><a href="/collaborators/">Collaborators</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </header>
+
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('theme-toggle');
+        btn.textContent = (document.documentElement.getAttribute('data-theme') === 'light') ? '🌙' : '☀️';
+        btn.addEventListener('click', function () {
+          var current = document.documentElement.getAttribute('data-theme');
+          var next = current === 'light' ? 'dark' : 'light';
+          if (next === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+          }
+          btn.textContent = next === 'light' ? '🌙' : '☀️';
+          localStorage.setItem('theme', next);
+        });
+      });
+    })();
+  </script>
+
+  <div class="container">
+    
+
+
+
+
+
+
+
+
+<h2>Vote-Left: A Deterministic Coordination Strategy for the Faithful in The Traitors</h2>
+<p><small>2026-11-25</small></p>
+
+
+<ul>
+  
+  <li>Authors:
+    
+    <a href="/collaborators/vincent-knight/">Vincent Knight</a>.
+    
+  </li>
+  
+  <li>Date: 2026</li>
+  
+  
+  <li><a href="https://arxiv.org/abs/2605.10233">Preprint.</a></li>
+  
+</ul>
+
+
+<p>In May I <a href="/posts/2026-05-12-traitors-paper/">posted a preprint</a> about how the
+Faithful should vote in <a href="https://www.bbc.co.uk/showsandtours/take-part/the-traitors">The Traitors</a>. I have just posted a new version,
+and it corrects the main result of the first one.</p>
+<p>The idea is the same: everyone votes for the next player in an agreed order (for
+example the person to their left), so every player gets exactly one vote and the
+tie-break picks someone at random. That gives the same outcome as random voting,
+but anyone who breaks the rule is seen straight away and can be voted out the next
+day.</p>
+<p>The first version claimed that nobody could ever do better by breaking this rule.
+A referee read the paper carefully and sent back two short counterexamples showing
+that this was wrong. Near the end of the game the punishment arrives too late: a
+player can break the rule and win before anyone gets to vote them out.</p>
+<p>The fix is simple. Vote left during most of the game, and once there are at most
+<span class="arithmatex">\(2m + 2\)</span> players left (where <span class="arithmatex">\(m\)</span> is the number of Traitors still in), go back to
+voting at random. With that switch:</p>
+<ol>
+<li>Nobody gains by breaking the rule before the last few rounds, whether alone or
+   with the other Traitors.</li>
+<li>With a single Traitor left, the protocol is an equilibrium of the whole game.</li>
+<li>Against colluding Traitors, the Faithful are about four times as likely to win
+   with three Traitors, and between 62 and 84 times as likely with four.</li>
+</ol>
+<p>What the Faithful should do in the last few rounds when there are two or more
+Traitors is still open.</p>
+<p>All the numbers in the paper are now exact, thanks to a new algorithm in
+<a href="https://vknight.org/backstab/">backstab</a> (version 0.2.1). The data and code are
+<a href="https://doi.org/10.5281/zenodo.24528818">on Zenodo</a>.</p>
+<p>I am very grateful to the referee. Only one person agreed to review the paper, and
+they found the hole in the main theorem and handed me two clean examples of it.
+That is peer review working exactly as it should.</p>
+<p>You can read the new version <a href="https://arxiv.org/abs/2605.10233">here</a>.</p>
+<p>I have also recorded a <a href="https://youtu.be/8UsLF8RT3dU">short video</a> that walks
+through the revised result:</p>
+<p><iframe
+  style="width: 100%; aspect-ratio: 16 / 9; border: 0;"
+  src="https://www.youtube-nocookie.com/embed/8UsLF8RT3dU"
+  title="Vote-Left: A Deterministic Coordination Strategy for the Faithful in The Traitors"
+  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+</p>
+<pre><code class="language-bibtex">@misc{knight2026vote,
+  title         = {Vote-Left: A Deterministic Coordination Strategy for the
+                   Faithful in {The Traitors}},
+  author        = {Knight, Vincent A.},
+  year          = {2026},
+  eprint        = {2605.10233},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2605.10233},
+}
+</code></pre>
+
+
+<hr>
+<div>
+<script src="https://giscus.app/client.js"
+        data-repo="drvinceknight/drvinceknight.github.com"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2ODI1NDI2"
+        data-category="General"
+        data-category-id="DIC_kwDOAGgl0s4CiAHw"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -4,7 +4,6 @@ date: 2026-05-12
 cover_image: /assets/thumbnails/traitors-paper.png
 tags:
   - post
-  - article
 title: "The Vote-Left Equilibrium: A Deterministic Coordination Strategy for the Faithful in The Traitors"
 published_date: 2026
 authors:
